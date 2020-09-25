@@ -13,6 +13,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
  * @property mixed name
+ * @property mixed id
  * @property mixed email
  * @property mixed password
  * @property mixed role_id
@@ -102,6 +103,25 @@ class User extends Authenticatable implements JWTSubject
         $u->save();
 
         return $u;
+    }
+
+
+    /**
+     * Check the current user is admin or not
+     * @return bool
+     */
+    public function isAdmin() : bool
+    {
+        return $this->role_id === Role::getAdminRoleID();
+    }
+
+    /**
+     * Check the current user is vendor or not
+     * @return bool
+     */
+    public function isVendor() : bool
+    {
+        return $this->role_id === Role::getVendorRoleID();
     }
 
     public function getJWTIdentifier()

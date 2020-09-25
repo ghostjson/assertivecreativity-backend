@@ -26,6 +26,8 @@ class UserSeeder extends Seeder
 
         $this->generator($users);
 
+        User::factory()->times(10)->create();
+
     }
 
     public function generator(array $users) : void

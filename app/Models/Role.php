@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property mixed name
  * @method static where(string $string, string $string)
+ * @method static find(array|int|string $array_rand)
  */
 class Role extends Model
 {
