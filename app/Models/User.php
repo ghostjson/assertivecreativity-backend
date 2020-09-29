@@ -121,7 +121,7 @@ class User extends Authenticatable implements JWTSubject
      */
     public function isVendor() : bool
     {
-        return $this->role_id === Role::getVendorRoleID();
+        return (($this->role_id === Role::getVendorRoleID()) || ($this->role_id === Role::getAdminRoleID()));
     }
 
     public function getJWTIdentifier()

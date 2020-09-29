@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('basePrice');
             $table->string('description');
             $table->string('image');
-            $table->json('priceTable');
+            $table->json('priceTable')->nullable();
             $table->boolean('priceTableMode');
             $table->integer('sales');
             $table->string('serial')->unique();
