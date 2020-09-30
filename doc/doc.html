@@ -1,0 +1,1782 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Asserive Creativity</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            tabReplace: '    ',
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <style>body {
+    position: relative;
+}
+
+h1 {
+    margin-top: 5px;
+}
+
+h1, h2, h3, h4 {
+    color: #2b2b2b;
+}
+
+h2:after {
+    content: ' ';
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    display: none;
+    position: absolute;
+    margin-left: 8px;
+}
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
+    color: #a5a5a5;
+    display: initial;
+}
+
+.nav.nav-tabs > li > a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.tab-content {
+    padding-top: 8px;
+}
+
+.table {
+    margin-bottom: 8px;
+}
+
+pre {
+    border-radius: 0px;
+    border: none;
+}
+
+pre code {
+    margin: -9.5px;
+}
+
+.request {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.response-text-sample {
+    padding: 0px !important;
+}
+
+.response-text-sample pre {
+    margin-bottom: 0px;
+}
+
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #2b2b2b;
+    padding-top: 20px;
+}
+
+#sidebar-wrapper ul {
+    width: 250px;
+}
+
+#sidebar-wrapper ul li {
+    margin-right: 10px;
+}
+
+#sidebar-wrapper ul li a:hover {
+    background: inherit;
+    text-decoration: none;
+}
+
+#sidebar-wrapper ul li a {
+    display: block;
+    color: #ECF0F1;
+    padding: 6px 15px;
+}
+
+#sidebar-wrapper ul li ul {
+    padding-left: 25px;
+}
+
+#sidebar-wrapper ul li ul li a {
+    padding: 1px 0px;
+}
+
+#sidebar-wrapper ul li a:hover,
+#sidebar-wrapper ul li a:focus {
+    color: #e0c46c;
+    border-right: solid 1px #e0c46c;
+}
+
+#sidebar-wrapper ul li.active > a {
+    color: #e0c46c;
+    border-right: solid 3px #e0c46c;
+}
+
+#sidebar-wrapper ul li:not(.active) ul {
+    display: none;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px 15px 15px 250px;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+<div id="sidebar-wrapper">
+    <div class="scrollspy">
+    <ul id="main-menu" data-spy="affix" class="nav">
+        <li>
+            <a href="#doc-general-notes">General notes</a>
+        </li>
+        
+        <li>
+            <a href="#doc-api-detail">API detail</a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="#folder-authentication">Authentication</a>
+            <ul>
+                
+                <li>
+                    <a href="#request-authentication-login-user">Login User</a>
+                </li>
+                
+                <li>
+                    <a href="#request-authentication-register-user">Register User</a>
+                </li>
+                
+                <li>
+                    <a href="#request-authentication-register-vendor">Register Vendor</a>
+                </li>
+                
+                <li>
+                    <a href="#request-authentication-logout">Logout</a>
+                </li>
+                
+                <li>
+                    <a href="#request-authentication-refresh-token">Refresh Token</a>
+                </li>
+                
+                <li>
+                    <a href="#request-authentication-get-user">Get user</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a href="#folder-products">Products</a>
+            <ul>
+                
+                <li>
+                    <a href="#request-products-list-products">List Products</a>
+                </li>
+                
+                <li>
+                    <a href="#request-products-show-product">Show Product</a>
+                </li>
+                
+                <li>
+                    <a href="#request-products-store-product">Store Product</a>
+                </li>
+                
+                <li>
+                    <a href="#request-products-update-product">Update Product</a>
+                </li>
+                
+                <li>
+                    <a href="#request-products-delete-product">Delete Product</a>
+                </li>
+                
+                <li>
+                    <a href="#request-products-get-product-by-category">Get Product By Category</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a href="#folder-orders">Orders</a>
+            <ul>
+                
+                <li>
+                    <a href="#request-orders-make-order">Make Order</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        <li>
+            <a href="#folder-threads">Threads</a>
+            <ul>
+                
+                <li>
+                    <a href="#request-threads-send-thread">Send Thread</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+    </ul>
+</div>
+
+</div>
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Asserive Creativity</h1>
+
+                <h2 id="doc-general-notes">
+                    General notes
+                    <a href="#doc-general-notes"><i class="glyphicon glyphicon-link"></i></a>
+                </h2>
+
+                
+
+                
+
+                <h2 id="doc-api-detail">
+                    API detail
+                    <a href="#doc-api-detail"><i class="glyphicon glyphicon-link"></i></a>
+                </h2>
+
+                
+
+
+                
+                
+                <div class="endpoints-group">
+                    <h3 id="folder-authentication">
+                        Authentication
+                        <a href="#folder-authentication"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-authentication-login-user">
+                            Login User
+                            <a href="#request-authentication-login-user"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div></div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-authentication-login-user-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-authentication-login-user-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-authentication-login-user-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST "{{base_url}}/api/auth/login"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-authentication-login-user-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/auth/login HTTP/1.1
+Host: </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-authentication-login-user-responses-972ea364-dabc-404f-8611-5df756b125b6" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-authentication-login-user-responses-972ea364-dabc-404f-8611-5df756b125b6">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:00:52 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:00:52 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>58</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+    "token_type": "bearer",
+    "expires_in": 3600
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-authentication-register-user">
+                            Register User
+                            <a href="#request-authentication-register-user"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Register a new user/customer</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-authentication-register-user-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-authentication-register-user-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-authentication-register-user-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST "{{base_url}}/api/auth/register/user"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-authentication-register-user-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/auth/register/user HTTP/1.1
+Host: </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-authentication-register-user-responses-becfa6fd-778c-4c9b-a5fb-bff23ec22826" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-authentication-register-user-responses-becfa6fd-778c-4c9b-a5fb-bff23ec22826">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:03:02 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:03:02 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdXNlciIsImlhdCI6MTYwMTM4MDk4MiwiZXhwIjoxNjAxMzg0NTgyLCJuYmYiOjE2MDEzODA5ODIsImp0aSI6ImREVW1Qd01qQUh3QlNrb2IiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LuGP8kubexKvi4YWIPGMib1pF9qUA1qZERvDsDfbJGQ",
+    "token_type": "bearer",
+    "expires_in": 3600
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-authentication-register-vendor">
+                            Register Vendor
+                            <a href="#request-authentication-register-vendor"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Register a new vendor</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-authentication-register-vendor-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-authentication-register-vendor-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-authentication-register-vendor-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST "{{base_url}}/api/auth/register/vendor"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-authentication-register-vendor-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/auth/register/vendor HTTP/1.1
+Host: </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-authentication-register-vendor-responses-d0566803-778f-4ecb-909c-3eeea8842bc6" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-authentication-register-vendor-responses-d0566803-778f-4ecb-909c-3eeea8842bc6">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:04:37 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:04:37 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdmVuZG9yIiwiaWF0IjoxNjAxMzgxMDc3LCJleHAiOjE2MDEzODQ2NzcsIm5iZiI6MTYwMTM4MTA3NywianRpIjoiVmRacFVwR3ZTOThOMEVBUSIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oD48Z4j4fAFkhaOoXGyJINK7x0Q1ZrqnkGGKHADClc4",
+    "token_type": "bearer",
+    "expires_in": 3600
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-authentication-logout">
+                            Logout
+                            <a href="#request-authentication-logout"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div></div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-authentication-logout-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-authentication-logout-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-authentication-logout-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdXNlciIsImlhdCI6MTYwMTM4MDk4MiwiZXhwIjoxNjAxMzg0NTgyLCJuYmYiOjE2MDEzODA5ODIsImp0aSI6ImREVW1Qd01qQUh3QlNrb2IiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LuGP8kubexKvi4YWIPGMib1pF9qUA1qZERvDsDfbJGQ" -H "Accept: application/json" "{{base_url}}/api/auth/logout"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-authentication-logout-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/auth/logout HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdXNlciIsImlhdCI6MTYwMTM4MDk4MiwiZXhwIjoxNjAxMzg0NTgyLCJuYmYiOjE2MDEzODA5ODIsImp0aSI6ImREVW1Qd01qQUh3QlNrb2IiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LuGP8kubexKvi4YWIPGMib1pF9qUA1qZERvDsDfbJGQ
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-authentication-logout-responses-3365e3cc-803f-4243-9bb7-450f92a21a3d" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-authentication-logout-responses-3365e3cc-803f-4243-9bb7-450f92a21a3d">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:06:23 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:06:23 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "message": "Successfully logged out"
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-authentication-refresh-token">
+                            Refresh Token
+                            <a href="#request-authentication-refresh-token"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Invalidate the current token and get a new valid token.</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-authentication-refresh-token-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-authentication-refresh-token-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-authentication-refresh-token-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdmVuZG9yIiwiaWF0IjoxNjAxMzgxMDc3LCJleHAiOjE2MDEzODQ2NzcsIm5iZiI6MTYwMTM4MTA3NywianRpIjoiVmRacFVwR3ZTOThOMEVBUSIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oD48Z4j4fAFkhaOoXGyJINK7x0Q1ZrqnkGGKHADClc4" -H "Accept: application/json" "{{base_url}}/api/auth/refresh"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-authentication-refresh-token-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/auth/refresh HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdmVuZG9yIiwiaWF0IjoxNjAxMzgxMDc3LCJleHAiOjE2MDEzODQ2NzcsIm5iZiI6MTYwMTM4MTA3NywianRpIjoiVmRacFVwR3ZTOThOMEVBUSIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oD48Z4j4fAFkhaOoXGyJINK7x0Q1ZrqnkGGKHADClc4
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-authentication-refresh-token-responses-ed809350-ef82-41ad-9771-a674a099c5cd" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-authentication-refresh-token-responses-ed809350-ef82-41ad-9771-a674a099c5cd">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:08:39 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:08:39 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNjAxMzgxMDc3LCJleHAiOjE2MDEzODQ5MTksIm5iZiI6MTYwMTM4MTMxOSwianRpIjoiMjh3Qld0WWJ4ZU8xTW1PdCIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AhBngKJy507dgqixem1B5WyBEZkb5UI8NjQRBzt7Rz4",
+    "token_type": "bearer",
+    "expires_in": 3600
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-authentication-get-user">
+                            Get user
+                            <a href="#request-authentication-get-user"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Get current authenticated user</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-authentication-get-user-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-authentication-get-user-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-authentication-get-user-example-curl">
+                                    <pre><code class="hljs curl">curl -X GET -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U" -H "Accept: application/json" "{{base_url}}/api/auth/user"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-authentication-get-user-example-http">
+                                    <pre><code class="hljs http">GET %7B%7Bbase_url%7D%7D/api/auth/user HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-authentication-get-user-responses-ea9c7acb-4580-4a32-a9b8-61e4638d7afb" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-authentication-get-user-responses-ea9c7acb-4580-4a32-a9b8-61e4638d7afb">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:10:43 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:10:43 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "data": {
+        "id": 1,
+        "name": "admin",
+        "email": "admin@ac.com",
+        "role": "admin"
+    }
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+
+                </div>
+                
+                
+                <div class="endpoints-group">
+                    <h3 id="folder-products">
+                        Products
+                        <a href="#folder-products"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-products-list-products">
+                            List Products
+                            <a href="#request-products-list-products"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>List all listed products</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-products-list-products-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-products-list-products-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-products-list-products-example-curl">
+                                    <pre><code class="hljs curl">curl -X GET "{{base_url}}/api/products/"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-products-list-products-example-http">
+                                    <pre><code class="hljs http">GET %7B%7Bbase_url%7D%7D/api/products/ HTTP/1.1
+Host: </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-products-list-products-responses-fbb4eeb8-2c7b-4e0c-a9c1-4728034b3744" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-products-list-products-responses-fbb4eeb8-2c7b-4e0c-a9c1-4728034b3744">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:12:41 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:12:41 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "data": [
+        {
+            "id": 1,
+            "name": "ad",
+            "basePrice": "4432",
+            "description": "Voluptatibus eum rerum perferendis necessitatibus aut sunt quas laudantium. Optio velit vel et velit optio adipisci est.",
+            "image": "https://lorempixel.com/640/480/?99556",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "165",
+            "serial": "1e59a282-5b07-363d-801e-3cb2cce84b57",
+            "stock": "767",
+            "customForms": "",
+            "category": "9",
+            "seller_id": "8",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 2,
+            "name": "explicabo",
+            "basePrice": "1323",
+            "description": "Minus consequatur quod consectetur voluptate qui omnis. Voluptatibus veritatis perferendis odio eligendi ea vero. In doloremque tempora dolorum molestiae rem.",
+            "image": "https://lorempixel.com/640/480/?52037",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "100",
+            "serial": "8772d738-7795-3ad0-8abf-253a54b6653d",
+            "stock": "702",
+            "customForms": "",
+            "category": "3",
+            "seller_id": "5",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 3,
+            "name": "nihil",
+            "basePrice": "4271",
+            "description": "Quo animi molestiae non reprehenderit aut ut. Ab et quam enim tempora non placeat. Reiciendis vero dolor in modi dicta sint. Ut dicta quasi enim expedita veniam qui iure.",
+            "image": "https://lorempixel.com/640/480/?86606",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "61",
+            "serial": "12a3d7b9-b2aa-3b53-9616-6d46f3ad773d",
+            "stock": "463",
+            "customForms": "",
+            "category": "3",
+            "seller_id": "8",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 4,
+            "name": "ex",
+            "basePrice": "740",
+            "description": "Velit et omnis eaque sint quia. Ipsa sed aut libero aliquam soluta. Deleniti id rerum ad vel.",
+            "image": "https://lorempixel.com/640/480/?63054",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "155",
+            "serial": "6a908e25-7566-3bd5-82dd-79be09ba543d",
+            "stock": "92",
+            "customForms": "",
+            "category": "1",
+            "seller_id": "8",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 5,
+            "name": "aut",
+            "basePrice": "672",
+            "description": "Tempora qui ea itaque veritatis facilis non ea. Est amet commodi omnis et dolore adipisci. Magnam ad iure et voluptatem ipsa quae. Omnis maiores qui itaque nam et non.",
+            "image": "https://lorempixel.com/640/480/?44111",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "108",
+            "serial": "83d5ee8a-eba1-3d20-b77f-3cdd256c1fc2",
+            "stock": "885",
+            "customForms": "",
+            "category": "4",
+            "seller_id": "6",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 6,
+            "name": "quis",
+            "basePrice": "384",
+            "description": "Commodi velit qui labore aliquam. Sint dolores magni velit. Suscipit explicabo facilis beatae adipisci.",
+            "image": "https://lorempixel.com/640/480/?92047",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "11",
+            "serial": "7541d79c-d01f-3ca5-a97d-03d8d5d148a4",
+            "stock": "290",
+            "customForms": "",
+            "category": "6",
+            "seller_id": "2",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "qui",
+            "basePrice": "4203",
+            "description": "Nobis est voluptas dolore. Dicta est alias et voluptatem provident exercitationem sunt. Cumque fuga magnam quaerat vitae expedita et. Eum cupiditate ipsa sit doloremque quaerat repellendus.",
+            "image": "https://lorempixel.com/640/480/?41798",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "107",
+            "serial": "4260bbfb-e810-3b69-87eb-dea7fa09cf0a",
+            "stock": "398",
+            "customForms": "",
+            "category": "1",
+            "seller_id": "6",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 8,
+            "name": "optio",
+            "basePrice": "4883",
+            "description": "Porro numquam ad ut. Molestiae aut veniam omnis molestiae. Placeat ut sed ipsam error ex quod. Sed dignissimos quasi consequatur ad recusandae. Eos error ab velit dolorem.",
+            "image": "https://lorempixel.com/640/480/?76897",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "172",
+            "serial": "16af2f81-0542-3104-a1fb-fb969f5d414b",
+            "stock": "185",
+            "customForms": "",
+            "category": "4",
+            "seller_id": "6",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 9,
+            "name": "et",
+            "basePrice": "3877",
+            "description": "Suscipit fugit eligendi quis nam. Quia et ducimus eaque. Pariatur et error dignissimos. Voluptatem non natus facilis deleniti.",
+            "image": "https://lorempixel.com/640/480/?82362",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "23",
+            "serial": "82f1653a-7bb1-3bbe-ab23-769e81944ff0",
+            "stock": "740",
+            "customForms": "",
+            "category": "7",
+            "seller_id": "8",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 10,
+            "name": "sed",
+            "basePrice": "804",
+            "description": "Qui sequi quo vitae tempora non possimus aliquam. Ab omnis aliquid tempora autem at. Officiis architecto omnis consequuntur velit. Inventore omnis saepe hic.",
+            "image": "https://lorempixel.com/640/480/?23554",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "154",
+            "serial": "1e580b29-cf2a-3546-b733-9eaf7f3ef90f",
+            "stock": "497",
+            "customForms": "",
+            "category": "4",
+            "seller_id": "7",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        }
+    ]
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-products-show-product">
+                            Show Product
+                            <a href="#request-products-show-product"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div></div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-products-show-product-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-products-show-product-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-products-show-product-example-curl">
+                                    <pre><code class="hljs curl">curl -X GET "{{base_url}}/api/products/1"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-products-show-product-example-http">
+                                    <pre><code class="hljs http">GET %7B%7Bbase_url%7D%7D/api/products/1 HTTP/1.1
+Host: </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-products-show-product-responses-e4346035-9a4d-4aea-b2b1-80f8d97c0241" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-products-show-product-responses-e4346035-9a4d-4aea-b2b1-80f8d97c0241">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 13:27:29 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 13:27:29 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "data": {
+        "id": 1,
+        "name": "ad",
+        "basePrice": "4432",
+        "description": "Voluptatibus eum rerum perferendis necessitatibus aut sunt quas laudantium. Optio velit vel et velit optio adipisci est.",
+        "image": "https://lorempixel.com/640/480/?99556",
+        "priceTable": "",
+        "priceTableMode": "",
+        "sales": "165",
+        "serial": "1e59a282-5b07-363d-801e-3cb2cce84b57",
+        "stock": "767",
+        "customForms": "",
+        "category": "9",
+        "seller_id": "8",
+        "created_at": "2020-09-29T11:50:18.000000Z",
+        "updated_at": "2020-09-29T11:50:18.000000Z"
+    }
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-products-store-product">
+                            Store Product
+                            <a href="#request-products-store-product"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Store a new product to database</p>
+
+<p>Permission: Vendor</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-products-store-product-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-products-store-product-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-products-store-product-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U" -H "Accept: application/json" "{{base_url}}/api/products"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-products-store-product-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/products HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-products-store-product-responses-00c6f9b3-e8bc-49ef-9218-626f07f45481" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-products-store-product-responses-00c6f9b3-e8bc-49ef-9218-626f07f45481">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:26:42 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:26:42 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "message": "successfully created"
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-products-update-product">
+                            Update Product
+                            <a href="#request-products-update-product"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Update an existing product</p>
+
+<p>Permission: Vendor</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-products-update-product-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-products-update-product-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-products-update-product-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U" -H "Accept: application/json" "{{base_url}}/api/products"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-products-update-product-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/products HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-products-update-product-responses-7b8dbaa8-bc8b-43c8-8caa-2176a45ff791" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-products-update-product-responses-7b8dbaa8-bc8b-43c8-8caa-2176a45ff791">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:26:42 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:26:42 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "message": "successfully created"
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-products-delete-product">
+                            Delete Product
+                            <a href="#request-products-delete-product"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Delete a product</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-products-delete-product-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-products-delete-product-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-products-delete-product-example-curl">
+                                    <pre><code class="hljs curl">curl -X DELETE -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U" -H "Accept: application/json" "{{base_url}}/api/products/3"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-products-delete-product-example-http">
+                                    <pre><code class="hljs http">DELETE %7B%7Bbase_url%7D%7D/api/products/3 HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-products-delete-product-responses-69a9e831-aee5-48eb-b1d2-76bf60fe72c1" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-products-delete-product-responses-69a9e831-aee5-48eb-b1d2-76bf60fe72c1">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:35:12 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 12:35:12 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>59</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "message": "successfully deleted"
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-products-get-product-by-category">
+                            Get Product By Category
+                            <a href="#request-products-get-product-by-category"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Get all products of a specific category</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-products-get-product-by-category-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-products-get-product-by-category-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-products-get-product-by-category-example-curl">
+                                    <pre><code class="hljs curl">curl -X GET "{{base_url}}/api/products/category/1"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-products-get-product-by-category-example-http">
+                                    <pre><code class="hljs http">GET %7B%7Bbase_url%7D%7D/api/products/category/1 HTTP/1.1
+Host: </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-products-get-product-by-category-responses-92ba2630-9ae1-483e-8142-c53335df657e" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-products-get-product-by-category-responses-92ba2630-9ae1-483e-8142-c53335df657e">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 13:48:36 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Tue, 29 Sep 2020 13:48:36 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>56</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "data": [
+        {
+            "id": 4,
+            "name": "ex",
+            "basePrice": "740",
+            "description": "Velit et omnis eaque sint quia. Ipsa sed aut libero aliquam soluta. Deleniti id rerum ad vel.",
+            "image": "https://lorempixel.com/640/480/?63054",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "155",
+            "serial": "6a908e25-7566-3bd5-82dd-79be09ba543d",
+            "stock": "92",
+            "customForms": "",
+            "category": "1",
+            "seller_id": "8",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "qui",
+            "basePrice": "4203",
+            "description": "Nobis est voluptas dolore. Dicta est alias et voluptatem provident exercitationem sunt. Cumque fuga magnam quaerat vitae expedita et. Eum cupiditate ipsa sit doloremque quaerat repellendus.",
+            "image": "https://lorempixel.com/640/480/?41798",
+            "priceTable": "",
+            "priceTableMode": "",
+            "sales": "107",
+            "serial": "4260bbfb-e810-3b69-87eb-dea7fa09cf0a",
+            "stock": "398",
+            "customForms": "",
+            "category": "1",
+            "seller_id": "6",
+            "created_at": "2020-09-29T11:50:18.000000Z",
+            "updated_at": "2020-09-29T11:50:18.000000Z"
+        }
+    ]
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+
+                </div>
+                
+                
+                <div class="endpoints-group">
+                    <h3 id="folder-orders">
+                        Orders
+                        <a href="#folder-orders"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-orders-make-order">
+                            Make Order
+                            <a href="#request-orders-make-order"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>Make a new order</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-orders-make-order-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-orders-make-order-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-orders-make-order-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0" -H "Accept: application/json" "{{base_url}}/api/orders/"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-orders-make-order-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/orders/ HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-orders-make-order-responses-786e84b8-0a01-45dd-bd84-94aa6e6da200" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-orders-make-order-responses-786e84b8-0a01-45dd-bd84-94aa6e6da200">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Wed, 30 Sep 2020 10:33:30 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Wed, 30 Sep 2020 10:33:30 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>58</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "message": "Successfully placed order"
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+
+                </div>
+                
+                
+                <div class="endpoints-group">
+                    <h3 id="folder-threads">
+                        Threads
+                        <a href="#folder-threads"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    
+                    
+                    <div class="request">
+
+                        <h4 id="request-threads-send-thread">
+                            Send Thread
+                            <a href="#request-threads-send-thread"><i class="glyphicon glyphicon-link"></i></a>
+                        </h4>
+
+                        <div><p>send a new thread</p>
+</div>
+
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#request-threads-send-thread-example-curl" data-toggle="tab">Curl</a></li>
+                                <li role="presentation"><a href="#request-threads-send-thread-example-http" data-toggle="tab">HTTP</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="request-threads-send-thread-example-curl">
+                                    <pre><code class="hljs curl">curl -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0" -H "Accept: application/json" "{{base_url}}/api/orders/thread"</code></pre>
+                                </div>
+                                <div class="tab-pane" id="request-threads-send-thread-example-http">
+                                    <pre><code class="hljs http">POST %7B%7Bbase_url%7D%7D/api/orders/thread HTTP/1.1
+Host: 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0
+Accept: application/json</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist">
+                                
+                                <li role="presentation" class="active">
+                                    <a href="#request-threads-send-thread-responses-7cdc4b17-7368-4a27-a7e3-2427a8f2b41a" data-toggle="tab">
+                                        
+                                            Response
+                                        
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="tab-content">
+                                
+                                <div class="tab-pane active" id="request-threads-send-thread-responses-7cdc4b17-7368-4a27-a7e3-2427a8f2b41a">
+                                    <table class="table table-bordered">
+                                        <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Host</th><td>localhost:8000</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Wed, 30 Sep 2020 11:10:15 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Date</th><td>Wed, 30 Sep 2020 11:10:15 GMT</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Connection</th><td>close</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-Powered-By</th><td>PHP/7.4.10</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Cache-Control</th><td>no-cache, private</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Limit</th><td>60</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">X-RateLimit-Remaining</th><td>58</td></tr>
+                                        
+                                        <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                        
+                                        
+                                            
+                                            <tr><td class="response-text-sample" colspan="2">
+                                                <pre><code>{
+    "message": "Successfully send thread"
+}</code></pre>
+                                            </td></tr>
+                                            
+                                        
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("table:not(.table)").addClass('table table-bordered');
+    });
+</script>
+</body>
+</html>
