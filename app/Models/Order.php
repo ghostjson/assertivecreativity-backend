@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @property int buyer_id
@@ -12,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int seller_id
  * @property string order_status
  * @property int product_id
+ * @method static find($order_id)
  */
 class Order extends Model
 {
@@ -34,14 +36,12 @@ class Order extends Model
 
 
         try{
-
-
-
             $order->save();
             return true;
         }
         catch(\Exception $exception)
         {
+            Log::error($exception);
             return false;
         }
 

@@ -13,7 +13,7 @@ class CreateThreadTable extends Migration
      */
     public function up()
     {
-        Schema::create('thread', function (Blueprint $table) {
+        Schema::create('threads', function (Blueprint $table) {
             $table->id();
 
             $table->bigInteger('sender_id')->unsigned();
@@ -22,7 +22,7 @@ class CreateThreadTable extends Migration
 
             $table->text('message_content');
 
-            $table->string('status');
+            $table->string('status')->default('reviewing');
 
             $table->timestamps();
         });
