@@ -18,6 +18,7 @@ class CreateThreadTable extends Migration
 
             $table->bigInteger('sender_id')->unsigned();
             $table->bigInteger('receiver_id')->unsigned();
+            $table->bigInteger('order_id')->unsigned();
 
             $table->text('message_content');
 

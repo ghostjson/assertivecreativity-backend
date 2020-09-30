@@ -17,12 +17,13 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->bigInteger('buyer_id')->unsigned();
             $table->bigInteger('seller_id')->unsigned();
-            $table->bigInteger('thread_id')->unsigned();
+
+            $table->bigInteger('product_id')->unsigned();
 
             $table->json('order');
 
             $table->string('order_status');
-            $table->string('payment_id');
+            $table->string('payment_id')->nullable();
 
             $table->timestamps();
         });
