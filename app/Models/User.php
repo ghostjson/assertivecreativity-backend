@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 /**
- * @property mixed name
  * @property mixed id
  * @property mixed email
  * @property mixed password
  * @property mixed role_id
+ * @property mixed phone
+ * @property mixed profession
+ * @property mixed company_details
+ * @property string first_name
+ * @property string last_name
  */
 class User extends Authenticatable implements JWTSubject
 {
@@ -82,6 +86,9 @@ class User extends Authenticatable implements JWTSubject
         $u->name = $user['name'];
         $u->email = $user['email'];
         $u->password = $user['password'];
+        $u->company_details = $user['company_details'];
+        $u->profession = $user['profession'];
+        $u->phone = $user['phone'];
         $u->role_id = Role::getUserRoleID();
         $u->save();
 
@@ -96,9 +103,13 @@ class User extends Authenticatable implements JWTSubject
     public static function createVendor(array $user) : User
     {
         $u = new User;
-        $u->name = $user['name'];
+        $u->first_name = $user['firstname'];
+        $u->lastname_name = $user['last_name'];
         $u->email = $user['email'];
         $u->password = $user['password'];
+        $u->company_details = $user['company_details'];
+        $u->profession = $user['profession'];
+        $u->phone = $user['phone'];
         $u->role_id = Role::getVendorRoleID();
         $u->save();
 

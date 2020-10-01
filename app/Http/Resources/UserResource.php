@@ -7,9 +7,13 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  * @property mixed id
- * @property mixed name
  * @property mixed email
  * @property mixed role
+ * @property mixed company_details
+ * @property mixed phone
+ * @property mixed profession
+ * @property mixed first_name
+ * @property mixed last_name
  */
 class UserResource extends JsonResource
 {
@@ -23,9 +27,13 @@ class UserResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
             'email' => $this->email,
             'role' => $this->role->name,
+            'company_details' => $this->company_details,
+            'phone' => $this->phone,
+            'profession' => $this->profession
         ];
     }
 }

@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
 
-            $table->json('company_details');
+            $table->text('company_details')->nullable();
             $table->string('phone')->nullable();
             $table->string('profession')->nullable();
 
