@@ -1446,7 +1446,7 @@
 					]
 				},
 				{
-					"name": "Get Product By Category",
+					"name": "Get Product By Category ID",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1532,6 +1532,184 @@
 							"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"ex\",\n            \"basePrice\": \"740\",\n            \"description\": \"Velit et omnis eaque sint quia. Ipsa sed aut libero aliquam soluta. Deleniti id rerum ad vel.\",\n            \"image\": \"https://lorempixel.com/640/480/?63054\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"155\",\n            \"serial\": \"6a908e25-7566-3bd5-82dd-79be09ba543d\",\n            \"stock\": \"92\",\n            \"customForms\": \"\",\n            \"category\": \"1\",\n            \"seller_id\": \"8\",\n            \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n            \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"qui\",\n            \"basePrice\": \"4203\",\n            \"description\": \"Nobis est voluptas dolore. Dicta est alias et voluptatem provident exercitationem sunt. Cumque fuga magnam quaerat vitae expedita et. Eum cupiditate ipsa sit doloremque quaerat repellendus.\",\n            \"image\": \"https://lorempixel.com/640/480/?41798\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"107\",\n            \"serial\": \"4260bbfb-e810-3b69-87eb-dea7fa09cf0a\",\n            \"stock\": \"398\",\n            \"customForms\": \"\",\n            \"category\": \"1\",\n            \"seller_id\": \"6\",\n            \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n            \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Get Product By Tag ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/products/tag/10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"tag",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product By Tag",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/tag/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"tag",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Oct 2020 12:58:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Oct 2020 12:58:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"vel\",\n            \"basePrice\": \"247\",\n            \"description\": \"Qui quasi aut delectus vero praesentium aliquam. Sed quia cumque velit voluptatem enim et voluptatem ea. Et incidunt autem autem odit et. Aut veniam consectetur eaque sapiente.\",\n            \"image\": \"https://lorempixel.com/640/480/?29598\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"57\",\n            \"serial\": \"69dd5b64-384f-3c87-9fbe-dde1988e46e6\",\n            \"stock\": \"124\",\n            \"customForms\": \"\",\n            \"category\": \"4\",\n            \"seller_id\": \"10\",\n            \"created_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"updated_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"pivot\": {\n                \"tag_id\": \"10\",\n                \"product_id\": \"4\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product By Tag Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product By Tag Name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/tag/name/a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"tag",
+										"name",
+										"a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Oct 2020 13:06:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Oct 2020 13:06:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 10,\n            \"name\": \"non\",\n            \"basePrice\": \"1821\",\n            \"description\": \"Quos error dignissimos aliquid ea sit earum. Soluta in quia quia est sed pariatur a. Recusandae occaecati ut est inventore reprehenderit.\",\n            \"image\": \"https://lorempixel.com/640/480/?56958\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"25\",\n            \"serial\": \"da78791e-17fd-35d5-b981-9baed9760a50\",\n            \"stock\": \"991\",\n            \"customForms\": \"\",\n            \"category\": \"10\",\n            \"seller_id\": \"4\",\n            \"created_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"updated_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"pivot\": {\n                \"tag_id\": \"7\",\n                \"product_id\": \"10\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Product Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "Get list of product based on product name, category and tag name."
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
