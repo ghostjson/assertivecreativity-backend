@@ -2,19 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductTag;
 use App\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TagFactory extends Factory
+class ProductTagFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Tag::class;
+    protected $model = ProductTag::class;
 
     /**
      * Define the model's default state.
@@ -24,8 +24,8 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
-            'category_id' => Category::all()->random()->id
+            'product_id' => Product::all()->random()->id,
+            'tag_id' => Tag::all()->random()->id,
         ];
     }
 }

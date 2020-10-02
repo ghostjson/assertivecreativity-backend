@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property mixed seller_id
+ * @property mixed id
  * @method static create(array $validated)
+ * @method static where(string $string, $id, $optional='')
  */
 class Product extends Model
 {
@@ -22,11 +24,20 @@ class Product extends Model
             $this->attributes['seller_id'] = auth()->id();
         }
         else
-            {
+        {
                 $this->attributes['seller_id'] = $value;
-
         }
 
+    }
+
+
+    /**
+     * Get all tags of this products
+     * @return Tag
+     */
+    public function tags() : Tag
+    {
+        return Tag::where('product_id', $this->id)->get();
     }
 
 }

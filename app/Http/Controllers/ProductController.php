@@ -10,6 +10,7 @@ use App\Http\Resources\ProductResource;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Role;
+use App\Models\Tag;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Resources\Json\ResourceCollection;
@@ -116,11 +117,52 @@ class ProductController extends Controller
      * @param Category $category
      * @return ResourceCollection
      */
-    public function getByCategory(Category $category) : ResourceCollection
+    public function getByCategoryID(Category $category) : ResourceCollection
     {
         return ProductResource::collection(
             Product::where('category', $category->id)
                 ->get()
+        );
+    }
+
+    /**
+     * Get all products of a specific category
+     *
+     * @param Tag $tag
+     * @return ResourceCollection
+     */
+    public function getByTagID(Tag $tag) : ResourceCollection
+    {
+        return ProductResource::collection(
+            $tag->products
+        );
+    }
+
+    /**
+     * Get all products of a specific tag name
+     *
+     * @param string $name
+     * @return ResourceCollection
+     */
+    public function getByTagName(string $name) : ResourceCollection
+    {
+        return ProductResource::collection(
+            Tag::where('name', $name)->first()->products
+        );
+    }
+
+    /**
+     * Get all products of a specific tag name
+     *
+     * @param string $search
+     * @return ResourceCollection
+     */
+    public function productSearch(string $search) : ResourceCollection
+    {
+        $search_results = Product::where('name', 'LIKE', '%'.$search.'%')->limit(1)->get();
+
+        return ProductResource::collection(
+            $search_results
         );
     }
 
