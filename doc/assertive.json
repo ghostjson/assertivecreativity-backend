@@ -132,8 +132,13 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "name",
+									"key": "first_name",
 									"value": "new_user_name",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "last_name",
 									"type": "text"
 								},
 								{
@@ -144,6 +149,24 @@
 								{
 									"key": "password",
 									"value": "new_password",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2132123",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "company_details",
+									"value": "asdasdasdas",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "profession",
+									"value": "asdasdasd",
+									"description": "optional",
 									"type": "text"
 								}
 							]
@@ -172,8 +195,13 @@
 									"mode": "formdata",
 									"formdata": [
 										{
-											"key": "name",
+											"key": "first_name",
 											"value": "new_user_name",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "last_name",
 											"type": "text"
 										},
 										{
@@ -184,6 +212,24 @@
 										{
 											"key": "password",
 											"value": "new_password",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "2132123",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "company_details",
+											"value": "asdasdasdas",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "profession",
+											"value": "asdasdasd",
+											"description": "optional",
 											"type": "text"
 										}
 									]
@@ -211,11 +257,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:03:02 GMT"
+									"value": "Sat, 03 Oct 2020 15:33:39 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:03:02 GMT"
+									"value": "Sat, 03 Oct 2020 15:33:39 GMT"
 								},
 								{
 									"key": "Connection",
@@ -247,7 +293,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdXNlciIsImlhdCI6MTYwMTM4MDk4MiwiZXhwIjoxNjAxMzg0NTgyLCJuYmYiOjE2MDEzODA5ODIsImp0aSI6ImREVW1Qd01qQUh3QlNrb2IiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LuGP8kubexKvi4YWIPGMib1pF9qUA1qZERvDsDfbJGQ\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdXNlciIsImlhdCI6MTYwMTczOTIxOSwiZXhwIjoxNjAxNzQyODE5LCJuYmYiOjE2MDE3MzkyMTksImp0aSI6Imc5Qzl3MTNnWU92c1V4Y2MiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KHQFiFB-ruwxpNLzwpXHSsHDX1Yplt_k2caqrHVQNfE\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
 						}
 					]
 				},
