@@ -4,6 +4,21 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @property mixed id
+ * @property mixed name
+ * @property mixed basePrice
+ * @property mixed description
+ * @property mixed image
+ * @property mixed priceTable
+ * @property mixed priceTableMode
+ * @property mixed sales
+ * @property mixed serial
+ * @property mixed customForms
+ * @property mixed category
+ * @property mixed seller_id
+ * @property mixed created_at
+ */
 class ProductResource extends JsonResource
 {
     /**
@@ -14,6 +29,21 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+//        return parent::toArray($request);
+        return [
+          'id' => $this->id,
+          'name' => $this->name,
+          'basePrice' => $this->basePrice,
+          'description' => $this->description,
+          'image' => $this->image,
+          'priceTable' => $this->priceTable,
+          'priceTableMode' => $this->priceTableMode,
+          'sales' => $this->sales,
+          'serial' => $this->serial,
+          'customForms'=> json_decode($this->customForms),
+          'category' => $this->category,
+          'seller_id' => $this->seller_id,
+          'created_at' => $this->created_at
+        ];
     }
 }
