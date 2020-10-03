@@ -83,7 +83,8 @@ class User extends Authenticatable implements JWTSubject
     public static function createUser(array $user) : User
     {
         $u = new User;
-        $u->name = $user['name'];
+        $u->first_name = $user['first_name'];
+        $u->last_name = $user['last_name'];
         $u->email = $user['email'];
         $u->password = $user['password'];
         $u->company_details = $user['company_details'];
