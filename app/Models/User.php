@@ -32,7 +32,8 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
@@ -87,9 +88,9 @@ class User extends Authenticatable implements JWTSubject
         $u->last_name = $user['last_name'];
         $u->email = $user['email'];
         $u->password = $user['password'];
-        $u->company_details = $user['company_details'];
-        $u->profession = $user['profession'];
-        $u->phone = $user['phone'];
+        $u->company_details = in_array('company_details', $user) ? $user['company_details'] : null;
+        $u->profession = in_array('profession', $user) ? $user['profession'] : null;
+        $u->phone = in_array('phone', $user) ? $user['phone'] : null;
         $u->role_id = Role::getUserRoleID();
         $u->save();
 
@@ -108,9 +109,9 @@ class User extends Authenticatable implements JWTSubject
         $u->lastname_name = $user['last_name'];
         $u->email = $user['email'];
         $u->password = $user['password'];
-        $u->company_details = $user['company_details'];
-        $u->profession = $user['profession'];
-        $u->phone = $user['phone'];
+        $u->company_details = in_array('company_details', $user) ? $user['company_details'] : null;
+        $u->profession = in_array('profession', $user) ? $user['profession'] : null;
+        $u->phone = in_array('phone', $user) ? $user['phone'] : null;
         $u->role_id = Role::getVendorRoleID();
         $u->save();
 
