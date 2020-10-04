@@ -89,6 +89,11 @@ class ProductController extends Controller
         if($this->isOwner($product))
         {
             $product->update($request->validated());
+            return respond('Successfully updated product');
+        }
+        else
+        {
+            return respond('Unauthorized', 401);
         }
     }
 

@@ -1164,7 +1164,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5NjA3MCwiZXhwIjoxNjAxNzk5NjcwLCJuYmYiOjE2MDE3OTYwNzAsImp0aSI6InBTSDFOS1lLRlRlR3QwblQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vZ2_3HNOUHAZGd20IuK6qlTZDpV2EZ6OXSsrarUYpgg",
 								"type": "text"
 							},
 							{
@@ -1234,26 +1234,27 @@
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/api/products",
+							"raw": "{{base_url}}/api/products/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
-								"products"
+								"products",
+								"1"
 							]
 						},
 						"description": "Update an existing product\r\n\r\nPermission: Vendor"
 					},
 					"response": [
 						{
-							"name": "Store Product",
+							"name": "Update Product",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5NjA3MCwiZXhwIjoxNjAxNzk5NjcwLCJuYmYiOjE2MDE3OTYwNzAsImp0aSI6InBTSDFOS1lLRlRlR3QwblQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vZ2_3HNOUHAZGd20IuK6qlTZDpV2EZ6OXSsrarUYpgg",
 										"type": "text"
 									},
 									{
@@ -1323,13 +1324,14 @@
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/api/products",
+									"raw": "{{base_url}}/api/products/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
-										"products"
+										"products",
+										"1"
 									]
 								}
 							},
@@ -1343,11 +1345,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:26:42 GMT"
+									"value": "Sun, 04 Oct 2020 07:24:42 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:26:42 GMT"
+									"value": "Sun, 04 Oct 2020 07:24:42 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1379,7 +1381,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"message\": \"successfully created\"\n}"
+							"body": "{\n    \"message\": \"Successfully updated product\"\n}"
 						}
 					]
 				},

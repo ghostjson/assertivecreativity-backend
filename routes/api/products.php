@@ -8,7 +8,7 @@ Route::get('', [ProductController::class, 'index']);
 Route::post('', [ProductController::class, 'store']);
 Route::get('{product}', [ProductController::class, 'show']);
 Route::delete('{product}', [ProductController::class, 'destroy']);
-Route::patch('{product}', [ProductController::class, 'update']);
+Route::post('{product}', [ProductController::class, 'update']);
 
 //search
 Route::get('search/{search}', [ProductController::class, 'productSearch']);

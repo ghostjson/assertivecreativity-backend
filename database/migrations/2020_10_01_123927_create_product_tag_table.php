@@ -19,6 +19,9 @@ class CreateProductTagTable extends Migration
             $table->foreignId('product_id')->constrained();
             $table->foreignId('tag_id')->constrained();
 
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
