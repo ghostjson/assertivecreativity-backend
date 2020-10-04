@@ -30,6 +30,16 @@ class Product extends Model
 
     }
 
+    public function setPriceTableAttribute($value)
+    {
+        $this->attributes['price_table'] = json_encode($value);
+    }
+
+    public function setCustomFormsAttribute($value)
+    {
+        $this->attributes['custom_forms'] = json_encode($value);
+    }
+
 
     /**
      * Get all tags of this products

@@ -16,6 +16,7 @@ Route::get('search/{search}', [ProductController::class, 'productSearch']);
 
 //category
 
+Route::post('categories/create', [ProductController::class, 'storeCategory']);
 Route::post('categories', [ProductController::class, 'storeCategory']);
 Route::get('categories/get', [ProductController::class, 'getAllCategory']);
 Route::get('categories/{category}', [ProductController::class, 'getByCategoryID']);

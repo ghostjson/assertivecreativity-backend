@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4a775c28-817a-4a08-bc80-3331fe2c1dcd",
+		"_postman_id": "33a595e0-9f91-4034-90f2-0a98f41420bb",
 		"name": "Asserive Creativity",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -935,7 +935,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTgxOTcyMSwiZXhwIjoxNjAxODIzMzIxLCJuYmYiOjE2MDE4MTk3MjEsImp0aSI6IllnN2dsY0gwaEdIblRSWW4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.GMzQnC2kv7CiQXWaSBGoHE2IvZhFC_vf2uVFocyFuNU",
 								"type": "text"
 							},
 							{
@@ -945,64 +945,13 @@
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "new_product",
-									"type": "text"
-								},
-								{
-									"key": "basePrice",
-									"value": "10",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "some test description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"value": "url of the image",
-									"type": "text"
-								},
-								{
-									"key": "priceTable",
-									"value": "priceTable",
-									"type": "text"
-								},
-								{
-									"key": "priceTableMode",
-									"value": "priceTablemode",
-									"type": "text"
-								},
-								{
-									"key": "sales",
-									"value": "100",
-									"type": "text"
-								},
-								{
-									"key": "serial",
-									"value": "AF123A",
-									"type": "text"
-								},
-								{
-									"key": "stock",
-									"value": "1000",
-									"type": "text"
-								},
-								{
-									"key": "customForm",
-									"value": "{json here}",
-									"type": "text"
-								},
-								{
-									"key": "category",
-									"value": "2",
-									"type": "text"
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"dsdf\",\n  \"serial\": \"sdfsdfaaa\",\n  \"description\": \"sdfsdf\",\n  \"category\": 1,\n  \"base_price\": 229,\n  \"stock\": 324,\n  \"sales\": 0,\n  \"image\": \"/assets/images/demo-product-images/1.jpg\",\n  \"price_table_mode\": false,\n  \"price_table\": [\n    { \"label\": null, \"pricePerPiece\": null, \"quantity\": null, \"relation\": null }\n  ],\n  \"custom_forms\": [\n    {\n      \"id\": 0,\n      \"title\": \"dsfsdf\",\n      \"parentForm\": null,\n      \"options\": [\n        {\n          \"type\": \"color\",\n          \"title\": \"dfsdf\",\n          \"name\": \"Colors\",\n          \"meta\": { \"isChained\": false },\n          \"inputs\": [\n            {\n              \"label\": \"sdfs\",\n              \"value\": \"#987633\",\n              \"chainedOptions\": [\n                {\n                  \"type\": \"dropdown\",\n                  \"title\": \"dfsdf\",\n                  \"name\": \"Dropdown Selection\",\n                  \"meta\": { \"isChained\": true },\n                  \"inputs\": [\n                    { \"label\": \"sdfsdf\", \"value\": \"sdfsdf\" },\n                    { \"label\": \"sdfsdf\", \"value\": \"sdfsdf\" }\n                  ]\n                }\n              ],\n              \"selectedChainedOption\": \"dropdown\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "{{base_url}}/api/products",
@@ -1692,7 +1641,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTgyMTU5MCwiZXhwIjoxNjAxODI1MTkwLCJuYmYiOjE2MDE4MjE1OTAsImp0aSI6IjFxYVJHNzNxT28xZWVOejEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.cSseKnquCNPPP9IrNuE_fHSg6QIWHTVM5vwWsd5pKtc",
 								"type": "text"
 							}
 						],
@@ -1701,20 +1650,21 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "new_category",
+									"value": "new_category12",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/api/products/categories",
+							"raw": "{{base_url}}/api/products/categories/create",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"products",
-								"categories"
+								"categories",
+								"create"
 							]
 						},
 						"description": "Get all products of a specific category"

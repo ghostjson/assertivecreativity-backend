@@ -17,15 +17,15 @@ class CreateProductsTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->integer('basePrice');
+            $table->integer('base_price');
             $table->string('description');
             $table->string('image');
-            $table->json('priceTable')->nullable();
-            $table->boolean('priceTableMode');
+            $table->json('price_table')->nullable();
+            $table->boolean('price_table_mode');
             $table->integer('sales');
             $table->string('serial')->unique();
             $table->integer('stock');
-            $table->json('customForms')->nullable();
+            $table->json('custom_forms')->nullable();
 
             $table->bigInteger('category')->unsigned();
             $table->bigInteger('seller_id')->unsigned();
