@@ -17,6 +17,7 @@ class AdminAuthMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        return auth()->user()->isAdmin() ? $next($request) : abort(401);
+        $is_admin = is_null(auth()->user()) ? false : auth()->user()->isAdmin();
+        return $is_admin ? $next($request) : respond('Unauthorized', 401);
     }
 }

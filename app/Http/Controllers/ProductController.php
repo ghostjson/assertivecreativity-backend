@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\VendorAuthMiddleware;
 use App\Http\Requests\ProductStoreRequest;
 use App\Http\Requests\ProductUpdateRequest;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\StoreTagRequest;
+use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\TagResource;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Role;
@@ -25,7 +30,11 @@ class ProductController extends Controller
 
         $this->middleware([
             VendorAuthMiddleware::class
-        ])->only(['store', 'destroy']);
+        ])->only(['store', 'destroy', 'update']);
+
+        $this->middleware([
+           AdminAuthMiddleware::class
+        ])->only(['storeCategory', 'updateCategory', 'storeTag', 'updateTag']);
     }
 
     /**
@@ -112,6 +121,17 @@ class ProductController extends Controller
 
 
     /**
+     * Get all Categories
+     *
+     * @return ResourceCollection
+     */
+    public function getAllCategory() : ResourceCollection
+    {
+        return CategoryResource::collection(Category::all());
+    }
+
+
+    /**
      * Get all products of a specific category
      *
      * @param Category $category
@@ -123,6 +143,66 @@ class ProductController extends Controller
             Product::where('category', $category->id)
                 ->get()
         );
+    }
+
+    /**
+     * Get all tags associated with a category
+     * @param Category $category
+     * @return ResourceCollection
+     */
+    public function getTagsAssociatedWithCategory(Category $category) : ResourceCollection
+    {
+        return TagResource::collection($category->tags());
+    }
+
+    /**
+     * Create a new category
+     * @param StoreCategoryRequest $request
+     * @return JsonResponse
+     */
+    public function storeCategory(StoreCategoryRequest $request) : JsonResponse
+    {
+        Category::create($request->validated());
+        return respond('Successfully created category');
+    }
+
+    /**
+     * update an existing category
+     * @param StoreCategoryRequest $request
+     * @param Category $category
+     * @return JsonResponse
+     */
+    public function updateCategory(StoreCategoryRequest $request, Category $category) : JsonResponse
+    {
+        $category->update($request->validated());
+        return respond('Successfully updated category');
+    }
+
+    /**
+     * Store a new tag
+     *
+     * @param StoreTagRequest $request
+     * @return JsonResponse
+     */
+    public function storeTag(StoreTagRequest $request) : JsonResponse
+    {
+        Tag::create($request->validated());
+
+        return respond('Successfully created tag');
+    }
+
+    /**
+     * Store a new tag
+     *
+     * @param StoreTagRequest $request
+     * @param Tag $tag
+     * @return JsonResponse
+     */
+    public function updateTag(StoreTagRequest $request, Tag $tag) : JsonResponse
+    {
+        $tag->update($request->validated());
+
+        return respond('Successfully updated tag');
     }
 
     /**

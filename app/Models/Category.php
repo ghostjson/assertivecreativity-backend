@@ -8,12 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property mixed id
+ * @method static create(array $validated)
  */
 class Category extends Model
 {
     use HasFactory;
 
     protected $table = 'categories';
+
+    protected $guarded = [];
 
     /**
      * Return the tags related to this category

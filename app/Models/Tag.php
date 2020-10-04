@@ -10,11 +10,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static where(string $string, $id, string $optional='')
+ * @method static create(array $validated)
  * @property mixed products
  */
 class Tag extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
 
 
     /**
