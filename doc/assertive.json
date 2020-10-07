@@ -755,6 +755,992 @@
 			"name": "Products",
 			"item": [
 				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "List Categories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/products/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List Categories",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/api/products/categories",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 05:55:58 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 05:55:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"culpa\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"provident\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"quis\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"inventore\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"voluptatum\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"natus\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"asperiores\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"cum\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"sed\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"vel\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Product By Category ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/categories/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories",
+										"2"
+									]
+								},
+								"description": "Get all products of a specific category"
+							},
+							"response": [
+								{
+									"name": "Get Product By Category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/products/category/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"category",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 29 Sep 2020 13:48:36 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 29 Sep 2020 13:48:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"ex\",\n            \"basePrice\": \"740\",\n            \"description\": \"Velit et omnis eaque sint quia. Ipsa sed aut libero aliquam soluta. Deleniti id rerum ad vel.\",\n            \"image\": \"https://lorempixel.com/640/480/?63054\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"155\",\n            \"serial\": \"6a908e25-7566-3bd5-82dd-79be09ba543d\",\n            \"stock\": \"92\",\n            \"customForms\": \"\",\n            \"category\": \"1\",\n            \"seller_id\": \"8\",\n            \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n            \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"qui\",\n            \"basePrice\": \"4203\",\n            \"description\": \"Nobis est voluptas dolore. Dicta est alias et voluptatem provident exercitationem sunt. Cumque fuga magnam quaerat vitae expedita et. Eum cupiditate ipsa sit doloremque quaerat repellendus.\",\n            \"image\": \"https://lorempixel.com/640/480/?41798\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"107\",\n            \"serial\": \"4260bbfb-e810-3b69-87eb-dea7fa09cf0a\",\n            \"stock\": \"398\",\n            \"customForms\": \"\",\n            \"category\": \"1\",\n            \"seller_id\": \"6\",\n            \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n            \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Store Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjAwMTE5MiwiZXhwIjoxNjAyMDA0NzkyLCJuYmYiOjE2MDIwMDExOTIsImp0aSI6IlRIdG9JVDRUVmw0MTF3S2MiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ZKlIYdbnIeSMrBsseb3_RZyXHw4RukuqnX3GKOm28oo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new_category12",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "hello world",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/products/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories"
+									]
+								},
+								"description": "Get all products of a specific category"
+							},
+							"response": [
+								{
+									"name": "Store Category",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "new_category",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/products/categories",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:20:46 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:20:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "55"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Successfully created category\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new_category",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/products/categories/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories",
+										"1"
+									]
+								},
+								"description": "Get all products of a specific category"
+							},
+							"response": [
+								{
+									"name": "Update Category",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"type": "text",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "new_category",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/products/categories/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"categories",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:48:42 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:48:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Successfully updated category\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Tag Associated With a Category",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/products/categories/tags/6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories",
+										"tags",
+										"6"
+									]
+								},
+								"description": "Get all products of a specific category"
+							},
+							"response": [
+								{
+									"name": "Get Tag Associated With a Category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/api/products/categories/tags/6",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"categories",
+												"tags",
+												"6"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:04:57 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:04:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"libero\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"rerum\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"praesentium\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Tags",
+					"item": [
+						{
+							"name": "Get Product By Tag ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/tag/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"tag",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Product By Tag",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/products/tag/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"tag",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Oct 2020 12:58:15 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Oct 2020 12:58:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"vel\",\n            \"basePrice\": \"247\",\n            \"description\": \"Qui quasi aut delectus vero praesentium aliquam. Sed quia cumque velit voluptatem enim et voluptatem ea. Et incidunt autem autem odit et. Aut veniam consectetur eaque sapiente.\",\n            \"image\": \"https://lorempixel.com/640/480/?29598\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"57\",\n            \"serial\": \"69dd5b64-384f-3c87-9fbe-dde1988e46e6\",\n            \"stock\": \"124\",\n            \"customForms\": \"\",\n            \"category\": \"4\",\n            \"seller_id\": \"10\",\n            \"created_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"updated_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"pivot\": {\n                \"tag_id\": \"10\",\n                \"product_id\": \"4\"\n            }\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Store Tag",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "tag1",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/products/tag",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"tag"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Store Tag",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "tag1",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/products/tag",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"tag"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:56:11 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 06:56:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Successfully created tag\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Tag",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "tag1",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/products/tag/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"tag",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Tag",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "tag1",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/products/tag/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"tag",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 07:01:37 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 04 Oct 2020 07:01:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Successfully updated tag\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Product By Tag Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": [
+								{
+									"name": "Get Product By Tag Name",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/products/tag/name/a",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"tag",
+												"name",
+												"a"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Oct 2020 13:06:12 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 01 Oct 2020 13:06:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "55"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 10,\n            \"name\": \"non\",\n            \"basePrice\": \"1821\",\n            \"description\": \"Quos error dignissimos aliquid ea sit earum. Soluta in quia quia est sed pariatur a. Recusandae occaecati ut est inventore reprehenderit.\",\n            \"image\": \"https://lorempixel.com/640/480/?56958\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"25\",\n            \"serial\": \"da78791e-17fd-35d5-b981-9baed9760a50\",\n            \"stock\": \"991\",\n            \"customForms\": \"\",\n            \"category\": \"10\",\n            \"seller_id\": \"4\",\n            \"created_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"updated_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"pivot\": {\n                \"tag_id\": \"7\",\n                \"product_id\": \"10\"\n            }\n        }\n    ]\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "List Products",
 					"request": {
 						"method": "GET",
@@ -935,7 +1921,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5NzQ0MCwiZXhwIjoxNjAxODAxMDQwLCJuYmYiOjE2MDE3OTc0NDAsImp0aSI6IjUxRVJ1MzJ6bEJsS1YzeVMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B85XJ2wpLJVOQf1u7-ROEaEHivsrfztj7JGINLTM_7o",
 								"type": "text"
 							},
 							{
@@ -1392,7 +2378,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5NjA3MCwiZXhwIjoxNjAxNzk5NjcwLCJuYmYiOjE2MDE3OTYwNzAsImp0aSI6InBTSDFOS1lLRlRlR3QwblQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vZ2_3HNOUHAZGd20IuK6qlTZDpV2EZ6OXSsrarUYpgg",
 								"type": "text"
 							},
 							{
@@ -1402,14 +2388,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/products/3",
+							"raw": "{{base_url}}/api/products/8",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"products",
-								"3"
+								"8"
 							]
 						},
 						"description": "Delete a product"
@@ -1494,975 +2480,6 @@
 					]
 				},
 				{
-					"name": "List Categories",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}/api/products/categories/get",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"categories",
-								"get"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "List Categories",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{base_url}}/api/products/categories/get",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"categories",
-										"get"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 05:55:58 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 05:55:58 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "57"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"culpa\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"provident\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"quis\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"inventore\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"voluptatum\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"natus\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"asperiores\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"cum\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"sed\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"vel\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Product By Category ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/api/products/categories/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"categories",
-								"1"
-							]
-						},
-						"description": "Get all products of a specific category"
-					},
-					"response": [
-						{
-							"name": "Get Product By Category",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/api/products/category/1",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"category",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 29 Sep 2020 13:48:36 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 29 Sep 2020 13:48:36 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "56"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"ex\",\n            \"basePrice\": \"740\",\n            \"description\": \"Velit et omnis eaque sint quia. Ipsa sed aut libero aliquam soluta. Deleniti id rerum ad vel.\",\n            \"image\": \"https://lorempixel.com/640/480/?63054\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"155\",\n            \"serial\": \"6a908e25-7566-3bd5-82dd-79be09ba543d\",\n            \"stock\": \"92\",\n            \"customForms\": \"\",\n            \"category\": \"1\",\n            \"seller_id\": \"8\",\n            \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n            \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"qui\",\n            \"basePrice\": \"4203\",\n            \"description\": \"Nobis est voluptas dolore. Dicta est alias et voluptatem provident exercitationem sunt. Cumque fuga magnam quaerat vitae expedita et. Eum cupiditate ipsa sit doloremque quaerat repellendus.\",\n            \"image\": \"https://lorempixel.com/640/480/?41798\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"107\",\n            \"serial\": \"4260bbfb-e810-3b69-87eb-dea7fa09cf0a\",\n            \"stock\": \"398\",\n            \"customForms\": \"\",\n            \"category\": \"1\",\n            \"seller_id\": \"6\",\n            \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n            \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Store Category",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "new_category",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/api/products/categories",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"categories"
-							]
-						},
-						"description": "Get all products of a specific category"
-					},
-					"response": [
-						{
-							"name": "Store Category",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "name",
-											"value": "new_category",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/api/products/categories",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"categories"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:20:46 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:20:46 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "55"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully created category\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Update Category",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "new_category",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/api/products/categories/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"categories",
-								"1"
-							]
-						},
-						"description": "Get all products of a specific category"
-					},
-					"response": [
-						{
-							"name": "Update Category",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "Authorization",
-										"type": "text",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "name",
-											"value": "new_category",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/api/products/categories/1",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"categories",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:48:42 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:48:42 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully updated category\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Product By Tag ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/api/products/tag/10",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"tag",
-								"10"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Get Product By Tag",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/api/products/tag/10",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"tag",
-										"10"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 01 Oct 2020 12:58:15 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 01 Oct 2020 12:58:15 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"vel\",\n            \"basePrice\": \"247\",\n            \"description\": \"Qui quasi aut delectus vero praesentium aliquam. Sed quia cumque velit voluptatem enim et voluptatem ea. Et incidunt autem autem odit et. Aut veniam consectetur eaque sapiente.\",\n            \"image\": \"https://lorempixel.com/640/480/?29598\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"57\",\n            \"serial\": \"69dd5b64-384f-3c87-9fbe-dde1988e46e6\",\n            \"stock\": \"124\",\n            \"customForms\": \"\",\n            \"category\": \"4\",\n            \"seller_id\": \"10\",\n            \"created_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"updated_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"pivot\": {\n                \"tag_id\": \"10\",\n                \"product_id\": \"4\"\n            }\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Store Tag",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "tag1",
-									"type": "text"
-								},
-								{
-									"key": "category_id",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/api/products/tag",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"tag"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Store Tag",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "name",
-											"value": "tag1",
-											"type": "text"
-										},
-										{
-											"key": "category_id",
-											"value": "1",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/api/products/tag",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"tag"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:56:11 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:56:11 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully created tag\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Update Tag",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "tag1",
-									"type": "text"
-								},
-								{
-									"key": "category_id",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/api/products/tag/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"tag",
-								"1"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Update Tag",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5MjI0NywiZXhwIjoxNjAxNzk1ODQ3LCJuYmYiOjE2MDE3OTIyNDcsImp0aSI6InhaMGtzbjFIampwOFR3SjUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K7YyImkg3k0FPr6wlkf9uuhnZZ5_2lY6wgJGikpVquM",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "name",
-											"value": "tag1",
-											"type": "text"
-										},
-										{
-											"key": "category_id",
-											"value": "1",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/api/products/tag/1",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"tag",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 07:01:37 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 07:01:37 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully updated tag\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Product By Tag Name",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": ""
-						}
-					},
-					"response": [
-						{
-							"name": "Get Product By Tag Name",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/api/products/tag/name/a",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"tag",
-										"name",
-										"a"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 01 Oct 2020 13:06:12 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 01 Oct 2020 13:06:12 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "55"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 10,\n            \"name\": \"non\",\n            \"basePrice\": \"1821\",\n            \"description\": \"Quos error dignissimos aliquid ea sit earum. Soluta in quia quia est sed pariatur a. Recusandae occaecati ut est inventore reprehenderit.\",\n            \"image\": \"https://lorempixel.com/640/480/?56958\",\n            \"priceTable\": \"\",\n            \"priceTableMode\": \"\",\n            \"sales\": \"25\",\n            \"serial\": \"da78791e-17fd-35d5-b981-9baed9760a50\",\n            \"stock\": \"991\",\n            \"customForms\": \"\",\n            \"category\": \"10\",\n            \"seller_id\": \"4\",\n            \"created_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"updated_at\": \"2020-10-01T12:56:32.000000Z\",\n            \"pivot\": {\n                \"tag_id\": \"7\",\n                \"product_id\": \"10\"\n            }\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Tag Associated With a Category",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}/api/products/categories/tags/6",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"products",
-								"categories",
-								"tags",
-								"6"
-							]
-						},
-						"description": "Get all products of a specific category"
-					},
-					"response": [
-						{
-							"name": "Get Tag Associated With a Category",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{base_url}}/api/products/categories/tags/6",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"products",
-										"categories",
-										"tags",
-										"6"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:04:57 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 04 Oct 2020 06:04:57 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"libero\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"rerum\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"praesentium\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
 					"name": "Product Search",
 					"request": {
 						"method": "GET",
@@ -2489,6 +2506,237 @@
 		{
 			"name": "Orders",
 			"item": [
+				{
+					"name": "Wishlist",
+					"item": [
+						{
+							"name": "List Products in Wishlist",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjA4MzMwMCwiZXhwIjoxNjAyMDg2OTAwLCJuYmYiOjE2MDIwODMzMDAsImp0aSI6ImtwY2VlOWt6Vjl0Z0I5TlgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3MF-pAOk0ix5myjdN1W6w1Gca3VbDHcBkzVYWbH3OhM",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/orders/wishlist",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"wishlist"
+									]
+								},
+								"description": "Get all products in the wishlist"
+							},
+							"response": []
+						},
+						{
+							"name": "Add product to wishlist",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjA4MjE2NSwiZXhwIjoxNjAyMDg1NzY1LCJuYmYiOjE2MDIwODIxNjUsImp0aSI6ImpBSU91WlpseVhPaHNyQk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BLUuvvcDLbghT-oQ9-1Y94KHVR6oi-fHHjruzWokzA8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "quantity",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/orders/wishlist",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"wishlist"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add product to wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjA4MjE2NSwiZXhwIjoxNjAyMDg1NzY1LCJuYmYiOjE2MDIwODIxNjUsImp0aSI6ImpBSU91WlpseVhPaHNyQk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BLUuvvcDLbghT-oQ9-1Y94KHVR6oi-fHHjruzWokzA8",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "quantity",
+													"value": "10",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/orders/wishlist",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												"wishlist"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Oct 2020 15:16:32 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Oct 2020 15:16:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Successfully added product to wishlist\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a product from wishlist",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/orders/wishlist",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"wishlist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Clear Wishlist",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/orders/wishlist",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"wishlist"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
 				{
 					"name": "Make Order",
 					"request": {
