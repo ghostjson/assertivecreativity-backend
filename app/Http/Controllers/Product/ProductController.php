@@ -59,7 +59,7 @@ class ProductController extends Controller
         $validated['seller_id'] = auth()->id();
 
         Product::create($validated);
-
+        
         return respond('successfully created');
     }
 
