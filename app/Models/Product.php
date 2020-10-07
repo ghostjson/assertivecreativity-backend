@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed id
  * @method static create(array $validated)
  * @method static where(string $string, $id, $optional='')
+ * @method static find($toArray)
  */
 class Product extends Model
 {
