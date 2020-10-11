@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Log;
  * @property string order_status
  * @property int product_id
  * @method static find($order_id)
+ * @method static where(string $string, int|string|null $id)
  */
 class Order extends Model
 {
@@ -45,6 +46,16 @@ class Order extends Model
             return false;
         }
 
+    }
+
+    public function setOrderAttribute($value)
+    {
+        $this->attributes['order'] = json_encode($value);
+    }
+
+    public function getOrderAttribute($value)
+    {
+        return json_decode($value);
     }
 
     /**

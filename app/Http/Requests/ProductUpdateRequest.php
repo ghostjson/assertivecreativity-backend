@@ -26,15 +26,15 @@ class ProductUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'basePrice' => 'required',
+            'base_price' => 'required',
             'description' => 'required',
             'image' => 'required',
-            'priceTable' => 'nullable',
-            'priceTableMode' => 'required',
+            'price_table' => 'nullable',
+            'price_table_mode' => 'required',
             'sales' => 'nullable',
             'serial' => 'required',
             'stock' => 'required',
-            'customForms' => 'nullable',
+            'custom_forms' => 'nullable',
             'category' => 'required',
 
         ];

@@ -27,20 +27,6 @@ class Wishlist extends Model
     }
 
     /**
-     * Get all products on the wishlist
-     * @return Collection
-     */
-    public static function getProducts() : Collection
-    {
-        return Product::find(
-            Wishlist::where('user_id', auth()->id())
-                ->get()
-                ->pluck('product_id')
-                ->toArray()
-        );
-    }
-
-    /**
      * Remove given product from wishlist
      * @param Product $product
      * @return bool

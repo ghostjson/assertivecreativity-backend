@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
 use App\Http\Requests\StoreWishlistRequest;
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\WishlistResource;
 use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Http\JsonResponse;
@@ -27,9 +28,7 @@ class WishlistController extends Controller
      */
     public function index() : ResourceCollection
     {
-        return ProductResource::collection(
-            Wishlist::getProducts()
-        );
+        return WishlistResource::collection(Wishlist::all());
     }
 
     /**

@@ -41,6 +41,17 @@ class Product extends Model
         $this->attributes['custom_forms'] = json_encode($value);
     }
 
+    public function getCustomFormsAttribute($value)
+    {
+        return json_decode(json_decode($value));
+    }
+
+    public function getPriceTableAttribute($value)
+    {
+        return json_decode(json_decode($value));
+    }
+
+
 
     /**
      * Get all tags of this products

@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Order;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
 use App\Http\Requests\OrderStoreRequest;
+use App\Http\Resources\OrderResource;
 use App\Models\Order;
-use App\Models\Product;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class OrderController extends Controller
 {
@@ -19,6 +19,31 @@ class OrderController extends Controller
         ]);
     }
 
+
+    /**
+     * Return all orders of a current user
+     * @return ResourceCollection
+     */
+    public function index() : ResourceCollection
+    {
+        return OrderResource::collection(
+            Order::where('buyer_id', auth()->id())
+                ->get()
+        );
+    }
+
+    /**
+     * Return all orders respect to vendor
+     * @return ResourceCollection
+     */
+    public function indexVendor() : ResourceCollection
+    {
+        return OrderResource::collection(
+            Order::where('seller_id', auth()->id())
+                ->get()
+        );
+    }
+
     /**
      * Create a new order
      * @param OrderStoreRequest $order
@@ -26,8 +51,10 @@ class OrderController extends Controller
      */
     public function store(OrderStoreRequest $order) : JsonResponse
     {
+
         return Order::new($order->validated()) ?
             respond('Successfully placed order') :
             respond('Error placing order', 500);
     }
+
 }

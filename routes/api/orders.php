@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('', [OrderController::class, 'store']);
+Route::get('', [OrderController::class, 'index']);
+Route::get('vendor', [OrderController::class, 'indexVendor']);
 
 // wishlist
 Route::post('wishlist', [WishlistController::class, 'store']);

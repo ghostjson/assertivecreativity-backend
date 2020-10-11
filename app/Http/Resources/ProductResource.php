@@ -40,7 +40,7 @@ class ProductResource extends JsonResource
           'price_table_mode' => $this->price_table_mode,
           'sales' => $this->sales,
           'serial' => $this->serial,
-          'custom_forms'=> json_decode($this->custom_forms),
+          'custom_forms'=> $this->custom_forms,
           'category' => $this->category,
           'seller_id' => $this->seller_id,
           'created_at' => $this->created_at
