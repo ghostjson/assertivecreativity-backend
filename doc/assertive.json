@@ -2570,7 +2570,7 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjA4MjE2NSwiZXhwIjoxNjAyMDg1NzY1LCJuYmYiOjE2MDIwODIxNjUsImp0aSI6ImpBSU91WlpseVhPaHNyQk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BLUuvvcDLbghT-oQ9-1Y94KHVR6oi-fHHjruzWokzA8",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
 										"type": "text"
 									}
 								],
@@ -2579,12 +2579,17 @@
 									"formdata": [
 										{
 											"key": "product_id",
-											"value": "2",
+											"value": "1",
 											"type": "text"
 										},
 										{
 											"key": "quantity",
 											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "custom_forms",
+											"value": "{json string here}",
 											"type": "text"
 										}
 									]
@@ -2614,7 +2619,7 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjA4MjE2NSwiZXhwIjoxNjAyMDg1NzY1LCJuYmYiOjE2MDIwODIxNjUsImp0aSI6ImpBSU91WlpseVhPaHNyQk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BLUuvvcDLbghT-oQ9-1Y94KHVR6oi-fHHjruzWokzA8",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
 												"type": "text"
 											}
 										],
@@ -2629,6 +2634,11 @@
 												{
 													"key": "quantity",
 													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "custom_forms",
+													"value": "{json string here}",
 													"type": "text"
 												}
 											]
@@ -2655,11 +2665,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Wed, 07 Oct 2020 15:16:32 GMT"
+											"value": "Sun, 11 Oct 2020 10:55:00 GMT"
 										},
 										{
 											"key": "Date",
-											"value": "Wed, 07 Oct 2020 15:16:32 GMT"
+											"value": "Sun, 11 Oct 2020 10:55:00 GMT"
 										},
 										{
 											"key": "Connection",
@@ -2744,7 +2754,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
 								"type": "text"
 							},
 							{
@@ -2763,7 +2773,7 @@
 								},
 								{
 									"key": "order",
-									"value": "{asdfasdfaslf kajsdf alsdfjlksjadlf}",
+									"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
 									"type": "text"
 								}
 							]
@@ -2872,6 +2882,205 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Successfully placed order\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Current User Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Current User Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/orders/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"2\",\n            \"product_id\": \"1\",\n            \"order\": \"{asdfasdfaslf kajsdf alsdfjlksjadlf}\",\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-11T10:41:21.000000Z\",\n            \"updated_at\": \"2020-10-11T10:41:21.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Orders For Vendor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders/vendor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"vendor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Current User Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/orders/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"2\",\n            \"product_id\": \"1\",\n            \"order\": \"{asdfasdfaslf kajsdf alsdfjlksjadlf}\",\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-11T10:41:21.000000Z\",\n            \"updated_at\": \"2020-10-11T10:41:21.000000Z\"\n        }\n    ]\n}"
 						}
 					]
 				}
