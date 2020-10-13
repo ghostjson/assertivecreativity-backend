@@ -25,7 +25,8 @@ class OrderStoreRequest extends FormRequest
     {
         return [
             'product_id' => 'required',
-            'order' => 'required'
+            'order' => 'required',
+            'delivery_date' => 'nullable'
         ];
     }
 }

@@ -7,6 +7,7 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Requests\OrderStoreRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
+use App\Models\Role;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
@@ -16,6 +17,10 @@ class OrderController extends Controller
     {
         $this->middleware([
             Authenticate::class
+        ]);
+
+        $this->middleware([
+
         ]);
     }
 
@@ -55,6 +60,30 @@ class OrderController extends Controller
         return Order::new($order->validated()) ?
             respond('Successfully placed order') :
             respond('Error placing order', 500);
+    }
+
+    /**
+     * Return specific order
+     * @param Order $order
+     */
+    public function show(Order $order)
+    {
+        if($this->isOwner($order)){
+            return new OrderResource($order);
+        }
+        else{
+            return respond('Unauthorized', 401);
+        }
+    }
+
+    /**
+     *
+     * @param Order $order
+     * @return bool
+     */
+    private function isOwner(Order $order) : bool
+    {
+        return (auth()->id() == $order->buyer_id) || (auth()->id() == $order->seller_id) || Role::getAdminRoleID();
     }
 
 }

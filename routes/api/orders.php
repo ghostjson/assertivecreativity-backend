@@ -7,9 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('', [OrderController::class, 'store']);
-Route::get('', [OrderController::class, 'index']);
-Route::get('vendor', [OrderController::class, 'indexVendor']);
+
 
 // wishlist
 Route::post('wishlist', [WishlistController::class, 'store']);
@@ -21,3 +19,10 @@ Route::delete('wishlist', [WishlistController::class, 'clear']);
 // THREADS
 
 Route::post('thread', [ThreadController::class, 'send']);
+
+
+// orders
+Route::post('', [OrderController::class, 'store']);
+Route::get('', [OrderController::class, 'index']);
+Route::get('{order}', [OrderController::class, 'show']);
+Route::get('vendor', [OrderController::class, 'indexVendor']);

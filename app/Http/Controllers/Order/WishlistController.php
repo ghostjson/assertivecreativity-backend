@@ -7,10 +7,12 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Requests\StoreWishlistRequest;
 use App\Http\Resources\ProductResource;
 use App\Http\Resources\WishlistResource;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;
+use Ramsey\Collection\Collection;
 
 class WishlistController extends Controller
 {
@@ -26,9 +28,15 @@ class WishlistController extends Controller
      * Return all products in the wishlist
      * @return ResourceCollection
      */
-    public function index() : ResourceCollection
+    public function index() : JsonResponse
     {
-        return WishlistResource::collection(Wishlist::all());
+        $products = Wishlist::where('user_id', auth()->id())->get();
+
+
+        return response()->json([
+            'data' => $products,
+            'total_price' => $this->sumOfProducts($products)
+        ]);
     }
 
     /**
@@ -69,5 +77,18 @@ class WishlistController extends Controller
         {
             return respond('Error occur during deletion', 500);
         }
+    }
+
+    private function sumOfProducts(\Illuminate\Database\Eloquent\Collection $products) : int
+    {
+
+        $total = 0;
+
+        foreach ($products as $product)
+        {
+            $total += (int) $product->product->base_price * (int) $product->quantity;
+        }
+
+        return $total;
     }
 }

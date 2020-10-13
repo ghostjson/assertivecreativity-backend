@@ -22,6 +22,8 @@ class CreateOrdersTable extends Migration
 
             $table->json('order');
 
+            $table->date('delivery_date')->nullable();
+
             $table->string('order_status');
             $table->string('payment_id')->nullable();
 

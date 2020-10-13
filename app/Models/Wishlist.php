@@ -45,6 +45,10 @@ class Wishlist extends Model
         }
     }
 
+    /**
+     * Clear every product in the card
+     * @return bool
+     */
     public static function clear()
     {
         try {

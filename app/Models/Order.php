@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Log;
  * @property int seller_id
  * @property string order_status
  * @property int product_id
+ * @property mixed delivery_date
  * @method static find($order_id)
  * @method static where(string $string, int|string|null $id)
  */
@@ -34,6 +36,7 @@ class Order extends Model
         $order->order = $data['order'];
         $order->seller_id = Product::find($data['product_id'])->seller_id;
         $order->order_status = 'open';
+        $order->delivery_date = $data['delivery_date'];
 
 
         try{
@@ -55,7 +58,7 @@ class Order extends Model
 
     public function getOrderAttribute($value)
     {
-        return json_decode($value);
+        return json_decode(json_decode($value));
     }
 
     /**
@@ -85,5 +88,7 @@ class Order extends Model
     {
         return $this->belongsTo('App\Models\Product', 'product_id', 'id');
     }
+
+
 
 }
