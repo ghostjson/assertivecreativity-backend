@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
 
             $table->bigInteger('product_id')->unsigned();
 
-            $table->json('order');
+            $table->json('data');
 
             $table->date('delivery_date')->nullable();
 

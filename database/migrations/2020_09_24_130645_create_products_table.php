@@ -27,7 +27,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock');
             $table->json('custom_forms')->nullable();
 
-            $table->bigInteger('category')->unsigned();
+            $table->bigInteger('category_id')->unsigned();
             $table->bigInteger('seller_id')->unsigned();
 
             $table->timestamps();

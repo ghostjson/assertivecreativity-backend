@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property mixed seller_id
@@ -43,15 +44,19 @@ class Product extends Model
 
     public function getCustomFormsAttribute($value)
     {
-        return json_decode(json_decode($value));
+        return json_decode($value);
     }
 
     public function getPriceTableAttribute($value)
     {
-        return json_decode(json_decode($value));
+        return json_decode($value);
     }
 
 
+    public function category() : BelongsTo
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 
     /**
      * Get all tags of this products

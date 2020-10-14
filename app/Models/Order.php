@@ -33,9 +33,9 @@ class Order extends Model
         $order = new Order;
         $order->buyer_id = auth()->id();
         $order->product_id = $data['product_id'];
-        $order->order = $data['order'];
+        $order->data = $data['data'];
         $order->seller_id = Product::find($data['product_id'])->seller_id;
-        $order->order_status = 'open';
+        $order->order_status = 'pending'; # pending/accepted/completed/cancelled
         $order->delivery_date = $data['delivery_date'];
 
 
@@ -51,14 +51,14 @@ class Order extends Model
 
     }
 
-    public function setOrderAttribute($value)
+    public function setDataAttribute($value)
     {
-        $this->attributes['order'] = json_encode($value);
+        $this->attributes['data'] = json_encode($value);
     }
 
-    public function getOrderAttribute($value)
+    public function getDataAttribute($value)
     {
-        return json_decode(json_decode($value));
+        return json_decode($value);
     }
 
     /**
