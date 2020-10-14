@@ -35,7 +35,7 @@ class ProductStoreRequest extends FormRequest
             'serial' => 'required',
             'stock' => 'required',
             'custom_forms' => 'nullable',
-            'category' => 'required',
+            'category_id' => 'required',
 
         ];
     }

@@ -1921,7 +1921,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTc5NzQ0MCwiZXhwIjoxNjAxODAxMDQwLCJuYmYiOjE2MDE3OTc0NDAsImp0aSI6IjUxRVJ1MzJ6bEJsS1YzeVMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B85XJ2wpLJVOQf1u7-ROEaEHivsrfztj7JGINLTM_7o",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2MzUzNCwiZXhwIjoxNjAyNjY3MTM0LCJuYmYiOjE2MDI2NjM1MzQsImp0aSI6Ikxtb1dDRlladlpQWUJadmMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Yjs7NaZC-HyUGSiF0hNAbaQE1hZ93mLn3wAoALMrVo4",
 								"type": "text"
 							},
 							{
@@ -1939,7 +1939,7 @@
 									"type": "text"
 								},
 								{
-									"key": "basePrice",
+									"key": "base_price",
 									"value": "10",
 									"type": "text"
 								},
@@ -1954,12 +1954,12 @@
 									"type": "text"
 								},
 								{
-									"key": "priceTable",
+									"key": "price_table",
 									"value": "priceTable",
 									"type": "text"
 								},
 								{
-									"key": "priceTableMode",
+									"key": "price_table_mode",
 									"value": "priceTablemode",
 									"type": "text"
 								},
@@ -1979,7 +1979,7 @@
 									"type": "text"
 								},
 								{
-									"key": "customForm",
+									"key": "custom_forms",
 									"value": "{json here}",
 									"type": "text"
 								},
@@ -2010,7 +2010,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTM4MDg1MiwiZXhwIjoxNjAxMzg0NDUyLCJuYmYiOjE2MDEzODA4NTIsImp0aSI6IllGZU5BcmVOaHd1TVgzTnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Mk78_L-FENk4O9mHfrdncNQGtbQGTeFvryTf8bQQn3U",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2MzUzNCwiZXhwIjoxNjAyNjY3MTM0LCJuYmYiOjE2MDI2NjM1MzQsImp0aSI6Ikxtb1dDRlladlpQWUJadmMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Yjs7NaZC-HyUGSiF0hNAbaQE1hZ93mLn3wAoALMrVo4",
 										"type": "text"
 									},
 									{
@@ -2028,7 +2028,7 @@
 											"type": "text"
 										},
 										{
-											"key": "basePrice",
+											"key": "base_price",
 											"value": "10",
 											"type": "text"
 										},
@@ -2043,12 +2043,12 @@
 											"type": "text"
 										},
 										{
-											"key": "priceTable",
+											"key": "price_table",
 											"value": "priceTable",
 											"type": "text"
 										},
 										{
-											"key": "priceTableMode",
+											"key": "price_table_mode",
 											"value": "priceTablemode",
 											"type": "text"
 										},
@@ -2068,7 +2068,7 @@
 											"type": "text"
 										},
 										{
-											"key": "customForm",
+											"key": "custom_forms",
 											"value": "{json here}",
 											"type": "text"
 										},
@@ -2100,11 +2100,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:26:42 GMT"
+									"value": "Wed, 14 Oct 2020 08:19:55 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:26:42 GMT"
+									"value": "Wed, 14 Oct 2020 08:19:55 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2519,7 +2519,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjA4MzMwMCwiZXhwIjoxNjAyMDg2OTAwLCJuYmYiOjE2MDIwODMzMDAsImp0aSI6ImtwY2VlOWt6Vjl0Z0I5TlgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3MF-pAOk0ix5myjdN1W6w1Gca3VbDHcBkzVYWbH3OhM",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2NzAyNCwiZXhwIjoxNjAyNjcwNjI0LCJuYmYiOjE2MDI2NjcwMjQsImp0aSI6IkJSTXBtTENmUlNCSDZjbkIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEm9jY1-q3OqznqmyNrKGgu1URQSewNTBxaNdhTRFiQ",
 										"type": "text"
 									},
 									{
@@ -2556,7 +2556,99 @@
 								},
 								"description": "Get all products in the wishlist"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "List Products in Wishlist",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2NzAyNCwiZXhwIjoxNjAyNjcwNjI0LCJuYmYiOjE2MDI2NjcwMjQsImp0aSI6IkJSTXBtTENmUlNCSDZjbkIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEm9jY1-q3OqznqmyNrKGgu1URQSewNTBxaNdhTRFiQ",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/orders/wishlist",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												"wishlist"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Oct 2020 09:21:21 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Oct 2020 09:21:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "42"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 5,\n            \"product_id\": \"4\",\n            \"user_id\": \"1\",\n            \"quantity\": \"1\",\n            \"custom_forms_entry\": null,\n            \"created_at\": \"2020-10-14T09:19:28.000000Z\",\n            \"updated_at\": \"2020-10-14T09:19:28.000000Z\",\n            \"product\": {\n                \"id\": 4,\n                \"name\": \"eos\",\n                \"base_price\": \"3566\",\n                \"description\": \"Illo sit eos labore rerum accusamus. Ullam odit ea voluptate molestiae. In aut voluptatum in. Rerum corrupti doloribus dolorem accusantium.\",\n                \"image\": \"https://lorempixel.com/640/480/?64766\",\n                \"price_table\": \"\",\n                \"price_table_mode\": \"\",\n                \"sales\": \"40\",\n                \"serial\": \"39429485-0982-3e02-b5c5-79835da7a978\",\n                \"stock\": \"721\",\n                \"custom_forms\": [\n                    {\n                        \"id\": 0,\n                        \"title\": \"rgegdf\",\n                        \"parentForm\": null,\n                        \"options\": [\n                            {\n                                \"type\": \"radioBtn\",\n                                \"title\": \"dfgdfg\",\n                                \"name\": \"Radio Buttons\",\n                                \"meta\": {\n                                    \"isChained\": false\n                                },\n                                \"inputs\": [\n                                    {\n                                        \"label\": \"dfgdfg\",\n                                        \"value\": \"dfgdfg\",\n                                        \"chained_options\": [],\n                                        \"selectedChainedOption\": null\n                                    },\n                                    {\n                                        \"label\": \"dfgdfg\",\n                                        \"value\": \"dfgdfg\",\n                                        \"chained_options\": [],\n                                        \"selectedChainedOption\": null\n                                    }\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"category\": \"5\",\n                \"seller_id\": \"11\",\n                \"created_at\": \"2020-10-14T08:51:10.000000Z\",\n                \"updated_at\": \"2020-10-14T08:51:10.000000Z\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"product_id\": \"4\",\n            \"user_id\": \"1\",\n            \"quantity\": \"1\",\n            \"custom_forms_entry\": null,\n            \"created_at\": \"2020-10-14T09:21:00.000000Z\",\n            \"updated_at\": \"2020-10-14T09:21:00.000000Z\",\n            \"product\": {\n                \"id\": 4,\n                \"name\": \"eos\",\n                \"base_price\": \"3566\",\n                \"description\": \"Illo sit eos labore rerum accusamus. Ullam odit ea voluptate molestiae. In aut voluptatum in. Rerum corrupti doloribus dolorem accusantium.\",\n                \"image\": \"https://lorempixel.com/640/480/?64766\",\n                \"price_table\": \"\",\n                \"price_table_mode\": \"\",\n                \"sales\": \"40\",\n                \"serial\": \"39429485-0982-3e02-b5c5-79835da7a978\",\n                \"stock\": \"721\",\n                \"custom_forms\": [\n                    {\n                        \"id\": 0,\n                        \"title\": \"rgegdf\",\n                        \"parentForm\": null,\n                        \"options\": [\n                            {\n                                \"type\": \"radioBtn\",\n                                \"title\": \"dfgdfg\",\n                                \"name\": \"Radio Buttons\",\n                                \"meta\": {\n                                    \"isChained\": false\n                                },\n                                \"inputs\": [\n                                    {\n                                        \"label\": \"dfgdfg\",\n                                        \"value\": \"dfgdfg\",\n                                        \"chained_options\": [],\n                                        \"selectedChainedOption\": null\n                                    },\n                                    {\n                                        \"label\": \"dfgdfg\",\n                                        \"value\": \"dfgdfg\",\n                                        \"chained_options\": [],\n                                        \"selectedChainedOption\": null\n                                    }\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"category\": \"5\",\n                \"seller_id\": \"11\",\n                \"created_at\": \"2020-10-14T08:51:10.000000Z\",\n                \"updated_at\": \"2020-10-14T08:51:10.000000Z\"\n            }\n        }\n    ],\n    \"total_price\": 7132\n}"
+								}
+							]
 						},
 						{
 							"name": "Add product to wishlist",
@@ -2570,29 +2662,18 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2NzAyNCwiZXhwIjoxNjAyNjcwNjI0LCJuYmYiOjE2MDI2NjcwMjQsImp0aSI6IkJSTXBtTENmUlNCSDZjbkIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEm9jY1-q3OqznqmyNrKGgu1URQSewNTBxaNdhTRFiQ",
 										"type": "text"
 									}
 								],
 								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "product_id",
-											"value": "1",
-											"type": "text"
-										},
-										{
-											"key": "quantity",
-											"value": "10",
-											"type": "text"
-										},
-										{
-											"key": "custom_forms",
-											"value": "{json string here}",
-											"type": "text"
+									"mode": "raw",
+									"raw": " {\r\n    \"id\": 3,\r\n    \"product_id\": \"4\",\r\n    \"user_id\": \"1\",\r\n    \"quantity\": \"1\",\r\n    \"custom_forms_entry\": null,\r\n    \"created_at\": \"2020-10-14T09:16:49.000000Z\",\r\n    \"updated_at\": \"2020-10-14T09:16:49.000000Z\",\r\n    \"product\": {\r\n        \"id\": 4,\r\n        \"name\": \"eos\",\r\n        \"base_price\": \"3566\",\r\n        \"description\": \"Illo sit eos labore rerum accusamus. Ullam odit ea voluptate molestiae. In aut voluptatum in. Rerum corrupti doloribus dolorem accusantium.\",\r\n        \"image\": \"https://lorempixel.com/640/480/?64766\",\r\n        \"price_table\": \"\",\r\n        \"price_table_mode\": \"\",\r\n        \"sales\": \"40\",\r\n        \"serial\": \"39429485-0982-3e02-b5c5-79835da7a978\",\r\n        \"stock\": \"721\",\r\n        \"custom_forms\": [\r\n            {\r\n                \"id\": 0,\r\n                \"title\": \"rgegdf\",\r\n                \"parentForm\": null,\r\n                \"options\": [\r\n                    {\r\n                        \"type\": \"radioBtn\",\r\n                        \"title\": \"dfgdfg\",\r\n                        \"name\": \"Radio Buttons\",\r\n                        \"meta\": {\r\n                            \"isChained\": false\r\n                        },\r\n                        \"inputs\": [\r\n                            {\r\n                                \"label\": \"dfgdfg\",\r\n                                \"value\": \"dfgdfg\",\r\n                                \"chained_options\": [],\r\n                                \"selectedChainedOption\": null\r\n                            },\r\n                            {\r\n                                \"label\": \"dfgdfg\",\r\n                                \"value\": \"dfgdfg\",\r\n                                \"chained_options\": [],\r\n                                \"selectedChainedOption\": null\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"category\": \"5\",\r\n        \"seller_id\": \"11\",\r\n        \"created_at\": \"2020-10-14T08:51:10.000000Z\",\r\n        \"updated_at\": \"2020-10-14T08:51:10.000000Z\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
 										}
-									]
+									}
 								},
 								"url": {
 									"raw": "{{base_url}}/api/orders/wishlist",
@@ -2619,7 +2700,7 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxODQ3MSwiZXhwIjoxNjAyNjIyMDcxLCJuYmYiOjE2MDI2MTg0NzEsImp0aSI6ImNjckxTS25WakxEcHdONU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ToW3o5CKBpOylH5GAxZyBoX8wE47JErwyWNJaUJJ0gU",
 												"type": "text"
 											}
 										],
@@ -2628,7 +2709,7 @@
 											"formdata": [
 												{
 													"key": "product_id",
-													"value": "2",
+													"value": "1",
 													"type": "text"
 												},
 												{
@@ -2637,7 +2718,7 @@
 													"type": "text"
 												},
 												{
-													"key": "custom_forms",
+													"key": "custom_forms_entry",
 													"value": "{json string here}",
 													"type": "text"
 												}
@@ -2665,11 +2746,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 11 Oct 2020 10:55:00 GMT"
+											"value": "Tue, 13 Oct 2020 19:53:18 GMT"
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 11 Oct 2020 10:55:00 GMT"
+											"value": "Tue, 13 Oct 2020 19:53:18 GMT"
 										},
 										{
 											"key": "Connection",
@@ -2693,7 +2774,7 @@
 										},
 										{
 											"key": "X-RateLimit-Remaining",
-											"value": "59"
+											"value": "58"
 										},
 										{
 											"key": "Access-Control-Allow-Origin",
@@ -2709,26 +2790,153 @@
 							"name": "Delete a product from wishlist",
 							"request": {
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
 								"url": {
-									"raw": "{{base_url}}/api/orders/wishlist",
+									"raw": "{{base_url}}/api/orders/wishlist/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"orders",
-										"wishlist"
+										"wishlist",
+										"1"
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "Delete a product from wishlist",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product_id",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/orders/wishlist/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"orders",
+												"wishlist",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 13 Oct 2020 19:01:05 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 13 Oct 2020 19:01:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Successfully deleted\"\n}"
+								}
+							]
 						},
 						{
 							"name": "Clear Wishlist",
 							"request": {
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
 								"url": {
 									"raw": "{{base_url}}/api/orders/wishlist",
 									"host": [
@@ -2754,7 +2962,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
 								"type": "text"
 							},
 							{
@@ -2774,6 +2982,11 @@
 								{
 									"key": "order",
 									"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
+									"type": "text"
+								},
+								{
+									"key": "delivery_date",
+									"value": "2020-10-15",
 									"type": "text"
 								}
 							]
@@ -2799,7 +3012,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
 										"type": "text"
 									},
 									{
@@ -2818,7 +3031,12 @@
 										},
 										{
 											"key": "order",
-											"value": "{asdfasdfaslf kajsdf alsdfjlksjadlf}",
+											"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
+											"type": "text"
+										},
+										{
+											"key": "delivery_date",
+											"value": "2020-10-15",
 											"type": "text"
 										}
 									]
@@ -2845,11 +3063,108 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 30 Sep 2020 10:33:30 GMT"
+									"value": "Tue, 13 Oct 2020 18:55:09 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 30 Sep 2020 10:33:30 GMT"
+									"value": "Tue, 13 Oct 2020 18:55:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully placed order\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Current User Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2ODUwNiwiZXhwIjoxNjAyNjcyMTA2LCJuYmYiOjE2MDI2Njg1MDYsImp0aSI6ImZpWkh6MkplRWZNQ3dGcEciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OdsfuPKshaEoaevShRdd2vGC816dFfsxTSu8rLvOvk4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Current User Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/orders/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Oct 2020 18:57:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Oct 2020 18:57:09 GMT"
 								},
 								{
 									"key": "Connection",
@@ -2881,104 +3196,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully placed order\"\n}"
-						}
-					]
-				},
-				{
-					"name": "List Current User Orders",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}/api/orders/",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"orders",
-								""
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "List Current User Orders",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{base_url}}/api/orders/",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"api",
-										"orders",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.10"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "56"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"2\",\n            \"product_id\": \"1\",\n            \"order\": \"{asdfasdfaslf kajsdf alsdfjlksjadlf}\",\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-11T10:41:21.000000Z\",\n            \"updated_at\": \"2020-10-11T10:41:21.000000Z\"\n        }\n    ]\n}"
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:48:32.000000Z\",\n            \"updated_at\": \"2020-10-13T18:48:32.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:49:05.000000Z\",\n            \"updated_at\": \"2020-10-13T18:49:05.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:49:45.000000Z\",\n            \"updated_at\": \"2020-10-13T18:49:45.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:51:19.000000Z\",\n            \"updated_at\": \"2020-10-13T18:51:19.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:52:37.000000Z\",\n            \"updated_at\": \"2020-10-13T18:52:37.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:52:43.000000Z\",\n            \"updated_at\": \"2020-10-13T18:52:43.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:53:35.000000Z\",\n            \"updated_at\": \"2020-10-13T18:53:35.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:53:40.000000Z\",\n            \"updated_at\": \"2020-10-13T18:53:40.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": null,\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:54:06.000000Z\",\n            \"updated_at\": \"2020-10-13T18:54:06.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"5\",\n            \"product_id\": \"1\",\n            \"order\": {\n                \"product_id\": 12,\n                \"order\": {\n                    \"name\": \"new product\",\n                    \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                    \"base_price\": \"0\",\n                    \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                    \"custom_forms\": [\n                        {\n                            \"id\": 0,\n                            \"title\": \"First Form\",\n                            \"parent_form\": null,\n                            \"options\": [\n                                {\n                                    \"type\": \"radioBtn\",\n                                    \"title\": \"Select a gender\",\n                                    \"name\": \"Radio Buttons\",\n                                    \"price\": null,\n                                    \"input\": \"female\",\n                                    \"meta\": {\n                                        \"isChained\": false,\n                                        \"chained_ops_hidden\": true\n                                    },\n                                    \"chained_options\": []\n                                }\n                            ]\n                        }\n                    ],\n                    \"cartId\": 0,\n                    \"totalPrice\": 0\n                }\n            },\n            \"delivery_date\": \"2020-10-15\",\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-13T18:55:09.000000Z\",\n            \"updated_at\": \"2020-10-13T18:55:09.000000Z\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -2990,7 +3208,7 @@
 							{
 								"key": "Authorization",
 								"type": "text",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc"
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o"
 							},
 							{
 								"key": "Accept",
@@ -3010,27 +3228,66 @@
 							]
 						}
 					},
+					"response": []
+				},
+				{
+					"name": "Show A Perticular Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"1"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+									"disabled": true
+								}
+							]
+						}
+					},
 					"response": [
 						{
-							"name": "List Current User Orders",
+							"name": "Show A Perticular Order",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjQxMjg0NiwiZXhwIjoxNjAyNDE2NDQ2LCJuYmYiOjE2MDI0MTI4NDYsImp0aSI6Ik12ZVBPSWpzY3p2b1VwNEQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m7jOKnQsDVipAGC4XqJ--rbzhNkE2Dm8-1L4i11eLPc",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
 										"type": "text"
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/api/orders/",
+									"raw": "{{base_url}}/api/orders/1",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"orders",
-										""
+										"1"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+											"disabled": true
+										}
 									]
 								}
 							},
@@ -3044,11 +3301,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
+									"value": "Tue, 13 Oct 2020 19:09:12 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 11 Oct 2020 10:41:25 GMT"
+									"value": "Tue, 13 Oct 2020 19:09:12 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3072,7 +3329,7 @@
 								},
 								{
 									"key": "X-RateLimit-Remaining",
-									"value": "56"
+									"value": "59"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -3080,7 +3337,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"2\",\n            \"product_id\": \"1\",\n            \"order\": \"{asdfasdfaslf kajsdf alsdfjlksjadlf}\",\n            \"order_status\": \"open\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-11T10:41:21.000000Z\",\n            \"updated_at\": \"2020-10-11T10:41:21.000000Z\"\n        }\n    ]\n}"
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"buyer_id\": \"1\",\n        \"seller_id\": \"5\",\n        \"product_id\": \"1\",\n        \"order\": {\n            \"product_id\": 12,\n            \"order\": {\n                \"name\": \"new product\",\n                \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n                \"base_price\": \"0\",\n                \"image\": \"/assets/images/demo-product-images/1.jpg\",\n                \"custom_forms\": [\n                    {\n                        \"id\": 0,\n                        \"title\": \"First Form\",\n                        \"parent_form\": null,\n                        \"options\": [\n                            {\n                                \"type\": \"radioBtn\",\n                                \"title\": \"Select a gender\",\n                                \"name\": \"Radio Buttons\",\n                                \"price\": null,\n                                \"input\": \"female\",\n                                \"meta\": {\n                                    \"isChained\": false,\n                                    \"chained_ops_hidden\": true\n                                },\n                                \"chained_options\": []\n                            }\n                        ]\n                    }\n                ],\n                \"cartId\": 0,\n                \"totalPrice\": 0\n            }\n        },\n        \"delivery_date\": null,\n        \"order_status\": \"open\",\n        \"payment_id\": null,\n        \"created_at\": \"2020-10-13T18:48:32.000000Z\",\n        \"updated_at\": \"2020-10-13T18:48:32.000000Z\"\n    }\n}"
 						}
 					]
 				}
