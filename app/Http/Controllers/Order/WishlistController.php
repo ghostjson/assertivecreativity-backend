@@ -34,9 +34,14 @@ class WishlistController extends Controller
 
 
         return response()->json([
-            'data' => $products,
+            'data' => WishlistResource::collection($products),
             'total_price' => $this->sumOfProducts($products)
         ]);
+    }
+
+    public function show(Wishlist $wishlist)
+    {
+        return new WishlistResource($wishlist);
     }
 
     /**
@@ -49,6 +54,8 @@ class WishlistController extends Controller
         Wishlist::create($request->validated());
         return respond('Successfully added product to wishlist');
     }
+
+
 
     /**
      * Remove a product from wishlist

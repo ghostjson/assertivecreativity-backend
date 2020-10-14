@@ -26,6 +26,11 @@ class Wishlist extends Model
         });
     }
 
+    public function getProductAttribute()
+    {
+        return Product::find($this->product_id);
+    }
+
     /**
      * Remove given product from wishlist
      * @param Product $product
