@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\URL;
 
 /**
  * @property mixed seller_id
@@ -52,6 +53,10 @@ class Product extends Model
         return json_decode($value);
     }
 
+    public function getImageAttribute($value)
+    {
+        return URL::to('/storage/'.$value);
+    }
 
     public function category() : BelongsTo
     {

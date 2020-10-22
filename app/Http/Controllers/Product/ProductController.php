@@ -58,6 +58,8 @@ class ProductController extends Controller
 
         $validated['seller_id'] = auth()->id();
 
+        $validated['image'] = fileUploader($validated['image']);
+
         $product = Product::create($validated);
 
         return respondWithObject('successfully created', $product);
