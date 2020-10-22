@@ -56,9 +56,10 @@ class OrderController extends Controller
      */
     public function store(OrderStoreRequest $order) : JsonResponse
     {
+        $order = Order::new($order->validated()) ?? false;
 
-        return Order::new($order->validated()) ?
-            respond('Successfully placed order') :
+        return  $order ?
+            respondWithObject('Successfully placed order', $order) :
             respond('Error placing order', 500);
     }
 

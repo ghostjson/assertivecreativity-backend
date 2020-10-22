@@ -17,6 +17,7 @@ class CreateTagsTable extends Migration
             $table->id();
             $table->string('name');
             $table->bigInteger('category_id')->unsigned();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

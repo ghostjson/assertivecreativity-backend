@@ -29,8 +29,10 @@ class ThreadController extends Controller
      */
     public function send(ThreadSendRequest $request) : JsonResponse
     {
-        return Thread::send($request->validated()) ?
-            respond('Successfully send thread') :
+        $thread = Thread::send($request->validated()) ?? false;
+
+        return  $thread ?
+            respondWithObject('Successfully send thread', $thread) :
             respond('Failed to send thread', 500);
     }
 

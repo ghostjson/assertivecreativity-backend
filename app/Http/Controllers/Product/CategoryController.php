@@ -70,8 +70,8 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request) : JsonResponse
     {
-        Category::create($request->validated());
-        return respond('Successfully created category');
+        $category = Category::create($request->validated());
+        return respondWithObject('Successfully created category', $category);
     }
 
     /**
@@ -83,6 +83,22 @@ class CategoryController extends Controller
     public function update(StoreCategoryRequest $request, Category $category) : JsonResponse
     {
         $category->update($request->validated());
-        return respond('Successfully updated category');
+        return respondWithObject('Successfully updated category', $category);
+    }
+
+    /**
+     * delete category
+     * @param Category $category
+     * @return JsonResponse
+     */
+    public function destroy(Category $category) : JsonResponse
+    {
+        try{
+            $category->delete();
+            return respond('Category is successfully deleted');
+        }catch (\Exception $exception)
+        {
+            return respond('Error during deletion', 500);
+        }
     }
 }

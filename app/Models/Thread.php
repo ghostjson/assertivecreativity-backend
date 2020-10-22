@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -25,24 +26,38 @@ class Thread extends Model
      * @param array $data
      * @return bool
      */
-    public static function send(array $data) : bool
+    public static function send(array $data) : Thread
     {
-        $thread = new Thread;
+        $order = Order::find($data['order_id']);
 
-        $thread->sender_id = auth()->id();
-        $thread->receiver_id = $data['receiver_id'];
-        $thread->order_id = $data['order_id'];
-        $thread->message_content = $data['message_content'];
+        if(!is_null($order))
+            if(
+                $order->buyer_id == auth()->id() ||
+                $order->seller_id == auth()->id() ||
+                Auth::user()->isAdmin())
+            {
 
-        try{
-            $thread->save();
-            return true;
-        }
-        catch(\Exception $exception)
-        {
-            Log::error($exception);
-            return false;
-        }
+
+                $thread = new Thread;
+
+                $thread->sender_id = auth()->id();
+                $thread->receiver_id = $data['receiver_id'];
+                $thread->order_id = $data['order_id'];
+                $thread->message_content = $data['message_content'];
+
+                try{
+                    $thread->save();
+                    return $thread;
+                }
+                catch(\Exception $exception)
+                {
+                    Log::error($exception);
+                }
+            }
+
+
+        return false;
+
     }
 
     /**

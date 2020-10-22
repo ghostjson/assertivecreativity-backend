@@ -5,7 +5,7 @@ use Illuminate\Http\JsonResponse;
 if (!function_exists('respond')) {
 
     /**
-     * description
+     * respond helper used for returning a json message
      *
      * @param string $message
      * @param int $status

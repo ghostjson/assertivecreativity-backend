@@ -58,9 +58,9 @@ class ProductController extends Controller
 
         $validated['seller_id'] = auth()->id();
 
-        Product::create($validated);
-        
-        return respond('successfully created');
+        $product = Product::create($validated);
+
+        return respondWithObject('successfully created', $product);
     }
 
     /**
@@ -87,7 +87,7 @@ class ProductController extends Controller
         if($this->isOwner($product))
         {
             $product->update($request->validated());
-            return respond('Successfully updated product');
+            return respondWithObject('Successfully updated product', $product);
         }
         else
         {

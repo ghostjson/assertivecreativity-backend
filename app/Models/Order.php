@@ -30,7 +30,7 @@ class Order extends Model
      * @param $data
      * @return bool
      */
-    public static function new(array $data) : bool
+    public static function new(array $data) : Order
     {
         $order = new Order;
         $order->buyer_id = auth()->id();
@@ -43,12 +43,11 @@ class Order extends Model
 
         try{
             $order->save();
-            return true;
+            return $order;
         }
         catch(\Exception $exception)
         {
             Log::error($exception);
-            return false;
         }
 
     }

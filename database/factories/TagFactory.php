@@ -25,7 +25,8 @@ class TagFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-            'category_id' => Category::all()->random()->id
+            'category_id' => Category::all()->random()->id,
+            'description' => $this->faker->text
         ];
     }
 }

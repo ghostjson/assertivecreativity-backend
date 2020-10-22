@@ -11,6 +11,7 @@ Route::get('categories', [CategoryController::class, 'index']);
 Route::get('categories/{category}', [CategoryController::class, 'show']);
 Route::post('categories/{category}', [CategoryController::class, 'update']);
 Route::get('categories/tags/{category}', [CategoryController::class, 'tags']);
+Route::delete('categories/{category}', [CategoryController::class, 'destroy']);
 
 //wishlist
 
@@ -20,6 +21,8 @@ Route::post('tag', [TagController::class, 'store']);
 Route::post('tag/{tag}', [TagController::class, 'update']);
 Route::get('tag/{tag}', [TagController::class, 'show']);
 Route::get('tag/name/{name}', [TagController::class, 'showByName']);
+Route::get('tags', [TagController::class, 'index']);
+Route::delete('tags/{tag}', [TagController::class, 'destroy']);
 
 //search
 Route::get('search/{search}', [ProductController::class, 'productSearch']);
