@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 
 /**
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Log;
  * @property mixed receiver_id
  * @property mixed order_id
  * @property mixed message_content
+ * @method static where(string $string, $id)
  */
 class Thread extends Model
 {
@@ -28,7 +30,7 @@ class Thread extends Model
         $thread = new Thread;
 
         $thread->sender_id = auth()->id();
-        $thread->receiver_id = Order::find($data['order_id'])->seller_id;
+        $thread->receiver_id = $data['receiver_id'];
         $thread->order_id = $data['order_id'];
         $thread->message_content = $data['message_content'];
 
@@ -41,6 +43,20 @@ class Thread extends Model
             Log::error($exception);
             return false;
         }
+    }
+
+    /**
+     * Get messages of the current user by order id
+     * @param Order $order
+     * @return Collection
+     */
+    public static function getThreadsByOrder(Order $order) : Collection
+    {
+        return Thread::where('order_id', $order->id)
+            ->where(function ($query) use ($order) {
+                $query->where('sender_id', $order->id)
+                    ->orWhere('receiver_id', $order->id);
+            })->get();
     }
 
 
@@ -70,5 +86,15 @@ class Thread extends Model
     public function order() : BelongsTo
     {
         return $this->belongsTo('App\Models\Order', 'order_id', 'id');
+    }
+
+    /**
+     * Check if this thead is belong to this user
+     * @param int $user_id
+     * @return bool
+     */
+    public function isBelongsTo(int $user_id)
+    {
+        return $this->receiver_id == $user_id || $this->sender_id == $user_id;
     }
 }

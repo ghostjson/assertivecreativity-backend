@@ -22,8 +22,6 @@ class CreateThreadTable extends Migration
 
             $table->text('message_content');
 
-            $table->string('status')->default('reviewing');
-
             $table->timestamps();
         });
     }
