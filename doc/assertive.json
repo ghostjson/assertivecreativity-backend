@@ -2519,7 +2519,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2NzAyNCwiZXhwIjoxNjAyNjcwNjI0LCJuYmYiOjE2MDI2NjcwMjQsImp0aSI6IkJSTXBtTENmUlNCSDZjbkIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEm9jY1-q3OqznqmyNrKGgu1URQSewNTBxaNdhTRFiQ",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI",
 										"type": "text"
 									},
 									{
@@ -3105,7 +3105,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws",
 								"type": "text"
 							},
 							{
@@ -3123,7 +3123,7 @@
 									"type": "text"
 								},
 								{
-									"key": "order",
+									"key": "data",
 									"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
 									"type": "text"
 								},
@@ -3155,7 +3155,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws",
 										"type": "text"
 									},
 									{
@@ -3173,7 +3173,7 @@
 											"type": "text"
 										},
 										{
-											"key": "order",
+											"key": "data",
 											"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
 											"type": "text"
 										},
@@ -3206,11 +3206,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 13 Oct 2020 18:55:09 GMT"
+									"value": "Thu, 22 Oct 2020 11:03:03 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 13 Oct 2020 18:55:09 GMT"
+									"value": "Thu, 22 Oct 2020 11:03:03 GMT"
 								},
 								{
 									"key": "Connection",
@@ -3234,7 +3234,7 @@
 								},
 								{
 									"key": "X-RateLimit-Remaining",
-									"value": "59"
+									"value": "58"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -3253,7 +3253,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY2ODUwNiwiZXhwIjoxNjAyNjcyMTA2LCJuYmYiOjE2MDI2Njg1MDYsImp0aSI6ImZpWkh6MkplRWZNQ3dGcEciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OdsfuPKshaEoaevShRdd2vGC816dFfsxTSu8rLvOvk4",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI",
 								"type": "text"
 							}
 						],
@@ -3380,7 +3380,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI",
 								"type": "text"
 							}
 						],
@@ -3497,7 +3497,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMTQ2MTU5OCwiZXhwIjoxNjAxNDY1MTk4LCJuYmYiOjE2MDE0NjE1OTgsImp0aSI6Im9kMEdlck03ZHRJTGZvOU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-kHpWZE_jNEcwFx4UWS4pg6nKP17sj2LltmxTns3vf0",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws",
 								"type": "text"
 							},
 							{
@@ -3518,18 +3518,23 @@
 									"key": "message_content",
 									"value": "Some test message content",
 									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "2",
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/api/orders/thread",
+							"raw": "{{base_url}}/api/orders/threads",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								"thread"
+								"threads"
 							]
 						},
 						"description": "send a new thread"
@@ -3625,6 +3630,369 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Successfully send thread\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Thread By Order ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/orders/threads/order/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"threads",
+								"order",
+								"1"
+							]
+						},
+						"description": "send a new thread"
+					},
+					"response": [
+						{
+							"name": "Get Thread By Order ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/orders/threads/order/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"threads",
+										"order",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 11:17:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 11:17:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"sender\": {\n                \"id\": 1,\n                \"first_name\": \"admin\",\n                \"last_name\": \"acc\",\n                \"email\": \"admin@ac.com\",\n                \"email_verified_at\": null,\n                \"company_details\": null,\n                \"phone\": null,\n                \"profession\": null,\n                \"role_id\": \"1\",\n                \"created_at\": \"2020-10-22T10:51:39.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:39.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"first_name\": \"Kendrick\",\n                \"last_name\": \"Frami\",\n                \"email\": \"lindsey.durgan@example.com\",\n                \"email_verified_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"company_details\": \"json here\",\n                \"phone\": \"818.720.9241 x3717\",\n                \"profession\": \"iste\",\n                \"role_id\": \"2\",\n                \"created_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:40.000000Z\"\n            },\n            \"order_id\": {\n                \"id\": 1,\n                \"buyer_id\": \"1\",\n                \"seller_id\": \"4\",\n                \"product_id\": \"1\",\n                \"data\": \"{\\n    \\\"product_id\\\": 12,\\n    \\\"order\\\": {\\n        \\\"name\\\": \\\"new product\\\",\\n        \\\"description\\\": \\\"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\\\",\\n        \\\"base_price\\\": \\\"0\\\",\\n        \\\"image\\\": \\\"/assets/images/demo-product-images/1.jpg\\\",\\n        \\\"custom_forms\\\": [\\n            {\\n                \\\"id\\\": 0,\\n                \\\"title\\\": \\\"First Form\\\",\\n                \\\"parent_form\\\": null,\\n                \\\"options\\\": [\\n                    {\\n                        \\\"type\\\": \\\"radioBtn\\\",\\n                        \\\"title\\\": \\\"Select a gender\\\",\\n                        \\\"name\\\": \\\"Radio Buttons\\\",\\n                        \\\"price\\\": null,\\n                        \\\"input\\\": \\\"female\\\",\\n                        \\\"meta\\\": {\\n                            \\\"isChained\\\": false,\\n                            \\\"chained_ops_hidden\\\": true\\n                        },\\n                        \\\"chained_options\\\": []\\n                    }\\n                ]\\n            }\\n        ],\\n        \\\"cartId\\\": 0,\\n        \\\"totalPrice\\\": 0\\n    }\\n}\",\n                \"delivery_date\": \"2020-10-15\",\n                \"order_status\": \"pending\",\n                \"payment_id\": null,\n                \"created_at\": \"2020-10-22T11:03:03.000000Z\",\n                \"updated_at\": \"2020-10-22T11:03:03.000000Z\"\n            },\n            \"message_content\": \"Some test message content\",\n            \"created_at\": \"2020-10-22T11:05:39.000000Z\",\n            \"updated_at\": \"2020-10-22T11:05:39.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Thread By Order ID Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/orders/threads",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"threads"
+							]
+						},
+						"description": "send a new thread"
+					},
+					"response": [
+						{
+							"name": "Get Thread By Order ID Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/orders/threads",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"threads"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 11:30:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 11:30:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"sender\": {\n                \"id\": 1,\n                \"first_name\": \"admin\",\n                \"last_name\": \"acc\",\n                \"email\": \"admin@ac.com\",\n                \"email_verified_at\": null,\n                \"company_details\": null,\n                \"phone\": null,\n                \"profession\": null,\n                \"role_id\": \"1\",\n                \"created_at\": \"2020-10-22T10:51:39.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:39.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"first_name\": \"Kendrick\",\n                \"last_name\": \"Frami\",\n                \"email\": \"lindsey.durgan@example.com\",\n                \"email_verified_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"company_details\": \"json here\",\n                \"phone\": \"818.720.9241 x3717\",\n                \"profession\": \"iste\",\n                \"role_id\": \"2\",\n                \"created_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:40.000000Z\"\n            },\n            \"order_id\": {\n                \"id\": 1,\n                \"buyer_id\": \"1\",\n                \"seller_id\": \"4\",\n                \"product_id\": \"1\",\n                \"data\": \"{\\n    \\\"product_id\\\": 12,\\n    \\\"order\\\": {\\n        \\\"name\\\": \\\"new product\\\",\\n        \\\"description\\\": \\\"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\\\",\\n        \\\"base_price\\\": \\\"0\\\",\\n        \\\"image\\\": \\\"/assets/images/demo-product-images/1.jpg\\\",\\n        \\\"custom_forms\\\": [\\n            {\\n                \\\"id\\\": 0,\\n                \\\"title\\\": \\\"First Form\\\",\\n                \\\"parent_form\\\": null,\\n                \\\"options\\\": [\\n                    {\\n                        \\\"type\\\": \\\"radioBtn\\\",\\n                        \\\"title\\\": \\\"Select a gender\\\",\\n                        \\\"name\\\": \\\"Radio Buttons\\\",\\n                        \\\"price\\\": null,\\n                        \\\"input\\\": \\\"female\\\",\\n                        \\\"meta\\\": {\\n                            \\\"isChained\\\": false,\\n                            \\\"chained_ops_hidden\\\": true\\n                        },\\n                        \\\"chained_options\\\": []\\n                    }\\n                ]\\n            }\\n        ],\\n        \\\"cartId\\\": 0,\\n        \\\"totalPrice\\\": 0\\n    }\\n}\",\n                \"delivery_date\": \"2020-10-15\",\n                \"order_status\": \"pending\",\n                \"payment_id\": null,\n                \"created_at\": \"2020-10-22T11:03:03.000000Z\",\n                \"updated_at\": \"2020-10-22T11:03:03.000000Z\"\n            },\n            \"message_content\": \"oldie\",\n            \"created_at\": \"2009-02-26T05:33:20.000000Z\",\n            \"updated_at\": \"2009-02-26T04:26:40.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"sender\": {\n                \"id\": 1,\n                \"first_name\": \"admin\",\n                \"last_name\": \"acc\",\n                \"email\": \"admin@ac.com\",\n                \"email_verified_at\": null,\n                \"company_details\": null,\n                \"phone\": null,\n                \"profession\": null,\n                \"role_id\": \"1\",\n                \"created_at\": \"2020-10-22T10:51:39.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:39.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"first_name\": \"Kendrick\",\n                \"last_name\": \"Frami\",\n                \"email\": \"lindsey.durgan@example.com\",\n                \"email_verified_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"company_details\": \"json here\",\n                \"phone\": \"818.720.9241 x3717\",\n                \"profession\": \"iste\",\n                \"role_id\": \"2\",\n                \"created_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:40.000000Z\"\n            },\n            \"order_id\": {\n                \"id\": 1,\n                \"buyer_id\": \"1\",\n                \"seller_id\": \"4\",\n                \"product_id\": \"1\",\n                \"data\": \"{\\n    \\\"product_id\\\": 12,\\n    \\\"order\\\": {\\n        \\\"name\\\": \\\"new product\\\",\\n        \\\"description\\\": \\\"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\\\",\\n        \\\"base_price\\\": \\\"0\\\",\\n        \\\"image\\\": \\\"/assets/images/demo-product-images/1.jpg\\\",\\n        \\\"custom_forms\\\": [\\n            {\\n                \\\"id\\\": 0,\\n                \\\"title\\\": \\\"First Form\\\",\\n                \\\"parent_form\\\": null,\\n                \\\"options\\\": [\\n                    {\\n                        \\\"type\\\": \\\"radioBtn\\\",\\n                        \\\"title\\\": \\\"Select a gender\\\",\\n                        \\\"name\\\": \\\"Radio Buttons\\\",\\n                        \\\"price\\\": null,\\n                        \\\"input\\\": \\\"female\\\",\\n                        \\\"meta\\\": {\\n                            \\\"isChained\\\": false,\\n                            \\\"chained_ops_hidden\\\": true\\n                        },\\n                        \\\"chained_options\\\": []\\n                    }\\n                ]\\n            }\\n        ],\\n        \\\"cartId\\\": 0,\\n        \\\"totalPrice\\\": 0\\n    }\\n}\",\n                \"delivery_date\": \"2020-10-15\",\n                \"order_status\": \"pending\",\n                \"payment_id\": null,\n                \"created_at\": \"2020-10-22T11:03:03.000000Z\",\n                \"updated_at\": \"2020-10-22T11:03:03.000000Z\"\n            },\n            \"message_content\": \"asdffasfdaf\",\n            \"created_at\": \"2009-04-09T21:30:00.000000Z\",\n            \"updated_at\": \"2009-04-09T22:36:40.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"sender\": {\n                \"id\": 1,\n                \"first_name\": \"admin\",\n                \"last_name\": \"acc\",\n                \"email\": \"admin@ac.com\",\n                \"email_verified_at\": null,\n                \"company_details\": null,\n                \"phone\": null,\n                \"profession\": null,\n                \"role_id\": \"1\",\n                \"created_at\": \"2020-10-22T10:51:39.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:39.000000Z\"\n            },\n            \"receiver\": {\n                \"id\": 2,\n                \"first_name\": \"Kendrick\",\n                \"last_name\": \"Frami\",\n                \"email\": \"lindsey.durgan@example.com\",\n                \"email_verified_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"company_details\": \"json here\",\n                \"phone\": \"818.720.9241 x3717\",\n                \"profession\": \"iste\",\n                \"role_id\": \"2\",\n                \"created_at\": \"2020-10-22T10:51:40.000000Z\",\n                \"updated_at\": \"2020-10-22T10:51:40.000000Z\"\n            },\n            \"order_id\": {\n                \"id\": 1,\n                \"buyer_id\": \"1\",\n                \"seller_id\": \"4\",\n                \"product_id\": \"1\",\n                \"data\": \"{\\n    \\\"product_id\\\": 12,\\n    \\\"order\\\": {\\n        \\\"name\\\": \\\"new product\\\",\\n        \\\"description\\\": \\\"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\\\",\\n        \\\"base_price\\\": \\\"0\\\",\\n        \\\"image\\\": \\\"/assets/images/demo-product-images/1.jpg\\\",\\n        \\\"custom_forms\\\": [\\n            {\\n                \\\"id\\\": 0,\\n                \\\"title\\\": \\\"First Form\\\",\\n                \\\"parent_form\\\": null,\\n                \\\"options\\\": [\\n                    {\\n                        \\\"type\\\": \\\"radioBtn\\\",\\n                        \\\"title\\\": \\\"Select a gender\\\",\\n                        \\\"name\\\": \\\"Radio Buttons\\\",\\n                        \\\"price\\\": null,\\n                        \\\"input\\\": \\\"female\\\",\\n                        \\\"meta\\\": {\\n                            \\\"isChained\\\": false,\\n                            \\\"chained_ops_hidden\\\": true\\n                        },\\n                        \\\"chained_options\\\": []\\n                    }\\n                ]\\n            }\\n        ],\\n        \\\"cartId\\\": 0,\\n        \\\"totalPrice\\\": 0\\n    }\\n}\",\n                \"delivery_date\": \"2020-10-15\",\n                \"order_status\": \"pending\",\n                \"payment_id\": null,\n                \"created_at\": \"2020-10-22T11:03:03.000000Z\",\n                \"updated_at\": \"2020-10-22T11:03:03.000000Z\"\n            },\n            \"message_content\": \"Some test message content\",\n            \"created_at\": \"2020-10-22T11:05:39.000000Z\",\n            \"updated_at\": \"2020-10-22T11:05:39.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Thread By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/orders/threads/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"threads",
+								"2"
+							]
+						},
+						"description": "send a new thread"
+					},
+					"response": [
+						{
+							"name": "Get Thread By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2MzU3OSwiZXhwIjoxNjAzMzY3MTc5LCJuYmYiOjE2MDMzNjM1NzksImp0aSI6InJkTUhKSzQxWmw4VDlSRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Od5VS9d4Npo0RCHFV_iQ4O_erK-zrrXe1DzpcqYNcws"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/orders/threads/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"threads",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 11:38:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 11:38:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"sender\": {\n            \"id\": 1,\n            \"first_name\": \"admin\",\n            \"last_name\": \"acc\",\n            \"email\": \"admin@ac.com\",\n            \"email_verified_at\": null,\n            \"company_details\": null,\n            \"phone\": null,\n            \"profession\": null,\n            \"role_id\": \"1\",\n            \"created_at\": \"2020-10-22T10:51:39.000000Z\",\n            \"updated_at\": \"2020-10-22T10:51:39.000000Z\"\n        },\n        \"receiver\": {\n            \"id\": 2,\n            \"first_name\": \"Kendrick\",\n            \"last_name\": \"Frami\",\n            \"email\": \"lindsey.durgan@example.com\",\n            \"email_verified_at\": \"2020-10-22T10:51:40.000000Z\",\n            \"company_details\": \"json here\",\n            \"phone\": \"818.720.9241 x3717\",\n            \"profession\": \"iste\",\n            \"role_id\": \"2\",\n            \"created_at\": \"2020-10-22T10:51:40.000000Z\",\n            \"updated_at\": \"2020-10-22T10:51:40.000000Z\"\n        },\n        \"order_id\": {\n            \"id\": 1,\n            \"buyer_id\": \"1\",\n            \"seller_id\": \"4\",\n            \"product_id\": \"1\",\n            \"data\": \"{\\n    \\\"product_id\\\": 12,\\n    \\\"order\\\": {\\n        \\\"name\\\": \\\"new product\\\",\\n        \\\"description\\\": \\\"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\\\",\\n        \\\"base_price\\\": \\\"0\\\",\\n        \\\"image\\\": \\\"/assets/images/demo-product-images/1.jpg\\\",\\n        \\\"custom_forms\\\": [\\n            {\\n                \\\"id\\\": 0,\\n                \\\"title\\\": \\\"First Form\\\",\\n                \\\"parent_form\\\": null,\\n                \\\"options\\\": [\\n                    {\\n                        \\\"type\\\": \\\"radioBtn\\\",\\n                        \\\"title\\\": \\\"Select a gender\\\",\\n                        \\\"name\\\": \\\"Radio Buttons\\\",\\n                        \\\"price\\\": null,\\n                        \\\"input\\\": \\\"female\\\",\\n                        \\\"meta\\\": {\\n                            \\\"isChained\\\": false,\\n                            \\\"chained_ops_hidden\\\": true\\n                        },\\n                        \\\"chained_options\\\": []\\n                    }\\n                ]\\n            }\\n        ],\\n        \\\"cartId\\\": 0,\\n        \\\"totalPrice\\\": 0\\n    }\\n}\",\n            \"delivery_date\": \"2020-10-15\",\n            \"order_status\": \"pending\",\n            \"payment_id\": null,\n            \"created_at\": \"2020-10-22T11:03:03.000000Z\",\n            \"updated_at\": \"2020-10-22T11:03:03.000000Z\"\n        },\n        \"message_content\": \"asdffasfdaf\",\n        \"created_at\": \"2009-04-09T21:30:00.000000Z\",\n        \"updated_at\": \"2009-04-09T22:36:40.000000Z\"\n    }\n}"
 						}
 					]
 				}
