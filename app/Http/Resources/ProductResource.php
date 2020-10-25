@@ -37,7 +37,7 @@ class ProductResource extends JsonResource
           'description' => $this->description,
           'image' => $this->image,
           'price_table' => $this->price_table,
-          'price_table_mode' => $this->price_table_mode,
+          'price_table_mode' => boolval($this->price_table_mode),
           'sales' => $this->sales,
           'serial' => $this->serial,
           'custom_forms'=> $this->custom_forms,
