@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4a775c28-817a-4a08-bc80-3331fe2c1dcd",
+		"_postman_id": "00f394ea-5140-4de3-8e0b-97ff3ed57d52",
 		"name": "Asserive Creativity",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -2828,21 +2828,6 @@
 												"type": "text"
 											}
 										],
-										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "",
-													"value": "",
-													"type": "text"
-												},
-												{
-													"key": "",
-													"value": "",
-													"type": "text"
-												}
-											]
-										},
 										"url": {
 											"raw": "{{base_url}}/api/orders/wishlist",
 											"host": [
@@ -2970,21 +2955,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "",
-													"value": "",
-													"type": "text"
-												},
-												{
-													"key": "",
-													"value": "",
-													"type": "text"
-												}
-											]
-										},
 										"url": {
 											"raw": "{{base_url}}/api/orders/wishlist/1",
 											"host": [
@@ -3060,13 +3030,13 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzYzMDkyMywiZXhwIjoxNjAzNjM0NTIzLCJuYmYiOjE2MDM2MzA5MjMsImp0aSI6IlpxNHI3OVo4a0VxMlNCaVMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.XTcQ40pGrWeUS4HsVdDN-YdaSvCptuX4Pg1x1J4jpEY",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": " {\r\n    \"id\": 3,\r\n    \"product_id\": \"4\",\r\n    \"user_id\": \"1\",\r\n    \"quantity\": \"1\",\r\n    \"custom_forms_entry\": null,\r\n    \"created_at\": \"2020-10-14T09:16:49.000000Z\",\r\n    \"updated_at\": \"2020-10-14T09:16:49.000000Z\",\r\n    \"product\": {\r\n        \"id\": 4,\r\n        \"name\": \"eos\",\r\n        \"base_price\": \"3566\",\r\n        \"description\": \"Illo sit eos labore rerum accusamus. Ullam odit ea voluptate molestiae. In aut voluptatum in. Rerum corrupti doloribus dolorem accusantium.\",\r\n        \"image\": \"https://lorempixel.com/640/480/?64766\",\r\n        \"price_table\": \"\",\r\n        \"price_table_mode\": \"\",\r\n        \"sales\": \"40\",\r\n        \"serial\": \"39429485-0982-3e02-b5c5-79835da7a978\",\r\n        \"stock\": \"721\",\r\n        \"custom_forms\": [\r\n            {\r\n                \"id\": 0,\r\n                \"title\": \"rgegdf\",\r\n                \"parentForm\": null,\r\n                \"options\": [\r\n                    {\r\n                        \"type\": \"radioBtn\",\r\n                        \"title\": \"dfgdfg\",\r\n                        \"name\": \"Radio Buttons\",\r\n                        \"meta\": {\r\n                            \"isChained\": false\r\n                        },\r\n                        \"inputs\": [\r\n                            {\r\n                                \"label\": \"dfgdfg\",\r\n                                \"value\": \"dfgdfg\",\r\n                                \"chained_options\": [],\r\n                                \"selectedChainedOption\": null\r\n                            },\r\n                            {\r\n                                \"label\": \"dfgdfg\",\r\n                                \"value\": \"dfgdfg\",\r\n                                \"chained_options\": [],\r\n                                \"selectedChainedOption\": null\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"category\": \"5\",\r\n        \"seller_id\": \"11\",\r\n        \"created_at\": \"2020-10-14T08:51:10.000000Z\",\r\n        \"updated_at\": \"2020-10-14T08:51:10.000000Z\"\r\n    }\r\n}",
+									"raw": "{\r\n  \"product_id\": 11,\r\n  \"quantity\": 1,\r\n  \"custom_forms_entry\": {\r\n    \"name\": \"pashmeena scarf\",\r\n    \"description\": \"skjfdlfjfsdf\",\r\n    \"base_price\": \"12\",\r\n    \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\r\n    \"custom_forms\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"thueh\",\r\n        \"parent_form\": null,\r\n        \"options\": [\r\n          {\r\n            \"type\": \"radioBtn\",\r\n            \"title\": \"asdasd\",\r\n            \"name\": \"Radio Buttons\",\r\n            \"price\": null,\r\n            \"input\": \"asdasd\",\r\n            \"meta\": {\r\n              \"isChained\": false,\r\n              \"chained_ops_hidden\": true\r\n            },\r\n            \"chained_options\": []\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  },\r\n  \"total_price\": 0\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3098,29 +3068,18 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxODQ3MSwiZXhwIjoxNjAyNjIyMDcxLCJuYmYiOjE2MDI2MTg0NzEsImp0aSI6ImNjckxTS25WakxEcHdONU0iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ToW3o5CKBpOylH5GAxZyBoX8wE47JErwyWNJaUJJ0gU",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzYzMDkyMywiZXhwIjoxNjAzNjM0NTIzLCJuYmYiOjE2MDM2MzA5MjMsImp0aSI6IlpxNHI3OVo4a0VxMlNCaVMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.XTcQ40pGrWeUS4HsVdDN-YdaSvCptuX4Pg1x1J4jpEY",
 												"type": "text"
 											}
 										],
 										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "product_id",
-													"value": "1",
-													"type": "text"
-												},
-												{
-													"key": "quantity",
-													"value": "10",
-													"type": "text"
-												},
-												{
-													"key": "custom_forms_entry",
-													"value": "{json string here}",
-													"type": "text"
+											"mode": "raw",
+											"raw": "{\r\n  \"product_id\": 11,\r\n  \"quantity\": 1,\r\n  \"custom_forms_entry\": {\r\n    \"name\": \"pashmeena scarf\",\r\n    \"description\": \"skjfdlfjfsdf\",\r\n    \"base_price\": \"12\",\r\n    \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\r\n    \"custom_forms\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"thueh\",\r\n        \"parent_form\": null,\r\n        \"options\": [\r\n          {\r\n            \"type\": \"radioBtn\",\r\n            \"title\": \"asdasd\",\r\n            \"name\": \"Radio Buttons\",\r\n            \"price\": null,\r\n            \"input\": \"asdasd\",\r\n            \"meta\": {\r\n              \"isChained\": false,\r\n              \"chained_ops_hidden\": true\r\n            },\r\n            \"chained_options\": []\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  },\r\n  \"total_price\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
 												}
-											]
+											}
 										},
 										"url": {
 											"raw": "{{base_url}}/api/orders/wishlist",
@@ -3144,11 +3103,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 13 Oct 2020 19:53:18 GMT"
+											"value": "Sun, 25 Oct 2020 13:18:47 GMT"
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 13 Oct 2020 19:53:18 GMT"
+											"value": "Sun, 25 Oct 2020 13:18:47 GMT"
 										},
 										{
 											"key": "Connection",
@@ -3156,7 +3115,7 @@
 										},
 										{
 											"key": "X-Powered-By",
-											"value": "PHP/7.4.10"
+											"value": "PHP/7.4.3"
 										},
 										{
 											"key": "Cache-Control",
@@ -3180,7 +3139,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"message\": \"Successfully added product to wishlist\"\n}"
+									"body": "{\n    \"message\": \"Successfully added product to wishlist\",\n    \"data\": {\n        \"product_id\": 11,\n        \"quantity\": 1,\n        \"custom_forms_entry\": {\n            \"name\": \"pashmeena scarf\",\n            \"description\": \"skjfdlfjfsdf\",\n            \"base_price\": \"12\",\n            \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\n            \"custom_forms\": [\n                {\n                    \"id\": 0,\n                    \"title\": \"thueh\",\n                    \"parent_form\": null,\n                    \"options\": [\n                        {\n                            \"type\": \"radioBtn\",\n                            \"title\": \"asdasd\",\n                            \"name\": \"Radio Buttons\",\n                            \"price\": null,\n                            \"input\": \"asdasd\",\n                            \"meta\": {\n                                \"isChained\": false,\n                                \"chained_ops_hidden\": true\n                            },\n                            \"chained_options\": []\n                        }\n                    ]\n                }\n            ]\n        },\n        \"user_id\": 1,\n        \"updated_at\": \"2020-10-25T13:18:47.000000Z\",\n        \"created_at\": \"2020-10-25T13:18:47.000000Z\",\n        \"id\": 5\n    }\n}"
 								}
 							]
 						},
@@ -3948,10 +3907,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
 								"url": {
 									"raw": "{{base_url}}/api/orders/threads/order/1",
 									"host": [
@@ -4069,10 +4024,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
 								"url": {
 									"raw": "{{base_url}}/api/orders/threads",
 									"host": [
@@ -4189,10 +4140,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
 								"url": {
 									"raw": "{{base_url}}/api/orders/threads/2",
 									"host": [

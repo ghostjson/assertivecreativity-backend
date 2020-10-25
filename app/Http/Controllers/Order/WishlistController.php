@@ -52,7 +52,7 @@ class WishlistController extends Controller
     public function store(StoreWishlistRequest $request) : JsonResponse
     {
         $wishlist = Wishlist::create($request->validated());
-        return respond('Successfully added product to wishlist', $wishlist);
+        return respondWithObject('Successfully added product to wishlist', $wishlist);
     }
 
 

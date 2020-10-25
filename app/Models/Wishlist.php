@@ -31,6 +31,16 @@ class Wishlist extends Model
         return Product::find($this->product_id);
     }
 
+    public function setCustomFormsEntryAttribute(array $value) : void
+    {
+        $this->attributes['custom_forms_entry'] = json_encode($value);
+    }
+
+    public function getCustomFormsEntryAttribute(string $value) : Object
+    {
+        return json_decode($value);
+    }
+
     /**
      * Remove given product from wishlist
      * @param Product $product
