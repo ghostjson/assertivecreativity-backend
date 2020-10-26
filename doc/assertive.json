@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "00f394ea-5140-4de3-8e0b-97ff3ed57d52",
+		"_postman_id": "e77ca0d5-5796-4a22-8551-5c9fe3bfad2c",
 		"name": "Asserive Creativity",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -2901,7 +2901,7 @@
 									{
 										"key": "Authorization",
 										"type": "text",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI"
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzcwOTI0NiwiZXhwIjoxNjAzNzEyODQ2LCJuYmYiOjE2MDM3MDkyNDYsImp0aSI6ImhyZEJOM2lIQXpDSVFmdk4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._Dln8p5g-h_n9Mtr1EpNaT5jwegBcCy-MqycnoNG7LI"
 									},
 									{
 										"key": "Accept",
@@ -2925,7 +2925,7 @@
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/api/orders/wishlist/1",
+									"raw": "{{base_url}}/api/orders/wishlist/7",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2933,7 +2933,7 @@
 										"api",
 										"orders",
 										"wishlist",
-										"1"
+										"7"
 									]
 								},
 								"description": "Get all products in the wishlist"
@@ -2947,7 +2947,7 @@
 											{
 												"key": "Authorization",
 												"type": "text",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI"
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzcwOTI0NiwiZXhwIjoxNjAzNzEyODQ2LCJuYmYiOjE2MDM3MDkyNDYsImp0aSI6ImhyZEJOM2lIQXpDSVFmdk4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._Dln8p5g-h_n9Mtr1EpNaT5jwegBcCy-MqycnoNG7LI"
 											},
 											{
 												"key": "Accept",
@@ -2955,8 +2955,23 @@
 												"value": "application/json"
 											}
 										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
 										"url": {
-											"raw": "{{base_url}}/api/orders/wishlist/1",
+											"raw": "{{base_url}}/api/orders/wishlist/7",
 											"host": [
 												"{{base_url}}"
 											],
@@ -2964,7 +2979,7 @@
 												"api",
 												"orders",
 												"wishlist",
-												"1"
+												"7"
 											]
 										}
 									},
@@ -2978,11 +2993,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Wed, 14 Oct 2020 14:33:13 GMT"
+											"value": "Mon, 26 Oct 2020 10:50:39 GMT"
 										},
 										{
 											"key": "Date",
-											"value": "Wed, 14 Oct 2020 14:33:13 GMT"
+											"value": "Mon, 26 Oct 2020 10:50:39 GMT"
 										},
 										{
 											"key": "Connection",
@@ -3014,7 +3029,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"product_id\": \"4\",\n        \"custom_forms_entry\": null,\n        \"user_id\": \"1\",\n        \"quantity\": \"1\",\n        \"product\": {\n            \"id\": 4,\n            \"name\": \"qui\",\n            \"base_price\": \"1046\",\n            \"description\": \"Ea voluptatum explicabo sed cumque. Voluptas qui laborum ipsam culpa quis eveniet officia. Eum minus non voluptas ullam voluptate qui iure repellat.\",\n            \"image\": \"https://lorempixel.com/640/480/?54352\",\n            \"price_table\": \"\",\n            \"price_table_mode\": \"\",\n            \"sales\": \"80\",\n            \"serial\": \"2db0a0a9-c3af-3a8e-8f70-d868a3e1ecf6\",\n            \"stock\": \"812\",\n            \"custom_forms\": [\n                {\n                    \"id\": 0,\n                    \"title\": \"rgegdf\",\n                    \"parentForm\": null,\n                    \"options\": [\n                        {\n                            \"type\": \"radioBtn\",\n                            \"title\": \"dfgdfg\",\n                            \"name\": \"Radio Buttons\",\n                            \"meta\": {\n                                \"isChained\": false\n                            },\n                            \"inputs\": [\n                                {\n                                    \"label\": \"dfgdfg\",\n                                    \"value\": \"dfgdfg\",\n                                    \"chained_options\": [],\n                                    \"selectedChainedOption\": null\n                                },\n                                {\n                                    \"label\": \"dfgdfg\",\n                                    \"value\": \"dfgdfg\",\n                                    \"chained_options\": [],\n                                    \"selectedChainedOption\": null\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ],\n            \"category_id\": \"4\",\n            \"seller_id\": \"10\",\n            \"created_at\": \"2020-10-14T09:45:02.000000Z\",\n            \"updated_at\": \"2020-10-14T09:45:02.000000Z\"\n        },\n        \"created_at\": \"2020-10-14T14:08:18.000000Z\",\n        \"updated_at\": \"2020-10-14T14:08:18.000000Z\"\n    }\n}"
+									"body": "{\n    \"data\": {\n        \"id\": 7,\n        \"product_id\": \"11\",\n        \"custom_forms_entry\": {\n            \"name\": \"pashmeena scarf\",\n            \"description\": \"skjfdlfjfsdf\",\n            \"base_price\": \"12\",\n            \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\n            \"custom_forms\": [\n                {\n                    \"id\": 0,\n                    \"title\": \"thueh\",\n                    \"parent_form\": null,\n                    \"options\": [\n                        {\n                            \"type\": \"radioBtn\",\n                            \"title\": \"asdasd\",\n                            \"name\": \"Radio Buttons\",\n                            \"price\": null,\n                            \"input\": \"asdasd\",\n                            \"meta\": {\n                                \"isChained\": false,\n                                \"chained_ops_hidden\": true\n                            },\n                            \"chained_options\": []\n                        }\n                    ]\n                }\n            ]\n        },\n        \"user_id\": \"1\",\n        \"quantity\": \"1\",\n        \"product\": {\n            \"id\": 11,\n            \"name\": \"pashmeena scarf\",\n            \"base_price\": \"12\",\n            \"description\": \"skjfdlfjfsdf\",\n            \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\n            \"price_table\": [\n                {\n                    \"label\": null,\n                    \"price_per_piece\": null,\n                    \"quantity\": null,\n                    \"relation\": null\n                }\n            ],\n            \"price_table_mode\": \"0\",\n            \"sales\": \"0\",\n            \"serial\": \"asdasdasdjaksjd0a9s8d09a8sd\",\n            \"stock\": \"230\",\n            \"custom_forms\": [\n                {\n                    \"id\": 0,\n                    \"title\": \"thueh\",\n                    \"is_formgroup\": false,\n                    \"parent_form\": null,\n                    \"options\": [\n                        {\n                            \"type\": \"radioBtn\",\n                            \"title\": \"asdasd\",\n                            \"name\": \"Radio Buttons\",\n                            \"meta\": {\n                                \"isChained\": false\n                            },\n                            \"inputs\": [\n                                {\n                                    \"label\": \"asdasd\",\n                                    \"value\": \"asdasd\",\n                                    \"chained_options\": [],\n                                    \"selectedChainedOption\": null\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ],\n            \"category_id\": \"2\",\n            \"seller_id\": \"1\",\n            \"created_at\": \"2020-10-25T12:59:42.000000Z\",\n            \"updated_at\": \"2020-10-25T12:59:42.000000Z\"\n        },\n        \"created_at\": \"2020-10-26T10:48:30.000000Z\",\n        \"updated_at\": \"2020-10-26T10:48:30.000000Z\"\n    }\n}"
 								}
 							]
 						},
