@@ -48,6 +48,7 @@ class Wishlist extends Model
      */
     public static function removeProduct(Product $product) : bool
     {
+
         try {
             Wishlist::where('product_id', $product->id)
                 ->first()
