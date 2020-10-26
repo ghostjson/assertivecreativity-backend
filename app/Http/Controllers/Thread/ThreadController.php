@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Thread;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Requests\ThreadSendRequest;
 use App\Http\Resources\ThreadResource;
 use App\Models\Order;
 use App\Models\Thread;
+use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
@@ -19,17 +21,36 @@ class ThreadController extends Controller
             Authenticate::class
         ]);
 
+        $this->middleware([
+            AdminAuthMiddleware::class
+        ])->only(['send']);
+
     }
 
 
     /**
-     * Send a thread
+     * Send a thread to a specific person
+     * @param ThreadSendRequest $request
+     * @param User $user
+     * @return JsonResponse
+     */
+    public function send(ThreadSendRequest $request, User $user) : JsonResponse
+    {
+        $thread = Thread::send($request->validated(), $user) ?? false;
+
+        return  $thread ?
+            respondWithObject('Successfully send thread', $thread) :
+            respond('Failed to send thread', 500);
+    }
+
+    /**
+     * Send thread to admin
      * @param ThreadSendRequest $request
      * @return JsonResponse
      */
-    public function send(ThreadSendRequest $request) : JsonResponse
+    public function sendToAdmin(ThreadSendRequest $request)
     {
-        $thread = Thread::send($request->validated()) ?? false;
+        $thread = Thread::sendToAdmin($request->validated()) ?? false;
 
         return  $thread ?
             respondWithObject('Successfully send thread', $thread) :

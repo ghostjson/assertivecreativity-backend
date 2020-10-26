@@ -24,9 +24,10 @@ class Thread extends Model
     /**
      * Create a new thread
      * @param array $data
-     * @return bool
+     * @param User $user
+     * @return Thread
      */
-    public static function send(array $data) : Thread
+    public static function send(array $data, User $user) : Thread
     {
         $order = Order::find($data['order_id']);
 
@@ -41,7 +42,7 @@ class Thread extends Model
                 $thread = new Thread;
 
                 $thread->sender_id = auth()->id();
-                $thread->receiver_id = $data['receiver_id'];
+                $thread->receiver_id = $user->id;
                 $thread->order_id = $data['order_id'];
                 $thread->message_content = $data['message_content'];
 
@@ -58,6 +59,45 @@ class Thread extends Model
 
         return false;
 
+    }
+
+
+    /**
+     * Send thread to admin
+     * @param array $data
+     * @return Thread|false
+     */
+    public static function sendToAdmin(array $data)
+    {
+        $order = Order::find($data['order_id']);
+
+        if(!is_null($order))
+            if(
+                $order->buyer_id == auth()->id() ||
+                $order->seller_id == auth()->id() ||
+                Auth::user()->isAdmin())
+            {
+
+
+                $thread = new Thread;
+
+                $thread->sender_id = auth()->id();
+                $thread->receiver_id = 1;
+                $thread->order_id = $data['order_id'];
+                $thread->message_content = $data['message_content'];
+
+                try{
+                    $thread->save();
+                    return $thread;
+                }
+                catch(\Exception $exception)
+                {
+                    Log::error($exception);
+                }
+            }
+
+
+        return false;
     }
 
     /**

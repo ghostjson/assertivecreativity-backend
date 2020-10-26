@@ -26,7 +26,6 @@ class ThreadSendRequest extends FormRequest
         return [
             'order_id' => 'required',
             'message_content' => 'required',
-            'receiver_id' => 'required'
         ];
     }
 }
