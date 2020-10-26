@@ -109,8 +109,8 @@ class Thread extends Model
     {
         return Thread::where('order_id', $order->id)
             ->where(function ($query) use ($order) {
-                $query->where('sender_id', $order->id)
-                    ->orWhere('receiver_id', $order->id);
+                $query->where('sender_id', \auth()->id())
+                    ->orWhere('receiver_id', \auth()->id());
             })->get();
     }
 
