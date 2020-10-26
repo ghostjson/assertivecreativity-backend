@@ -28,7 +28,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->word,
             'base_price' => $this->faker->numberBetween(100, 5000),
             'description' => $this->faker->text,
-            'image' => $this->faker->imageUrl(),
+            'image' => 'https://picsum.photos/200/300',
             'price_table' => '',
             'price_table_mode' => '',
             'sales' => $this->faker->numberBetween(0, 200),
