@@ -56,17 +56,17 @@ class WishlistController extends Controller
     }
 
 
-
     /**
      * Remove a product from wishlist
-     * @param Product $product
+     * @param Wishlist $wishlist
      * @return JsonResponse
      */
-    public function destroy(Product $product) : JsonResponse
+    public function destroy(Wishlist $wishlist) : JsonResponse
     {
-        if(Wishlist::removeProduct($product)) {
+        try {
+            $wishlist->delete();
             return respond('Successfully deleted');
-        }else
+        }catch (\Exception $exception)
         {
             return respond('Error occur during deletion', 500);
         }

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('wishlist', [WishlistController::class, 'store']);
 Route::get('wishlist', [WishlistController::class, 'index']);
 Route::get('wishlist/{wishlist}', [WishlistController::class, 'show']);
-Route::delete('wishlist/{product}', [WishlistController::class, 'destroy']);
+Route::delete('wishlist/{wishlist}', [WishlistController::class, 'destroy']);
 Route::delete('wishlist', [WishlistController::class, 'clear']);
 
 
