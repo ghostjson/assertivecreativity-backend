@@ -56,6 +56,8 @@ class ProductController extends Controller
     {
         $validated = $request->validated();
 
+        dd($request->validated());
+
         $validated['seller_id'] = auth()->id();
 
         $validated['image'] = fileUploader($validated['image']);
