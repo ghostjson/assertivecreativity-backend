@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Order;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\Authenticate;
+use App\Http\Middleware\VendorAuthMiddleware;
 use App\Http\Requests\OrderStoreRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
@@ -20,8 +22,12 @@ class OrderController extends Controller
         ]);
 
         $this->middleware([
+            VendorAuthMiddleware::class
+        ])->only(['indexVendor']);
 
-        ]);
+        $this->middleware([
+            AdminAuthMiddleware::class
+        ])->only(['indexAdmin']);
     }
 
 
@@ -46,6 +52,18 @@ class OrderController extends Controller
         return OrderResource::collection(
             Order::where('seller_id', auth()->id())
                 ->get()
+        );
+    }
+
+    /**
+     * Return all orders of the website
+     * @return ResourceCollection
+     */
+    public function indexAdmin() : ResourceCollection
+    {
+
+        return OrderResource::collection(
+            Order::orderBy('created_at', 'desc')->get()
         );
     }
 

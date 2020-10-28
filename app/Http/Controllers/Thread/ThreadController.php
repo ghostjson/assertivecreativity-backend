@@ -38,8 +38,9 @@ class ThreadController extends Controller
     {
         $thread = Thread::send($request->validated(), $user) ?? false;
 
+
         return  $thread ?
-            respondWithObject('Successfully send thread', $thread) :
+            respondWithObject('Successfully send thread', new ThreadResource($thread)) :
             respond('Failed to send thread', 500);
     }
 
@@ -53,7 +54,7 @@ class ThreadController extends Controller
         $thread = Thread::sendToAdmin($request->validated()) ?? false;
 
         return  $thread ?
-            respondWithObject('Successfully send thread', $thread) :
+            respondWithObject('Successfully send thread', new ThreadResource($thread)) :
             respond('Failed to send thread', 500);
     }
 

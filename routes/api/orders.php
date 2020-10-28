@@ -29,5 +29,6 @@ Route::post('threads', [ThreadController::class, 'sendToAdmin']);
 // orders
 Route::post('', [OrderController::class, 'store']);
 Route::get('', [OrderController::class, 'index']);
-Route::get('{order}', [OrderController::class, 'show']);
 Route::get('vendor', [OrderController::class, 'indexVendor']);
+Route::get('admin', [OrderController::class, 'indexAdmin']);
+Route::get('{order}', [OrderController::class, 'show']);

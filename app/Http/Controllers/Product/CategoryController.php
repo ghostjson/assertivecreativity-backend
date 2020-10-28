@@ -48,7 +48,7 @@ class CategoryController extends Controller
     public function show(Category $category) : ResourceCollection
     {
         return ProductResource::collection(
-            Product::where('category', $category->id)
+            Product::where('category_id', $category->id)
                 ->get()
         );
     }

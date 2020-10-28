@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Log;
  * @property mixed id
  * @method static find($order_id)
  * @method static where(string $string, int|string|null $id)
+ * @method static orderBy(string $string, string $string1)
  */
 class Order extends Model
 {
