@@ -1213,7 +1213,7 @@
 						{
 							"name": "Get Tag Associated With a Category",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Accept",
@@ -1221,8 +1221,18 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_ids",
+											"value": "[2]",
+											"type": "text"
+										}
+									]
+								},
 								"url": {
-									"raw": "{{base_url}}/api/products/categories/tags/6",
+									"raw": "{{base_url}}/api/products/categories/list",
 									"host": [
 										"{{base_url}}"
 									],
@@ -1230,8 +1240,7 @@
 										"api",
 										"products",
 										"categories",
-										"tags",
-										"6"
+										"list"
 									]
 								},
 								"description": "Get all products of a specific category"
@@ -1240,7 +1249,7 @@
 								{
 									"name": "Get Tag Associated With a Category",
 									"originalRequest": {
-										"method": "GET",
+										"method": "POST",
 										"header": [
 											{
 												"key": "Accept",
@@ -1248,8 +1257,18 @@
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "category_ids",
+													"value": "[2]",
+													"type": "text"
+												}
+											]
+										},
 										"url": {
-											"raw": "{{base_url}}/api/products/categories/tags/6",
+											"raw": "{{base_url}}/api/products/categories/list",
 											"host": [
 												"{{base_url}}"
 											],
@@ -1257,8 +1276,7 @@
 												"api",
 												"products",
 												"categories",
-												"tags",
-												"6"
+												"list"
 											]
 										}
 									},
@@ -1272,11 +1290,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 04 Oct 2020 06:04:57 GMT"
+											"value": "Thu, 29 Oct 2020 13:53:42 GMT"
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 04 Oct 2020 06:04:57 GMT"
+											"value": "Thu, 29 Oct 2020 13:53:42 GMT"
 										},
 										{
 											"key": "Connection",
@@ -1300,7 +1318,7 @@
 										},
 										{
 											"key": "X-RateLimit-Remaining",
-											"value": "59"
+											"value": "58"
 										},
 										{
 											"key": "Access-Control-Allow-Origin",
@@ -1308,7 +1326,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"libero\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"rerum\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"praesentium\",\n            \"category_id\": \"6\",\n            \"created_at\": \"2020-10-03T18:43:25.000000Z\",\n            \"updated_at\": \"2020-10-03T18:43:25.000000Z\"\n        }\n    ]\n}"
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 8,\n            \"name\": \"nobis\",\n            \"base_price\": \"1714\",\n            \"description\": \"Omnis exercitationem ut consectetur. Et aliquid earum impedit quis et omnis. Pariatur quaerat et ut ducimus excepturi odio ad nihil.\",\n            \"image\": \"http://localhost:8000/storage/https://lorempixel.com/640/480?63384\",\n            \"price_table\": \"\",\n            \"price_table_mode\": false,\n            \"sales\": \"112\",\n            \"serial\": \"e71784c9-3731-398c-b242-6c68cc6c8abb\",\n            \"custom_forms\": [\n                {\n                    \"id\": 0,\n                    \"title\": \"Product Customisation\",\n                    \"is_formgroup\": true,\n                    \"parent_form\": null,\n                    \"options\": []\n                },\n                {\n                    \"id\": 1,\n                    \"title\": \"Cloth Customisation\",\n                    \"is_formgroup\": false,\n                    \"parent_form\": 0,\n                    \"options\": [\n                        {\n                            \"type\": \"color\",\n                            \"title\": \"Pick a color\",\n                            \"name\": \"Colors\",\n                            \"meta\": {\n                                \"isChained\": false\n                            },\n                            \"inputs\": [\n                                {\n                                    \"label\": \"Reddish\",\n                                    \"value\": \"#e83c1a\",\n                                    \"chained_options\": [\n                                        {\n                                            \"type\": \"dropdown\",\n                                            \"title\": \"Cloth Pattern\",\n                                            \"name\": \"Dropdown Selection\",\n                                            \"meta\": {\n                                                \"isChained\": true\n                                            },\n                                            \"inputs\": [\n                                                {\n                                                    \"label\": \"Plain\",\n                                                    \"value\": \"plain\"\n                                                },\n                                                {\n                                                    \"label\": \"Checkered\",\n                                                    \"value\": \"checkered\"\n                                                },\n                                                {\n                                                    \"label\": \"Dots\",\n                                                    \"value\": \"dots\"\n                                                }\n                                            ]\n                                        }\n                                    ],\n                                    \"selectedChainedOption\": \"dropdown\"\n                                },\n                                {\n                                    \"label\": \"Bluish\",\n                                    \"value\": \"#3639d1\",\n                                    \"chained_options\": [\n                                        {\n                                            \"type\": \"dropdown\",\n                                            \"title\": \"Cloth Pattern\",\n                                            \"name\": \"Dropdown Selection\",\n                                            \"meta\": {\n                                                \"isChained\": true\n                                            },\n                                            \"inputs\": [\n                                                {\n                                                    \"label\": \"Plain\",\n                                                    \"value\": \"plain\"\n                                                },\n                                                {\n                                                    \"label\": \"Checkered\",\n                                                    \"value\": \"checkered\"\n                                                },\n                                                {\n                                                    \"label\": \"Dots\",\n                                                    \"value\": \"dots\"\n                                                }\n                                            ]\n                                        }\n                                    ],\n                                    \"selectedChainedOption\": \"dropdown\"\n                                }\n                            ]\n                        },\n                        {\n                            \"type\": \"text\",\n                            \"title\": \"Enter additional remarks for cloth customisation.\",\n                            \"name\": \"Text input\",\n                            \"meta\": {\n                                \"isChained\": false\n                            },\n                            \"inputs\": [\n                                {\n                                    \"label\": \"Enter remarks here\",\n                                    \"chained_options\": [],\n                                    \"selectedChainedOption\": null\n                                }\n                            ]\n                        }\n                    ]\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Delivery Instruction\",\n                    \"is_formgroup\": false,\n                    \"parent_form\": null,\n                    \"options\": [\n                        {\n                            \"type\": \"radioBtn\",\n                            \"title\": \"Type of address\",\n                            \"name\": \"Radio Buttons\",\n                            \"meta\": {\n                                \"isChained\": false\n                            },\n                            \"inputs\": [\n                                {\n                                    \"label\": \"Home (9 AM to 9 PM)\",\n                                    \"value\": \"home-(9-am-to-9-pm)\",\n                                    \"chained_options\": [],\n                                    \"selectedChainedOption\": null\n                                },\n                                {\n                                    \"label\": \"Work (9 AM to 4 PM)\",\n                                    \"value\": \"work-(9-am-to-4-pm)\",\n                                    \"chained_options\": [],\n                                    \"selectedChainedOption\": null\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ],\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"quae\",\n                \"description\": \"Repellendus tempore ullam non dolores vero aut autem. Autem quo omnis aut deleniti dolor. Velit et eveniet recusandae a. Ut aliquid reiciendis non facilis explicabo. Facilis omnis eum quam est.\",\n                \"created_at\": \"2020-10-26T11:21:05.000000Z\",\n                \"updated_at\": \"2020-10-26T11:21:05.000000Z\"\n            },\n            \"seller_id\": \"7\",\n            \"created_at\": \"2020-10-26T11:21:05.000000Z\",\n            \"stock\": \"277\"\n        }\n    ]\n}"
 								}
 							]
 						},
@@ -1421,6 +1439,17 @@
 									"body": "{\n    \"message\": \"Category is successfully deleted\"\n}"
 								}
 							]
+						},
+						{
+							"name": "Get Products From List Of Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},

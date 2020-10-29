@@ -54,10 +54,14 @@ class CategoryController extends Controller
         );
     }
 
-    public function getProductByCategories(GetProductByCategoriesRequest $request)
+    /**
+     * Get products from list of categories
+     * @param GetProductByCategoriesRequest $request
+     * @return ResourceCollection
+     */
+    public function getProductByCategories(GetProductByCategoriesRequest $request) : ResourceCollection
     {
         $ids = json_decode($request->validated()['category_ids']);
-
         return ProductResource::collection(Product::whereIn('category_id', $ids)->get());
 
     }
