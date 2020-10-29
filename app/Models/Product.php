@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\URL;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 /**
  * @property mixed seller_id
@@ -14,12 +15,19 @@ use Illuminate\Support\Facades\URL;
  * @method static where(string $string, $id, $optional='')
  * @method static find($toArray)
  * @method static whereIn(string $string, $ids)
+ * @method static search(string $search)
  */
 class Product extends Model
 {
-    use HasFactory;
+    use HasFactory, SearchableTrait;
 
     protected $guarded = [];
+
+    public $searchable = [
+      'columns' => [
+          'products.name' => 10
+      ]
+    ];
 
     public function setSellerIdAttribute($value)
     {

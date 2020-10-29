@@ -135,7 +135,7 @@ class ProductController extends Controller
      */
     public function productSearch(string $search) : ResourceCollection
     {
-        $search_results = Product::where('name', 'LIKE', '%'.$search.'%')->limit(1)->get();
+        $search_results = Product::search($search)->get();
 
         return ProductResource::collection(
             $search_results
