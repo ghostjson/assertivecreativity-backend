@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\VendorAuthMiddleware;
+use App\Http\Requests\GetProductByCategoriesRequest;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ProductResource;
@@ -51,6 +52,14 @@ class CategoryController extends Controller
             Product::where('category_id', $category->id)
                 ->get()
         );
+    }
+
+    public function getProductByCategories(GetProductByCategoriesRequest $request)
+    {
+        $ids = json_decode($request->validated()['category_ids']);
+
+        return ProductResource::collection(Product::whereIn('category_id', $ids)->get());
+
     }
 
     /**

@@ -8,6 +8,7 @@ use App\Http\Controllers\Product\ProductController;
 //category
 Route::post('categories', [CategoryController::class, 'store']);
 Route::get('categories', [CategoryController::class, 'index']);
+Route::post('categories/list', [CategoryController::class, 'getProductByCategories']);
 Route::get('categories/{category}', [CategoryController::class, 'show']);
 Route::post('categories/{category}', [CategoryController::class, 'update']);
 Route::get('categories/tags/{category}', [CategoryController::class, 'tags']);

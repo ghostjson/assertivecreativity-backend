@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\URL;
  * @method static create(array $validated)
  * @method static where(string $string, $id, $optional='')
  * @method static find($toArray)
+ * @method static whereIn(string $string, $ids)
  */
 class Product extends Model
 {
