@@ -105,7 +105,7 @@ class AuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => 60 * 60,
-            'user' => auth()->user()
+            'user' => new UserResource(auth()->user())
         ]);
     }
 }
