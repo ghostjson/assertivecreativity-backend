@@ -46,6 +46,24 @@ class ProductController extends Controller
         return ProductResource::collection(Product::all());
     }
 
+    /**
+     * Return All products of a vendor.
+     *
+     * @return ResourceCollection
+     */
+    public function indexVendor() : ResourceCollection
+    {
+        if(auth()->user()->isAdmin())
+        {
+            return $this->index();
+        }else{
+            return ProductResource::collection(
+                Product::where('seller_id', auth()->id())
+                    ->get()
+                );
+        }
+    }
+
 
     /**
      * Store a newly created resource in storage.
