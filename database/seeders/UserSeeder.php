@@ -24,6 +24,22 @@ class UserSeeder extends Seeder
         $u->role_id = 1;
         $u->save();
 
+        $u = new User;
+        $u->first_name = 'vendor';
+        $u->last_name = 'acc';
+        $u->email = 'vendor@ac.com';
+        $u->password = '17291234';
+        $u->role_id = 2;
+        $u->save();
+
+        $u = new User;
+        $u->first_name = 'user';
+        $u->last_name = 'acc';
+        $u->email = 'user@ac.com';
+        $u->password = '17291234';
+        $u->role_id = 2;
+        $u->save();
+
 
         $this->generator($users);
 
