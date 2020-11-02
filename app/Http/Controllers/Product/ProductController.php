@@ -17,6 +17,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Role;
 use App\Models\Tag;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
@@ -55,9 +56,6 @@ class ProductController extends Controller
     public function store(ProductStoreRequest $request) : JsonResponse
     {
         $validated = $request->validated();
-
-        dd($request->validated());
-
         $validated['seller_id'] = auth()->id();
 
         $validated['image'] = fileUploader($validated['image']);
@@ -104,7 +102,7 @@ class ProductController extends Controller
      *
      * @param Product $product
      * @return JsonResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy(Product $product) : JsonResponse
     {
@@ -119,7 +117,7 @@ class ProductController extends Controller
                 return respond('Unauthorized', 401);
             }
         }
-        catch(\Exception $exception)
+        catch(Exception $exception)
         {
             return respond('Could not delete', 500);
         }

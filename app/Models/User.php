@@ -105,8 +105,8 @@ class User extends Authenticatable implements JWTSubject
     public static function createVendor(array $user) : User
     {
         $u = new User;
-        $u->first_name = $user['firstname'];
-        $u->lastname_name = $user['last_name'];
+        $u->first_name = $user['first_name'];
+        $u->last_name = $user['last_name'];
         $u->email = $user['email'];
         $u->password = $user['password'];
         $u->company_details = in_array('company_details', $user) ? $user['company_details'] : null;
