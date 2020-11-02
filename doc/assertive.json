@@ -306,24 +306,47 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "name",
-									"value": "new_vendor_name",
+									"key": "first_name",
+									"value": "new_user_name",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "last_name",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "new_vendor_email@example.com",
+									"value": "new_user_email@example.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
 									"value": "new_password",
 									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "2132123",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "company_details",
+									"value": "asdasdasdas",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "profession",
+									"value": "asdasdasd",
+									"description": "optional",
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/api/auth/register/vendor",
+							"raw": "{{base_url}}/api/auth/register/user",
 							"host": [
 								"{{base_url}}"
 							],
@@ -331,14 +354,14 @@
 								"api",
 								"auth",
 								"register",
-								"vendor"
+								"user"
 							]
 						},
-						"description": "Register a new vendor"
+						"description": "Register a new user/customer"
 					},
 					"response": [
 						{
-							"name": "Register Vendor",
+							"name": "Register User",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -346,24 +369,47 @@
 									"mode": "formdata",
 									"formdata": [
 										{
-											"key": "name",
-											"value": "new_vendor_name",
+											"key": "first_name",
+											"value": "new_user_name",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "last_name",
 											"type": "text"
 										},
 										{
 											"key": "email",
-											"value": "new_vendor_email@example.com",
+											"value": "new_user_email@example.com",
 											"type": "text"
 										},
 										{
 											"key": "password",
 											"value": "new_password",
 											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "2132123",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "company_details",
+											"value": "asdasdasdas",
+											"description": "optional",
+											"type": "text"
+										},
+										{
+											"key": "profession",
+											"value": "asdasdasd",
+											"description": "optional",
+											"type": "text"
 										}
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/api/auth/register/vendor",
+									"raw": "{{base_url}}/api/auth/register/user",
 									"host": [
 										"{{base_url}}"
 									],
@@ -371,7 +417,7 @@
 										"api",
 										"auth",
 										"register",
-										"vendor"
+										"user"
 									]
 								}
 							},
@@ -385,11 +431,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:04:37 GMT"
+									"value": "Sun, 04 Oct 2020 07:45:19 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 29 Sep 2020 12:04:37 GMT"
+									"value": "Sun, 04 Oct 2020 07:45:19 GMT"
 								},
 								{
 									"key": "Connection",
@@ -421,7 +467,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdmVuZG9yIiwiaWF0IjoxNjAxMzgxMDc3LCJleHAiOjE2MDEzODQ2NzcsIm5iZiI6MTYwMTM4MTA3NywianRpIjoiVmRacFVwR3ZTOThOMEVBUSIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oD48Z4j4fAFkhaOoXGyJINK7x0Q1ZrqnkGGKHADClc4\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdXNlciIsImlhdCI6MTYwMTc5NzUxOSwiZXhwIjoxNjAxODAxMTE5LCJuYmYiOjE2MDE3OTc1MTksImp0aSI6IkJjMzY0Mm5uaUhHM21zRmEiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KltvP6NuMC7vTNIQYEFl2Z4rFp_gDlt12D7sjYbgOOE\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600,\n    \"user\": {\n        \"first_name\": \"new_user_name\",\n        \"last_name\": \"last_name\",\n        \"email\": \"new_user_email@example.com\",\n        \"company_details\": null,\n        \"profession\": null,\n        \"phone\": null,\n        \"role_id\": 3,\n        \"updated_at\": \"2020-10-04T07:45:19.000000Z\",\n        \"created_at\": \"2020-10-04T07:45:19.000000Z\",\n        \"id\": 12\n    }\n}"
 						}
 					]
 				},
@@ -2192,6 +2238,103 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"ad\",\n        \"basePrice\": \"4432\",\n        \"description\": \"Voluptatibus eum rerum perferendis necessitatibus aut sunt quas laudantium. Optio velit vel et velit optio adipisci est.\",\n        \"image\": \"https://lorempixel.com/640/480/?99556\",\n        \"priceTable\": \"\",\n        \"priceTableMode\": \"\",\n        \"sales\": \"165\",\n        \"serial\": \"1e59a282-5b07-363d-801e-3cb2cce84b57\",\n        \"stock\": \"767\",\n        \"customForms\": \"\",\n        \"category\": \"9\",\n        \"seller_id\": \"8\",\n        \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n        \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Vendor's Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdmVuZG9yIiwiaWF0IjoxNjA0MzI0NzY2LCJleHAiOjE2MDQzMjgzNjYsIm5iZiI6MTYwNDMyNDc2NiwianRpIjoiRjFvNGhBSmxXTTAwM2hTbyIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DjvuyIdgAqnRpGz4TH4xhuTQkg8lDZpxa-_EEgTpc_Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/products/vendor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"vendor"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Vendor's Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9yZWdpc3RlclwvdmVuZG9yIiwiaWF0IjoxNjA0MzI0NzY2LCJleHAiOjE2MDQzMjgzNjYsIm5iZiI6MTYwNDMyNDc2NiwianRpIjoiRjFvNGhBSmxXTTAwM2hTbyIsInN1YiI6MTMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.DjvuyIdgAqnRpGz4TH4xhuTQkg8lDZpxa-_EEgTpc_Q",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/products/vendor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"vendor"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Nov 2020 13:46:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Nov 2020 13:46:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 11,\n            \"name\": \"new_product\",\n            \"base_price\": \"10\",\n            \"description\": \"some test description\",\n            \"image\": \"http://localhost:8000/storage/1604324789_5fa00db596ae86.17259092.png\",\n            \"price_table\": \"priceTable\",\n            \"price_table_mode\": true,\n            \"sales\": \"100\",\n            \"serial\": \"AF123Aas2a\",\n            \"custom_forms\": \"{json here}\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"accusamus\",\n                \"description\": \"Eveniet iure ut recusandae maxime facere cum nihil. Aspernatur beatae eum et corrupti sunt enim occaecati. Maxime et necessitatibus consectetur.\",\n                \"created_at\": \"2020-11-02T09:58:31.000000Z\",\n                \"updated_at\": \"2020-11-02T09:58:31.000000Z\"\n            },\n            \"seller_id\": \"13\",\n            \"created_at\": \"2020-11-02T13:46:29.000000Z\",\n            \"stock\": \"1000\"\n        }\n    ]\n}"
 						}
 					]
 				},
