@@ -64,7 +64,7 @@ class Product extends Model
 
     public function getImageAttribute($value)
     {
-        return URL::to('/storage/'.$value);
+        return env('APP_URL').'/storage/'.$value;
     }
 
     public function category() : BelongsTo
