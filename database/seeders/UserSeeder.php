@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         $u->last_name = 'acc';
         $u->email = 'user@ac.com';
         $u->password = '17291234';
-        $u->role_id = 2;
+        $u->role_id = 3;
         $u->save();
 
 
