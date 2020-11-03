@@ -35,176 +35,197 @@ class ProductFactory extends Factory
             'serial' => $this->faker->uuid,
             'stock' => $this->faker->numberBetween(0, 1000),
             'custom_forms' => array (
-                        0 =>
+                0 =>
+                    array (
+                        'id' => 0,
+                        'title' => 'Product Customisation',
+                        'is_formgroup' => true,
+                        'parent_form' => NULL,
+                        'options' =>
                             array (
-                                'id' => 0,
-                                'title' => 'Product Customisation',
-                                'is_formgroup' => true,
-                                'parent_form' => NULL,
-                                'options' =>
-                                    array (
-                                    ),
                             ),
-                        1 =>
+                    ),
+                1 =>
+                    array (
+                        'id' => 1,
+                        'title' => 'Cloth Customisation',
+                        'is_formgroup' => false,
+                        'parent_form' => 0,
+                        'options' =>
                             array (
-                                'id' => 1,
-                                'title' => 'Cloth Customisation',
-                                'is_formgroup' => false,
-                                'parent_form' => 0,
-                                'options' =>
+                                0 =>
                                     array (
-                                        0 =>
+                                        'type' => 'color',
+                                        'title' => 'Pick a color',
+                                        'name' => 'Colors',
+                                        'price' => 12,
+                                        'meta' =>
                                             array (
-                                                'type' => 'color',
-                                                'title' => 'Pick a color',
-                                                'name' => 'Colors',
-                                                'meta' =>
+                                                'isChained' => false,
+                                            ),
+                                        'inputs' =>
+                                            array (
+                                                0 =>
                                                     array (
-                                                        'isChained' => false,
-                                                    ),
-                                                'inputs' =>
-                                                    array (
-                                                        0 =>
+                                                        'label' => 'Reddish',
+                                                        'value' => '#e83c1a',
+                                                        'chained_options' =>
                                                             array (
-                                                                'label' => 'Reddish',
-                                                                'value' => '#e83c1a',
-                                                                'chained_options' =>
+                                                                0 =>
                                                                     array (
-                                                                        0 =>
+                                                                        'type' => 'dropdown',
+                                                                        'title' => 'Cloth Pattern',
+                                                                        'name' => 'Dropdown Selection',
+                                                                        'price' => 4,
+                                                                        'meta' =>
                                                                             array (
-                                                                                'type' => 'dropdown',
-                                                                                'title' => 'Cloth Pattern',
-                                                                                'name' => 'Dropdown Selection',
-                                                                                'meta' =>
+                                                                                'isChained' => true,
+                                                                            ),
+                                                                        'inputs' =>
+                                                                            array (
+                                                                                0 =>
                                                                                     array (
-                                                                                        'isChained' => true,
+                                                                                        'label' => 'Plain',
+                                                                                        'value' => 'plain',
                                                                                     ),
-                                                                                'inputs' =>
+                                                                                1 =>
                                                                                     array (
-                                                                                        0 =>
-                                                                                            array (
-                                                                                                'label' => 'Plain',
-                                                                                                'value' => 'plain',
-                                                                                            ),
-                                                                                        1 =>
-                                                                                            array (
-                                                                                                'label' => 'Checkered',
-                                                                                                'value' => 'checkered',
-                                                                                            ),
-                                                                                        2 =>
-                                                                                            array (
-                                                                                                'label' => 'Dots',
-                                                                                                'value' => 'dots',
-                                                                                            ),
+                                                                                        'label' => 'Checkered',
+                                                                                        'value' => 'checkered',
+                                                                                    ),
+                                                                                2 =>
+                                                                                    array (
+                                                                                        'label' => 'Dots',
+                                                                                        'value' => 'dots',
                                                                                     ),
                                                                             ),
                                                                     ),
-                                                                'selectedChainedOption' => 'dropdown',
                                                             ),
-                                                        1 =>
+                                                        'selectedChainedOption' => NULL,
+                                                    ),
+                                                1 =>
+                                                    array (
+                                                        'label' => 'Bluish',
+                                                        'value' => '#3639d1',
+                                                        'chained_options' =>
                                                             array (
-                                                                'label' => 'Bluish',
-                                                                'value' => '#3639d1',
-                                                                'chained_options' =>
+                                                                0 =>
                                                                     array (
-                                                                        0 =>
+                                                                        'type' => 'dropdown',
+                                                                        'title' => 'Cloth Pattern',
+                                                                        'name' => 'Dropdown Selection',
+                                                                        'price' => 10,
+                                                                        'meta' =>
                                                                             array (
-                                                                                'type' => 'dropdown',
-                                                                                'title' => 'Cloth Pattern',
-                                                                                'name' => 'Dropdown Selection',
-                                                                                'meta' =>
+                                                                                'isChained' => true,
+                                                                            ),
+                                                                        'inputs' =>
+                                                                            array (
+                                                                                0 =>
                                                                                     array (
-                                                                                        'isChained' => true,
+                                                                                        'label' => 'Plain',
+                                                                                        'value' => 'plain',
                                                                                     ),
-                                                                                'inputs' =>
+                                                                                1 =>
                                                                                     array (
-                                                                                        0 =>
-                                                                                            array (
-                                                                                                'label' => 'Plain',
-                                                                                                'value' => 'plain',
-                                                                                            ),
-                                                                                        1 =>
-                                                                                            array (
-                                                                                                'label' => 'Checkered',
-                                                                                                'value' => 'checkered',
-                                                                                            ),
-                                                                                        2 =>
-                                                                                            array (
-                                                                                                'label' => 'Dots',
-                                                                                                'value' => 'dots',
-                                                                                            ),
+                                                                                        'label' => 'Checkered',
+                                                                                        'value' => 'checkered',
+                                                                                    ),
+                                                                                2 =>
+                                                                                    array (
+                                                                                        'label' => 'Dots',
+                                                                                        'value' => 'dots',
                                                                                     ),
                                                                             ),
                                                                     ),
-                                                                'selectedChainedOption' => 'dropdown',
                                                             ),
-                                                    ),
-                                            ),
-                                        1 =>
-                                            array (
-                                                'type' => 'text',
-                                                'title' => 'Enter additional remarks for cloth customisation.',
-                                                'name' => 'Text input',
-                                                'meta' =>
-                                                    array (
-                                                        'isChained' => false,
-                                                    ),
-                                                'inputs' =>
-                                                    array (
-                                                        0 =>
-                                                            array (
-                                                                'label' => 'Enter remarks here',
-                                                                'chained_options' =>
-                                                                    array (
-                                                                    ),
-                                                                'selectedChainedOption' => NULL,
-                                                            ),
+                                                        'selectedChainedOption' => NULL,
                                                     ),
                                             ),
                                     ),
-                            ),
-                        2 =>
-                            array (
-                                'id' => 2,
-                                'title' => 'Delivery Instruction',
-                                'is_formgroup' => false,
-                                'parent_form' => NULL,
-                                'options' =>
+                                1 =>
                                     array (
-                                        0 =>
+                                        'type' => 'text',
+                                        'title' => 'Enter additional remarks for cloth customisation.',
+                                        'name' => 'Text input',
+                                        'price' => 0,
+                                        'meta' =>
                                             array (
-                                                'type' => 'radioBtn',
-                                                'title' => 'Type of address',
-                                                'name' => 'Radio Buttons',
-                                                'meta' =>
+                                                'isChained' => false,
+                                            ),
+                                        'inputs' =>
+                                            array (
+                                                0 =>
                                                     array (
-                                                        'isChained' => false,
+                                                        'label' => 'Enter remarks here',
+                                                        'chained_options' =>
+                                                            array (
+                                                            ),
+                                                        'selectedChainedOption' => NULL,
                                                     ),
-                                                'inputs' =>
+                                                1 =>
                                                     array (
-                                                        0 =>
+                                                        'label' => NULL,
+                                                        'chained_options' =>
                                                             array (
-                                                                'label' => 'Home (9 AM to 9 PM)',
-                                                                'value' => 'home-(9-am-to-9-pm)',
-                                                                'chained_options' =>
-                                                                    array (
-                                                                    ),
-                                                                'selectedChainedOption' => NULL,
                                                             ),
-                                                        1 =>
+                                                        'selectedChainedOption' => NULL,
+                                                    ),
+                                                2 =>
+                                                    array (
+                                                        'label' => NULL,
+                                                        'chained_options' =>
                                                             array (
-                                                                'label' => 'Work (9 AM to 4 PM)',
-                                                                'value' => 'work-(9-am-to-4-pm)',
-                                                                'chained_options' =>
-                                                                    array (
-                                                                    ),
-                                                                'selectedChainedOption' => NULL,
                                                             ),
+                                                        'selectedChainedOption' => NULL,
                                                     ),
                                             ),
                                     ),
                             ),
                     ),
+                2 =>
+                    array (
+                        'id' => 2,
+                        'title' => 'Delivery Instruction',
+                        'is_formgroup' => false,
+                        'parent_form' => NULL,
+                        'options' =>
+                            array (
+                                0 =>
+                                    array (
+                                        'type' => 'radioBtn',
+                                        'title' => 'Type of address',
+                                        'name' => 'Radio Buttons',
+                                        'price' => NULL,
+                                        'meta' =>
+                                            array (
+                                                'isChained' => false,
+                                            ),
+                                        'inputs' =>
+                                            array (
+                                                0 =>
+                                                    array (
+                                                        'label' => 'Home (9 AM to 9 PM)',
+                                                        'value' => 'home-(9-am-to-9-pm)',
+                                                        'chained_options' =>
+                                                            array (
+                                                            ),
+                                                        'selectedChainedOption' => NULL,
+                                                    ),
+                                                1 =>
+                                                    array (
+                                                        'label' => 'Work (9 AM to 4 PM)',
+                                                        'value' => 'work-(9-am-to-4-pm)',
+                                                        'chained_options' =>
+                                                            array (
+                                                            ),
+                                                        'selectedChainedOption' => NULL,
+                                                    ),
+                                            ),
+                                    ),
+                            ),
+                    ),
+            ),
             'category_id' => Category::all()->random()->id,
             'seller_id' => User::where('role_id', Role::getVendorRoleID())->get()->random()->id,
         ];
