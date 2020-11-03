@@ -131,8 +131,8 @@ class Thread extends Model
                 $thread->receiver->role_id == Role::getUserRoleID()) {
 
                 array_push($users, new ThreadResource($thread));
-            } else if ($thread->sender->role_id == Role::getUserRoleID() ||
-                $thread->receiver->role_id == Role::getUserRoleID()) {
+            } else if ($thread->sender->role_id == Role::getVendorRoleID() ||
+                $thread->receiver->role_id == Role::getVendorRoleID()) {
                 array_push($vendors, new ThreadResource($thread));
             }
         }
