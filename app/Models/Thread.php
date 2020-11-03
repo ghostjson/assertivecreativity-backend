@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Resources\ThreadResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -27,16 +28,15 @@ class Thread extends Model
      * @param User $user
      * @return Thread
      */
-    public static function send(array $data, User $user) : Thread
+    public static function send(array $data, User $user): Thread
     {
         $order = Order::find($data['order_id']);
 
-        if(!is_null($order))
-            if(
+        if (!is_null($order))
+            if (
                 $order->buyer_id == auth()->id() ||
                 $order->seller_id == auth()->id() ||
-                Auth::user()->isAdmin())
-            {
+                Auth::user()->isAdmin()) {
 
 
                 $thread = new Thread;
@@ -46,12 +46,10 @@ class Thread extends Model
                 $thread->order_id = $data['order_id'];
                 $thread->message_content = $data['message_content'];
 
-                try{
+                try {
                     $thread->save();
                     return $thread;
-                }
-                catch(\Exception $exception)
-                {
+                } catch (\Exception $exception) {
                     Log::error($exception);
                 }
             }
@@ -71,12 +69,11 @@ class Thread extends Model
     {
         $order = Order::find($data['order_id']);
 
-        if(!is_null($order))
-            if(
+        if (!is_null($order))
+            if (
                 $order->buyer_id == auth()->id() ||
                 $order->seller_id == auth()->id() ||
-                Auth::user()->isAdmin())
-            {
+                Auth::user()->isAdmin()) {
 
 
                 $thread = new Thread;
@@ -86,12 +83,10 @@ class Thread extends Model
                 $thread->order_id = $data['order_id'];
                 $thread->message_content = $data['message_content'];
 
-                try{
+                try {
                     $thread->save();
                     return $thread;
-                }
-                catch(\Exception $exception)
-                {
+                } catch (\Exception $exception) {
                     Log::error($exception);
                 }
             }
@@ -105,7 +100,7 @@ class Thread extends Model
      * @param Order $order
      * @return Collection
      */
-    public static function getThreadsByOrder(Order $order) : Collection
+    public static function getThreadsByOrder(Order $order): Collection
     {
         return Thread::where('order_id', $order->id)
             ->where(function ($query) use ($order) {
@@ -114,12 +109,48 @@ class Thread extends Model
             })->get();
     }
 
+    /**
+     * Get messages of the current user by order id and group by user and vendor
+     * @param Order $order
+     * @return array
+     */
+    public static function getThreadsByOrderAdmin(Order $order): array
+    {
+        $threads = Thread::where('order_id', $order->id)
+            ->where(function ($query) use ($order) {
+                $query->where('sender_id', \auth()->id())
+                    ->orWhere('receiver_id', \auth()->id());
+            })->get();
+
+
+        $users = [];
+        $vendors = [];
+
+        foreach ($threads as $thread) {
+            if ($thread->sender->role_id == Role::getUserRoleID() ||
+                $thread->receiver->role_id == Role::getUserRoleID()) {
+
+                array_push($users, new ThreadResource($thread));
+            } else if ($thread->sender->role_id == Role::getUserRoleID() ||
+                $thread->receiver->role_id == Role::getUserRoleID()) {
+                array_push($vendors, new ThreadResource($thread));
+            }
+        }
+
+        return [
+            'vendors' => $vendors,
+            'users' => $users
+        ];
+
+
+    }
+
 
     /**
      * Get sender object
      * @return BelongsTo
      */
-    public function sender() : BelongsTo
+    public function sender(): BelongsTo
     {
         return $this->belongsTo('App\Models\User', 'sender_id', 'id');
     }
@@ -128,7 +159,7 @@ class Thread extends Model
      * Get receiver object
      * @return BelongsTo
      */
-    public function receiver() : BelongsTo
+    public function receiver(): BelongsTo
     {
         return $this->belongsTo('App\Models\User', 'receiver_id', 'id');
     }
@@ -138,7 +169,7 @@ class Thread extends Model
      * Get order object
      * @return BelongsTo
      */
-    public function order() : BelongsTo
+    public function order(): BelongsTo
     {
         return $this->belongsTo('App\Models\Order', 'order_id', 'id');
     }

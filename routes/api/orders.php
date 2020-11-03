@@ -20,6 +20,7 @@ Route::delete('wishlist', [WishlistController::class, 'clear']);
 // THREADS
 
 Route::get('threads/order/{order}', [ThreadController::class, 'getThreadsByOrder']);
+Route::get('threads/admin/order/{order}', [ThreadController::class, 'get']);
 Route::get('threads', [ThreadController::class, 'getThreadsByCurrentUser']);
 Route::get('threads/{thread}', [ThreadController::class, 'getThreadById']);
 Route::post('threads/{user}', [ThreadController::class, 'send']);

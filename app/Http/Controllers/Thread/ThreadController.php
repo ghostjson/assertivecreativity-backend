@@ -23,7 +23,7 @@ class ThreadController extends Controller
 
         $this->middleware([
             AdminAuthMiddleware::class
-        ])->only(['send']);
+        ])->only(['send', 'get']);
 
     }
 
@@ -42,6 +42,19 @@ class ThreadController extends Controller
         return  $thread ?
             respondWithObject('Successfully send thread', new ThreadResource($thread)) :
             respond('Failed to send thread', 500);
+    }
+
+    /**
+     * Get threads of a specific user
+     * @param Order $order
+     * @return array
+     */
+    public function get(Order $order) : array
+    {
+        if(auth()->user()->isAdmin())
+        {
+            return Thread::getThreadsByOrderAdmin($order);
+        }
     }
 
     /**
