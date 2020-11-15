@@ -104,6 +104,13 @@ class ProductController extends Controller
      */
     public function update(ProductUpdateRequest $request, Product $product) : JsonResponse
     {
+        $validated = $request->validated();
+
+        if($validated['image'] != null)
+        {
+            $validated['image'] = fileUploader($validated['image']);
+        }
+
         if($this->isOwner($product))
         {
             $product->update($request->validated());
