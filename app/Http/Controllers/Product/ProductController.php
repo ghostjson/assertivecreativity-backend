@@ -106,7 +106,7 @@ class ProductController extends Controller
     {
         $validated = $request->validated();
 
-        if($validated['image'] != null)
+        if(isset($validated['image']))
         {
             $validated['image'] = fileUploader($validated['image']);
         }
