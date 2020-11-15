@@ -1268,14 +1268,13 @@
 									}
 								],
 								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "category_ids",
-											"value": "[2]",
-											"type": "text"
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
 										}
-									]
+									}
 								},
 								"url": {
 									"raw": "{{base_url}}/api/products/categories/list",
@@ -1489,10 +1488,28 @@
 						{
 							"name": "Get Products From List Of Categories",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_ids\": [2,3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": ""
+									"raw": "{{base_url}}/api/products/categories/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"categories",
+										"list"
+									]
 								}
 							},
 							"response": []
@@ -4487,7 +4504,10 @@
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": []
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
 						},
 						"url": {
 							"raw": "{{base_url}}/api/orders/threads/admin/order/1",

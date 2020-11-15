@@ -61,7 +61,7 @@ class CategoryController extends Controller
      */
     public function getProductByCategories(GetProductByCategoriesRequest $request) : ResourceCollection
     {
-        $ids = json_decode($request->validated()['category_ids']);
+        $ids = json_decode(json_encode($request->validated()['category_ids']));
         return ProductResource::collection(Product::whereIn('category_id', $ids)->get());
 
     }
