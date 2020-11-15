@@ -113,7 +113,7 @@ class ProductController extends Controller
 
         if($this->isOwner($product))
         {
-            $product->update($request->validated());
+            $product->update($validated);
             return respondWithObject('Successfully updated product', $product);
         }
         else
