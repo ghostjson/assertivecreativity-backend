@@ -18,10 +18,10 @@ Route::delete('categories/{category}', [CategoryController::class, 'destroy']);
 
 
 //tag
-Route::post('tag', [TagController::class, 'store']);
-Route::post('tag/{tag}', [TagController::class, 'update']);
-Route::get('tag/{tag}', [TagController::class, 'show']);
-Route::get('tag/name/{name}', [TagController::class, 'showByName']);
+Route::post('tags', [TagController::class, 'store']);
+Route::post('tags/{tag}', [TagController::class, 'update']);
+Route::get('tags/{tag}', [TagController::class, 'show']);
+Route::get('tags/name/{name}', [TagController::class, 'showByName']);
 Route::get('tags', [TagController::class, 'index']);
 Route::delete('tags/{tag}', [TagController::class, 'destroy']);
 

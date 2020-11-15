@@ -1527,15 +1527,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/api/products/tag/10",
+									"raw": "{{base_url}}/api/products/tags/3",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"products",
-										"tag",
-										"10"
+										"tags",
+										"3"
 									]
 								}
 							},
@@ -1615,7 +1615,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2NzY4NiwiZXhwIjoxNjAzMzcxMjg2LCJuYmYiOjE2MDMzNjc2ODYsImp0aSI6InF5cFBtTUEyYVJLTEt5QmYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UDRn3SMmYMOhPH7tzI4YFXSUgZCmpWznrn2uouFAhsk",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNTQ0MDA4MCwiZXhwIjoxNjA1NDQzNjgwLCJuYmYiOjE2MDU0NDAwODAsImp0aSI6ImpKbVFPOXRzWUV6ZlNTVTYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ElA0AJaWnEwNwuJUZx063BBeofIaVBsiJopAXhR5jeU",
 										"type": "text"
 									}
 								],
@@ -1635,14 +1635,14 @@
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/api/products/tag",
+									"raw": "{{base_url}}/api/products/tags",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"products",
-										"tag"
+										"tags"
 									]
 								}
 							},
@@ -1762,15 +1762,15 @@
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/api/products/tag/2",
+									"raw": "{{base_url}}/api/products/tags/3",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"products",
-										"tag",
-										"2"
+										"tags",
+										"3"
 									]
 								}
 							},
@@ -1876,14 +1876,14 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/api/products/tag/name/et",
+									"raw": "{{base_url}}/api/products/tags/name/et",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"products",
-										"tag",
+										"tags",
 										"name",
 										"et"
 									]
