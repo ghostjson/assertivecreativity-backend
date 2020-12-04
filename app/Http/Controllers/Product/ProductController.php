@@ -3,20 +3,17 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
-use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\VendorAuthMiddleware;
+use App\Http\Requests\ProductImportRequest;
 use App\Http\Requests\ProductStoreRequest;
 use App\Http\Requests\ProductUpdateRequest;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\StoreTagRequest;
-use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ProductResource;
-use App\Http\Resources\TagResource;
-use App\Models\Category;
+use App\Jobs\ProductImportJob;
 use App\Models\Product;
 use App\Models\Role;
-use App\Models\Tag;
+use App\Modules\ProductImporter\ProductImporter;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;
@@ -38,13 +35,18 @@ class ProductController extends Controller
 
     /**
      * Return All products .
-     *
-     * @return ResourceCollection
+     * @return array
      */
-    public function index() : ResourceCollection
+    public function index() : array
     {
-        return ProductResource::collection(Product::all());
+        $products = [];
+        $product_names = Product::select('Name')->distinct()->get();
+        foreach ($product_names as $product_name){
+            array_push($products, Product::where('Name', $product_name->Name)->first());
+        }
+        return $products;
     }
+
 
     /**
      * Return All products of a vendor.
@@ -83,15 +85,21 @@ class ProductController extends Controller
         return respondWithObject('successfully created', $product);
     }
 
+    public function import(ProductImportRequest $request)
+    {
+        dispatch(new ProductImportJob())->delay(Carbon::now()->addSeconds(5));
+        return respond('Started importing from sheet');
+    }
+
     /**
      * Display the specified resource.
      *
      * @param Product $product
-     * @return ProductResource
+     * @return Product
      */
-    public function show(Product $product) : ProductResource
+    public function show(Product $product) : \Illuminate\Support\Collection
     {
-        return new ProductResource($product);
+        return Product::where('Name', $product->Name)->get();
     }
 
 

@@ -34,6 +34,7 @@ Route::get('search/{search}', [ProductController::class, 'productSearch']);
 Route::get('', [ProductController::class, 'index']);
 Route::get('/vendor', [ProductController::class, 'indexVendor']);
 Route::post('', [ProductController::class, 'store']);
+Route::post('excel', [ProductController::class, 'import']);
 Route::get('{product}', [ProductController::class, 'show']);
 Route::delete('{product}', [ProductController::class, 'destroy']);
 Route::post('{product}', [ProductController::class, 'update']);

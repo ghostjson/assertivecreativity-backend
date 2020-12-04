@@ -2943,6 +2943,35 @@
 						"description": "Get list of product based on product name, category and tag name."
 					},
 					"response": []
+				},
+				{
+					"name": "Import Products From Excel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sheet",
+									"type": "file",
+									"src": "/E:/workspace/workspace/freelance/assertive/assertivecreativity-backend/storage/app/public/products.xls"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/products/excel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"excel"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}

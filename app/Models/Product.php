@@ -16,6 +16,7 @@ use Nicolaslopezj\Searchable\SearchableTrait;
  * @method static find($toArray)
  * @method static whereIn(string $string, $ids)
  * @method static search(string $search)
+ * @method static select(string $string)
  */
 class Product extends Model
 {
