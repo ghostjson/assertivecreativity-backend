@@ -141,6 +141,8 @@ class CreateProductsTable extends Migration
             $table->string('InventoryOnHandAdd')->nullable();
             $table->string('InventoryMemo')->nullable();
 
+            $table->bigInteger('Owner')->unsigned();
+
             $table->timestamps();
         });
     }

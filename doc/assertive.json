@@ -2259,6 +2259,17 @@
 					]
 				},
 				{
+					"name": "show updated Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "List Vendor's Products",
 					"request": {
 						"method": "GET",
@@ -2948,7 +2959,13 @@
 					"name": "Import Products From Excel",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNzE1ODAzOSwiZXhwIjoxNjA3MTYxNjM5LCJuYmYiOjE2MDcxNTgwMzksImp0aSI6Ik1OS0Q1RUZVcTlxRUhENkwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jwgQbWS1i31Ru-U_-Wvz7WiotZZ8aMLQ4rxmXadhzdM",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [

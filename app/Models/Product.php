@@ -11,6 +11,7 @@ use Nicolaslopezj\Searchable\SearchableTrait;
 /**
  * @property mixed seller_id
  * @property mixed id
+ * @property mixed Name
  * @method static create(array $validated)
  * @method static where(string $string, $id, $optional='')
  * @method static find($toArray)

@@ -142,6 +142,8 @@ class ProductsImport implements ToModel, WithStartRow
                 'InventoryOnHand' => $row[121],
                 'InventoryOnHandAdd' => $row[122],
                 'InventoryMemo' => $row[123],
+
+                'Owner' => auth()->id()
             ]
         );
     }
