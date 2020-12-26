@@ -16,6 +16,7 @@ use App\Models\Role;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\Storage;
 
@@ -85,9 +86,10 @@ class ProductController extends Controller
         return respondWithObject('successfully created', $product);
     }
 
-    public function import(ProductImportRequest $request)
+    public function import(Request $request)
     {
-        Storage::put('public/products.xls', $request->file('sheet'));
+        Storage::putFileAs('public', $request->file('sheet'), 'products.xls');
+
         dispatch(new ProductImportJob())->delay(Carbon::now()->addSeconds(5));
         return respond('Started importing from sheet');
     }
