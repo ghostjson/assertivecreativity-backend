@@ -9,9 +9,10 @@ use App\Http\Requests\ProductImportRequest;
 use App\Http\Requests\ProductStoreRequest;
 use App\Http\Requests\ProductUpdateRequest;
 use App\Http\Requests\ShowUpdatedProductRequest;
+use App\Http\Resources\CustomProductResource;
 use App\Http\Resources\ProductResource;
 use App\Jobs\ProductImportJob;
-use App\Models\Product;
+use App\Models\CustomProduct;
 use App\Models\Role;
 use Carbon\Carbon;
 use Exception;
@@ -20,7 +21,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\Storage;
 
-class ProductController extends Controller
+class CustomProductController extends Controller
 {
     public function __construct()
     {
@@ -36,8 +37,6 @@ class ProductController extends Controller
     }
 
 
-
-
     /**
      * Return All products of a vendor.
      *
@@ -49,7 +48,7 @@ class ProductController extends Controller
             return $this->index();
         } else {
             return ProductResource::collection(
-                Product::where('seller_id', auth()->id())
+                CustomProduct::where('seller_id', auth()->id())
                     ->get()
             );
         }
@@ -69,27 +68,19 @@ class ProductController extends Controller
 
         $validated['image'] = fileUploader($validated['image']);
 
-        $product = Product::create($validated);
+        $product = CustomProduct::create($validated);
 
         return respondWithObject('successfully created', $product);
     }
-
-
-
-
-
-
-
-
 
     /**
      * Update the specified resource in storage.
      *
      * @param ProductUpdateRequest $request
-     * @param Product $product
+     * @param CustomProduct $product
      * @return JsonResponse
      */
-    public function update(ProductUpdateRequest $request, Product $product): JsonResponse
+    public function update(ProductUpdateRequest $request, CustomProduct $product): JsonResponse
     {
         $validated = $request->validated();
 
@@ -108,11 +99,11 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Product $product
+     * @param CustomProduct $product
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy(Product $product): JsonResponse
+    public function destroy(CustomProduct $product): JsonResponse
     {
         try {
             if ($this->isOwner($product)) {
@@ -129,16 +120,16 @@ class ProductController extends Controller
 
 
     /**
-     * Get all products of a specific tag name
+     * Get all products of a specific name
      *
      * @param string $search
      * @return ResourceCollection
      */
     public function productSearch(string $search): ResourceCollection
     {
-        $search_results = Product::search($search)->get();
+        $search_results = CustomProduct::search($search)->get();
 
-        return ProductResource::collection(
+        return CustomProductResource::collection(
             $search_results
         );
     }
@@ -146,10 +137,10 @@ class ProductController extends Controller
     /**
      * Check if the authenticated user is the owner of the product
      *
-     * @param Product $product
+     * @param CustomProduct $product
      * @return bool
      */
-    private function isOwner(Product $product): bool
+    private function isOwner(CustomProduct $product): bool
     {
         return ((auth()->id() === $product->seller_id) || (auth()->id() === Role::getAdminRoleID()));
     }

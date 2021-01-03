@@ -37,7 +37,7 @@ class Order extends Model
         $order->buyer_id = auth()->id();
         $order->product_id = $data['product_id'];
         $order->data = $data['data'];
-        $order->seller_id = Product::find($data['product_id'])->seller_id;
+        $order->seller_id = CustomProduct::find($data['product_id'])->seller_id;
         $order->order_status = 'pending'; # pending/accepted/completed/cancelled
         $order->delivery_date = $data['delivery_date'];
 
@@ -88,7 +88,7 @@ class Order extends Model
      */
     public function product() : BelongsTo
     {
-        return $this->belongsTo('App\Models\Product', 'product_id', 'id');
+        return $this->belongsTo('App\Models\CustomProduct', 'product_id', 'id');
     }
 
 

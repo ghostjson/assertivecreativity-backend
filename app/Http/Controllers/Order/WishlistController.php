@@ -8,7 +8,7 @@ use App\Http\Requests\StoreWishlistRequest;
 use App\Http\Resources\ProductResource;
 use App\Http\Resources\WishlistResource;
 use App\Models\Order;
-use App\Models\Product;
+use App\Models\CustomProduct;
 use App\Models\Wishlist;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;

@@ -3,19 +3,19 @@
 namespace Database\Factories;
 
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\CustomProduct;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProductFactory extends Factory
+class CustomProductFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Product::class;
+    protected $model = CustomProduct::class;
 
     /**
      * Define the model's default state.
@@ -38,7 +38,7 @@ class ProductFactory extends Factory
                 0 =>
                     array (
                         'id' => 0,
-                        'title' => 'Product Customisation',
+                        'title' => 'CustomProduct Customisation',
                         'is_formgroup' => true,
                         'parent_form' => NULL,
                         'options' =>

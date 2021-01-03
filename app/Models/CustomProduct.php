@@ -19,7 +19,7 @@ use Nicolaslopezj\Searchable\SearchableTrait;
  * @method static search(string $search)
  * @method static select(string $string)
  */
-class Product extends Model
+class CustomProduct extends Model
 {
     use HasFactory, SearchableTrait;
 
@@ -27,7 +27,7 @@ class Product extends Model
 
     public $searchable = [
       'columns' => [
-          'products.name' => 10
+          'custom_products.name' => 10
       ]
     ];
 

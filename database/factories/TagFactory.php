@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\CustomProduct;
 use App\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

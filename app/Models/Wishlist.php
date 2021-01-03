@@ -28,7 +28,7 @@ class Wishlist extends Model
 
     public function getProductAttribute()
     {
-        return Product::find($this->product_id);
+        return CustomProduct::find($this->product_id);
     }
 
     public function setCustomFormsEntryAttribute(array $value) : void
@@ -43,10 +43,10 @@ class Wishlist extends Model
 
     /**
      * Remove given product from wishlist
-     * @param Product $product
+     * @param CustomProduct $product
      * @return bool
      */
-    public static function removeProduct(Product $product) : bool
+    public static function removeProduct(CustomProduct $product) : bool
     {
 
         try {
@@ -78,6 +78,6 @@ class Wishlist extends Model
 
     public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(CustomProduct::class);
     }
 }
