@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 
-use App\Models\Product;
+use App\Models\StockProduct;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithStartRow;
 
@@ -15,7 +15,7 @@ class ProductsImport implements ToModel, WithStartRow
     */
     public function model(array $row)
     {
-        return Product::updateOrCreate(
+        return StockProduct::updateOrCreate(
             ['ProductID' => $row[0]],
             [
                 'ProductID' => $row[0],

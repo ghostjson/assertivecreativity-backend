@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace App\Http\Controllers\CustomProduct;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\AdminAuthMiddleware;
@@ -42,7 +42,7 @@ class CategoryController extends Controller
 
     /**
      * Get all products of a specific category
-     *
+     *s
      * @param Category $category
      * @return ResourceCollection
      */

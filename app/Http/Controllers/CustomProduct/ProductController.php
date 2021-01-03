@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace App\Http\Controllers\CustomProduct;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
@@ -35,19 +35,7 @@ class ProductController extends Controller
 
     }
 
-    /**
-     * Return All products .
-     * @return array
-     */
-    public function index(): array
-    {
-        $products = [];
-        $product_names = Product::select('Name')->distinct()->get();
-        foreach ($product_names as $product_name) {
-            array_push($products, Product::where('Name', $product_name->Name)->first());
-        }
-        return $products;
-    }
+
 
 
     /**
@@ -86,41 +74,12 @@ class ProductController extends Controller
         return respondWithObject('successfully created', $product);
     }
 
-    public function import(Request $request)
-    {
-        Storage::putFileAs('public', $request->file('sheet'), 'products.xls');
-
-        dispatch(new ProductImportJob())->delay(Carbon::now()->addSeconds(5));
-        return respond('Started importing from sheet');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param Product $product
-     * @return array
-     */
-    public function show(Product $product)
-    {
-        $variants = Product::where('Name', $product->Name);
-        $colors = $variants->select('Colors')->distinct()->get();
-
-        return [
-            'product' => $product->toArray(),
-            'attributes' => [
-                'Colors' => $this->getValues($colors->toArray())
-            ],
-        ];
-
-    }
 
 
-    public function showUpdatedProduct(ShowUpdatedProductRequest $request, Product $product)
-    {
-        $conditions = $request->validated();
-        $conditions = $conditions + ['Name' => $product->Name];
-        return Product::where($conditions)->get();
-    }
+
+
+
+
 
 
     /**
@@ -195,14 +154,5 @@ class ProductController extends Controller
         return ((auth()->id() === $product->seller_id) || (auth()->id() === Role::getAdminRoleID()));
     }
 
-    private function getValues($array)
-    {
-        $values = [];
-        foreach ($array as $value)
-        {
-            array_push($values, array_values($value)[0]);
-        }
 
-        return $values;
-    }
 }
