@@ -4,20 +4,17 @@ namespace App\Http\Controllers\CustomProduct;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\AdminAuthMiddleware;
-use App\Http\Middleware\Authenticate;
-use App\Http\Middleware\VendorAuthMiddleware;
 use App\Http\Requests\GetProductByCategoriesRequest;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Resources\CategoryResource;
-use App\Http\Resources\ProductResource;
+use App\Http\Resources\CustomProductResource;
 use App\Http\Resources\TagResource;
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\CustomProduct;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class CategoryController extends Controller
+class CustomCategoryController extends Controller
 {
 
     public function __construct()
@@ -48,8 +45,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category) : ResourceCollection
     {
-        return ProductResource::collection(
-            Product::where('category_id', $category->id)
+        return CustomProductResource::collection(
+            CustomProduct::where('category_id', $category->id)
                 ->get()
         );
     }
@@ -62,7 +59,7 @@ class CategoryController extends Controller
     public function getProductByCategories(GetProductByCategoriesRequest $request) : ResourceCollection
     {
         $ids = json_decode(json_encode($request->validated()['category_ids']));
-        return ProductResource::collection(Product::whereIn('category_id', $ids)->get());
+        return CustomProductResource::collection(CustomProduct::whereIn('category_id', $ids)->get());
 
     }
 

@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static where(string $string, $id, string $optional='')
  * @method static create(array $validated)
  * @property mixed products
+ * @property mixed custom_products
  */
 class Tag extends Model
 {
@@ -33,9 +34,12 @@ class Tag extends Model
      * Get all products that's under this tag
      * @return BelongsToMany
      */
-    public function products() : BelongsToMany
+    public function custom_products() : BelongsToMany
     {
-        return $this->belongsToMany(CustomProduct::class);
+        return $this->belongsToMany(CustomProduct::class,
+            CustomProductTag::class,
+            'tag_id',
+            'custom_product_id');
     }
 
 }

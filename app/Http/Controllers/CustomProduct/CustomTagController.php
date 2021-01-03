@@ -4,23 +4,24 @@ namespace App\Http\Controllers\CustomProduct;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\AdminAuthMiddleware;
+use App\Http\Requests\AddTagsToProductRequest;
 use App\Http\Requests\StoreTagRequest;
-use App\Http\Resources\ProductResource;
+use App\Http\Resources\CustomProductResource;
 use App\Http\Resources\TagResource;
+use App\Models\CustomProductTag;
 use App\Models\Tag;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
-use function PHPUnit\Framework\isNull;
+use Illuminate\Support\Facades\Log;
 
-class TagController extends Controller
+class CustomTagController extends Controller
 {
 
     public function __construct()
     {
         $this->middleware([
             AdminAuthMiddleware::class
-        ])->only(['store', 'update', 'destroy']);
+        ])->only(['store', 'update', 'destroy', 'addTagsToProduct']);
     }
 
 
@@ -68,8 +69,8 @@ class TagController extends Controller
      */
     public function show(Tag $tag) : ResourceCollection
     {
-        return ProductResource::collection(
-            $tag->products
+        return CustomProductResource::collection(
+            $tag->custom_products
         );
     }
 
@@ -82,12 +83,12 @@ class TagController extends Controller
     public function showByName(string $name) : ResourceCollection
     {
         try {
-            $products = Tag::where('name', $name)->first()->products;
-            return ProductResource::collection($products);
+            $products = Tag::where('name', $name)->first()->custom_products;
+            return CustomProductResource::collection($products);
 
         }catch (\ErrorException $exception)
         {
-            return ProductResource::collection([]);
+            return CustomProductResource::collection([]);
         }
 
 
@@ -107,6 +108,25 @@ class TagController extends Controller
         catch (\Exception $exception)
         {
             return respond('Tag cannot delete', 500);
+        }
+    }
+
+    public function addTagsToProduct(AddTagsToProductRequest $request)
+    {
+        $tag_ids = json_decode($request->input('tag_ids'));
+
+        try{
+            foreach ($tag_ids as $tag_id){
+                CustomProductTag::create([
+                    'custom_product_id' => $request->input('product_id'),
+                    'tag_id' => $tag_id
+                ]);
+            }
+            return respond('Tags are successfully added');
+        }catch (\Exception $exception){
+            dd($exception);
+            Log::error($exception);
+            return respond('Server Error', 500);
         }
     }
 

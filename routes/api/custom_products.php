@@ -1,29 +1,32 @@
 <?php
 
-use App\Http\Controllers\CustomProduct\CategoryController;
-use App\Http\Controllers\CustomProduct\TagController;
+use App\Http\Controllers\CustomProduct\CustomCategoryController;
+use App\Http\Controllers\CustomProduct\CustomTagController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomProduct\CustomProductController;
 
 //category
-Route::post('categories', [CategoryController::class, 'store']);
-Route::get('categories', [CategoryController::class, 'index']);
-Route::post('categories/list', [CategoryController::class, 'getProductByCategories']);
-Route::get('categories/{category}', [CategoryController::class, 'show']);
-Route::post('categories/{category}', [CategoryController::class, 'update']);
-Route::get('categories/tags/{category}', [CategoryController::class, 'tags']);
-Route::delete('categories/{category}', [CategoryController::class, 'destroy']);
+Route::post('categories', [CustomCategoryController::class, 'store']);
+Route::get('categories', [CustomCategoryController::class, 'index']);
+Route::post('categories/list', [CustomCategoryController::class, 'getProductByCategories']);
+Route::get('categories/tags/{category}', [CustomCategoryController::class, 'tags']);
+Route::get('categories/{category}', [CustomCategoryController::class, 'show']);
+Route::post('categories/{category}', [CustomCategoryController::class, 'update']);
+Route::delete('categories/{category}', [CustomCategoryController::class, 'destroy']);
 
 //wishlist
 
 
 //tag
-Route::post('tags', [TagController::class, 'store']);
-Route::post('tags/{tag}', [TagController::class, 'update']);
-Route::get('tags/{tag}', [TagController::class, 'show']);
-Route::get('tags/name/{name}', [TagController::class, 'showByName']);
-Route::get('tags', [TagController::class, 'index']);
-Route::delete('tags/{tag}', [TagController::class, 'destroy']);
+Route::post('tags', [CustomTagController::class, 'store']);
+Route::post('tags/add', [CustomTagController::class, 'addTagsToProduct']);
+
+Route::post('tags/{tag}', [CustomTagController::class, 'update']);
+Route::get('tags/{tag}', [CustomTagController::class, 'show']);
+Route::get('tags/name/{name}', [CustomTagController::class, 'showByName']);
+Route::get('tags', [CustomTagController::class, 'index']);
+Route::delete('tags/{tag}', [CustomTagController::class, 'destroy']);
+
 
 //search
 Route::get('search/{search}', [CustomProductController::class, 'productSearch']);
