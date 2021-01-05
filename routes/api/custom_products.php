@@ -32,9 +32,9 @@ Route::delete('tags/{tag}', [CustomTagController::class, 'destroy']);
 Route::get('search/{search}', [CustomProductController::class, 'productSearch']);
 
 //product crud
-
-
+Route::get('', [CustomProductController::class, 'index']);
 Route::post('', [CustomProductController::class, 'store']);
 Route::get('vendor', [CustomProductController::class, 'indexVendor']);
+Route::get('{product}', [CustomProductController::class, 'show']);
 Route::delete('{product}', [CustomProductController::class, 'destroy']);
 Route::post('{product}', [CustomProductController::class, 'update']);

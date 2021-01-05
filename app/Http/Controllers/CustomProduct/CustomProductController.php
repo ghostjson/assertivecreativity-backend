@@ -20,6 +20,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\Storage;
+use Tymon\JWTAuth\Claims\Custom;
 
 class CustomProductController extends Controller
 {
@@ -31,9 +32,19 @@ class CustomProductController extends Controller
 
         $this->middleware([
             VendorAuthMiddleware::class
-        ])->only(['store', 'destroy', 'update', 'import']);
+        ])->only(['store', 'destroy', 'update', 'import', 'indexVendor']);
 
 
+    }
+
+    public function index()
+    {
+        return CustomProductResource::collection(CustomProduct::all());
+    }
+
+    public function show(CustomProduct $product)
+    {
+        return new CustomProductResource($product);
     }
 
 
@@ -47,7 +58,7 @@ class CustomProductController extends Controller
         if (auth()->user()->isAdmin()) {
             return $this->index();
         } else {
-            return ProductResource::collection(
+            return CustomProductResource::collection(
                 CustomProduct::where('seller_id', auth()->id())
                     ->get()
             );

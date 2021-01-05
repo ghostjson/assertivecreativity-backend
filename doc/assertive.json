@@ -2054,13 +2054,14 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/api/products/vendor",
+									"raw": "{{base_url}}/api/products/custom/vendor",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"api",
 										"products",
+										"custom",
 										"vendor"
 									]
 								}
@@ -2138,6 +2139,25 @@
 									"body": "{\n    \"data\": [\n        {\n            \"id\": 11,\n            \"name\": \"new_product\",\n            \"base_price\": \"10\",\n            \"description\": \"some test description\",\n            \"image\": \"http://localhost:8000/storage/1604324789_5fa00db596ae86.17259092.png\",\n            \"price_table\": \"priceTable\",\n            \"price_table_mode\": true,\n            \"sales\": \"100\",\n            \"serial\": \"AF123Aas2a\",\n            \"custom_forms\": \"{json here}\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"accusamus\",\n                \"description\": \"Eveniet iure ut recusandae maxime facere cum nihil. Aspernatur beatae eum et corrupti sunt enim occaecati. Maxime et necessitatibus consectetur.\",\n                \"created_at\": \"2020-11-02T09:58:31.000000Z\",\n                \"updated_at\": \"2020-11-02T09:58:31.000000Z\"\n            },\n            \"seller_id\": \"13\",\n            \"created_at\": \"2020-11-02T13:46:29.000000Z\",\n            \"stock\": \"1000\"\n        }\n    ]\n}"
 								}
 							]
+						},
+						{
+							"name": "List all custom products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/custom",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"custom"
+									]
+								}
+							},
+							"response": []
 						},
 						{
 							"name": "Store Product",
@@ -2729,6 +2749,26 @@
 									]
 								},
 								"description": "Get list of product based on product name, category and tag name."
+							},
+							"response": []
+						},
+						{
+							"name": "Show Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/custom/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"custom",
+										"4"
+									]
+								}
 							},
 							"response": []
 						}
