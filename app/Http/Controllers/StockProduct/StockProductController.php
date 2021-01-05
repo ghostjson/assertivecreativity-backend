@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\StockProduct;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\VendorAuthMiddleware;
 use App\Http\Requests\ShowUpdatedProductRequest;
 use App\Jobs\ProductImportJob;
 use App\Models\CustomProduct;
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Storage;
 
 class StockProductController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware([
+            VendorAuthMiddleware::class
+        ])->only(['import']);
+    }
 
     /**
      * Return All products .
@@ -75,5 +83,23 @@ class StockProductController extends Controller
         }
 
         return $values;
+    }
+
+    //categories
+    public function categories()
+    {
+        return array_values(
+            array_unique(
+                StockProduct::all()
+                    ->pluck('Cat1Name')
+                    ->toArray()
+            )
+        );
+
+    }
+
+    public function getProductsByCategoryName(string $category)
+    {
+        return StockProduct::where('Cat1Name', $category)->get()->unique('Name')->values();
     }
 }

@@ -32,7 +32,7 @@ class CustomProductController extends Controller
 
         $this->middleware([
             VendorAuthMiddleware::class
-        ])->only(['store', 'destroy', 'update', 'import', 'indexVendor']);
+        ])->only(['store', 'destroy', 'update', 'indexVendor']);
 
 
     }

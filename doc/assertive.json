@@ -2987,7 +2987,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwOTY2NzAxNywiZXhwIjoxNjA5NjcwNjE3LCJuYmYiOjE2MDk2NjcwMTcsImp0aSI6InZpdUU5ZVA0bUk1VkNCdXAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jGfySUK2VL0Rh_2yY_4NeIUyaX2CRd5-0kjHLiDlWBM",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwOTg2MDQxNCwiZXhwIjoxNjA5ODY0MDE0LCJuYmYiOjE2MDk4NjA0MTQsImp0aSI6IkxTU2dxa0ExRWU0MVYwMjAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TOKdIY4iCh8rNiedPySpeZNTsyIp4sYgukctP0TpbKU",
 										"type": "text"
 									}
 								],
@@ -3011,6 +3011,47 @@
 										"products",
 										"stock",
 										"excel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/stock/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"stock",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Products By Category Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/stock/categories/Scarves",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"stock",
+										"categories",
+										"Scarves"
 									]
 								}
 							},
