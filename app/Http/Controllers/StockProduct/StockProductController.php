@@ -66,7 +66,6 @@ class StockProductController extends Controller
     }
 
 
-
     public function showUpdatedProduct(ShowUpdatedProductRequest $request, StockProduct $product)
     {
         $conditions = $request->validated();

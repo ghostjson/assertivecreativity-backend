@@ -4,8 +4,8 @@
     - quantity step definition
     -> Stock Products search by name
     -> get Stock Products categories list
-    - Item num to product
-    - stock products follow convention
+    -> Item num to product
+    -> stock products follow convention
     - problem with wishlist
     - form save (CRUD)
     - message save (CRUD)

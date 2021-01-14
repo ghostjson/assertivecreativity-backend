@@ -26,7 +26,7 @@ class WishlistController extends Controller
 
     /**
      * Return all products in the wishlist
-     * @return ResourceCollection
+     * @return JsonResponse
      */
     public function index() : JsonResponse
     {

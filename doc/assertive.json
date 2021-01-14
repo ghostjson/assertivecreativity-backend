@@ -2620,7 +2620,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjY4NDE1OSwiZXhwIjoxNjAyNjg3NzU5LCJuYmYiOjE2MDI2ODQxNTksImp0aSI6Im9LOFlmVnFvaGowdnRPQWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.knFyP2XUremmcivGBnUZQ6jEyTbnNNKbbhAgNWZOhsI",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDY0MjEzMiwiZXhwIjoxNjEwNjQ1NzMyLCJuYmYiOjE2MTA2NDIxMzIsImp0aSI6IlZsUGZNZ0p5R0pFb1QzQXkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktI5ThXxlIUYX7zsijeQeqNOdPOL7JgK4iuFWml0uC4",
 												"type": "text"
 											},
 											{
@@ -2747,7 +2747,7 @@
 											{
 												"key": "Authorization",
 												"type": "text",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzcwOTI0NiwiZXhwIjoxNjAzNzEyODQ2LCJuYmYiOjE2MDM3MDkyNDYsImp0aSI6ImhyZEJOM2lIQXpDSVFmdk4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._Dln8p5g-h_n9Mtr1EpNaT5jwegBcCy-MqycnoNG7LI"
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDY0MjEzMiwiZXhwIjoxNjEwNjQ1NzMyLCJuYmYiOjE2MTA2NDIxMzIsImp0aSI6IlZsUGZNZ0p5R0pFb1QzQXkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktI5ThXxlIUYX7zsijeQeqNOdPOL7JgK4iuFWml0uC4"
 											},
 											{
 												"key": "Accept",
@@ -2771,7 +2771,7 @@
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/api/orders/wishlist/7",
+											"raw": "{{base_url}}/api/orders/wishlist/1",
 											"host": [
 												"{{base_url}}"
 											],
@@ -2779,7 +2779,7 @@
 												"api",
 												"orders",
 												"wishlist",
-												"7"
+												"1"
 											]
 										},
 										"description": "Get all products in the wishlist"
@@ -2891,13 +2891,13 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzYzMDkyMywiZXhwIjoxNjAzNjM0NTIzLCJuYmYiOjE2MDM2MzA5MjMsImp0aSI6IlpxNHI3OVo4a0VxMlNCaVMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.XTcQ40pGrWeUS4HsVdDN-YdaSvCptuX4Pg1x1J4jpEY",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDY0MjEzMiwiZXhwIjoxNjEwNjQ1NzMyLCJuYmYiOjE2MTA2NDIxMzIsImp0aSI6IlZsUGZNZ0p5R0pFb1QzQXkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktI5ThXxlIUYX7zsijeQeqNOdPOL7JgK4iuFWml0uC4",
 												"type": "text"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"product_id\": 11,\r\n  \"quantity\": 1,\r\n  \"custom_forms_entry\": {\r\n    \"name\": \"pashmeena scarf\",\r\n    \"description\": \"skjfdlfjfsdf\",\r\n    \"base_price\": \"12\",\r\n    \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\r\n    \"custom_forms\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"thueh\",\r\n        \"parent_form\": null,\r\n        \"options\": [\r\n          {\r\n            \"type\": \"radioBtn\",\r\n            \"title\": \"asdasd\",\r\n            \"name\": \"Radio Buttons\",\r\n            \"price\": null,\r\n            \"input\": \"asdasd\",\r\n            \"meta\": {\r\n              \"isChained\": false,\r\n              \"chained_ops_hidden\": true\r\n            },\r\n            \"chained_options\": []\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  },\r\n  \"total_price\": 0\r\n}",
+											"raw": "{\r\n  \"product_id\": 10,\r\n  \"quantity\": 1,\r\n  \"custom_forms_entry\": {\r\n    \"name\": \"pashmeena scarf\",\r\n    \"description\": \"skjfdlfjfsdf\",\r\n    \"base_price\": \"12\",\r\n    \"image\": \"http://localhost:8000/storage/1603630782_5f9576bed7b1e3.78203230.png\",\r\n    \"custom_forms\": [\r\n      {\r\n        \"id\": 0,\r\n        \"title\": \"thueh\",\r\n        \"parent_form\": null,\r\n        \"options\": [\r\n          {\r\n            \"type\": \"radioBtn\",\r\n            \"title\": \"asdasd\",\r\n            \"name\": \"Radio Buttons\",\r\n            \"price\": null,\r\n            \"input\": \"asdasd\",\r\n            \"meta\": {\r\n              \"isChained\": false,\r\n              \"chained_ops_hidden\": true\r\n            },\r\n            \"chained_options\": []\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  },\r\n  \"total_price\": 0\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3011,7 +3011,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDY0MjEzMiwiZXhwIjoxNjEwNjQ1NzMyLCJuYmYiOjE2MTA2NDIxMzIsImp0aSI6IlZsUGZNZ0p5R0pFb1QzQXkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktI5ThXxlIUYX7zsijeQeqNOdPOL7JgK4iuFWml0uC4",
 												"type": "text"
 											},
 											{
@@ -3142,7 +3142,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMjYxNDg1MiwiZXhwIjoxNjAyNjE4NDUyLCJuYmYiOjE2MDI2MTQ4NTIsImp0aSI6ImE0YWM3M01zeG5wdnhnTGUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Y8t3eICWEs_Secp3DkPIYW6LGuQ-Dym6V0ARu97AT6o",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDY0MjEzMiwiZXhwIjoxNjEwNjQ1NzMyLCJuYmYiOjE2MTA2NDIxMzIsImp0aSI6IlZsUGZNZ0p5R0pFb1QzQXkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktI5ThXxlIUYX7zsijeQeqNOdPOL7JgK4iuFWml0uC4",
 												"type": "text"
 											},
 											{
