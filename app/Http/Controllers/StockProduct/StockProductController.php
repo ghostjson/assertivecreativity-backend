@@ -4,6 +4,7 @@ namespace App\Http\Controllers\StockProduct;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\VendorAuthMiddleware;
+use App\Http\Requests\ProductsByCategoryRequest;
 use App\Http\Requests\ShowUpdatedProductRequest;
 use App\Http\Requests\StockProductSearch;
 use App\Jobs\ProductImportJob;
@@ -98,9 +99,19 @@ class StockProductController extends Controller
 
     }
 
-    public function getProductsByCategoryName(string $category)
+    public function getProductsByCategoryName(ProductsByCategoryRequest $request)
     {
-        return StockProduct::where('category', $category)->get()->unique('name')->values();
+        $products = [];
+        $categories = $request->input('categories');
+
+        foreach ($categories as $category){
+            array_push($products, StockProduct::where('category', $category)
+                ->get()
+                ->unique('name')
+                ->values());
+        }
+
+        return $products;
     }
 
     public function search(StockProductSearch $search)

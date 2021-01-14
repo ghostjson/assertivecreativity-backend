@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 //categories
 Route::get('/categories', [StockProductController::class, 'categories']);
-Route::get('/categories/{category}', [StockProductController::class, 'getProductsByCategoryName']);
+Route::post('/categories', [StockProductController::class, 'getProductsByCategoryName']);
 
 //search
 Route::post('/search', [StockProductController::class, 'search']);
