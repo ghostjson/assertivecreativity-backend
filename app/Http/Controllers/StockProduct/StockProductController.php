@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\VendorAuthMiddleware;
 use App\Http\Requests\ShowUpdatedProductRequest;
 use App\Jobs\ProductImportJob;
-use App\Models\CustomProduct;
 use App\Models\StockProduct;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -29,9 +28,9 @@ class StockProductController extends Controller
     public function index(): array
     {
         $products = [];
-        $product_names = StockProduct::select('Name')->distinct()->get();
+        $product_names = StockProduct::select('name')->distinct()->get();
         foreach ($product_names as $product_name) {
-            array_push($products, StockProduct::where('Name', $product_name->Name)->first());
+            array_push($products, StockProduct::where('name', $product_name->name)->first());
         }
         return $products;
     }
@@ -44,13 +43,13 @@ class StockProductController extends Controller
      */
     public function show(StockProduct $product)
     {
-        $variants = StockProduct::where('Name', $product->Name);
-        $colors = $variants->select('Colors')->distinct()->get();
+        $variants = StockProduct::where('name', $product->name);
+        $colors = $variants->select('colors')->distinct()->get();
 
         return [
             'product' => $product->toArray(),
             'attributes' => [
-                'Colors' => $this->getValues($colors->toArray())
+                'colors' => $this->getValues($colors->toArray())
             ],
         ];
 
@@ -69,7 +68,7 @@ class StockProductController extends Controller
     public function showUpdatedProduct(ShowUpdatedProductRequest $request, StockProduct $product)
     {
         $conditions = $request->validated();
-        $conditions = $conditions + ['Name' => $product->Name];
+        $conditions = $conditions + ['name' => $product->name];
         return StockProduct::where($conditions)->get();
     }
 
@@ -91,7 +90,7 @@ class StockProductController extends Controller
         return array_values(
             array_unique(
                 StockProduct::all()
-                    ->pluck('Cat1Name')
+                    ->pluck('category')
                     ->toArray()
             )
         );
@@ -100,6 +99,6 @@ class StockProductController extends Controller
 
     public function getProductsByCategoryName(string $category)
     {
-        return StockProduct::where('Cat1Name', $category)->get()->unique('Name')->values();
+        return StockProduct::where('category', $category)->get()->unique('name')->values();
     }
 }

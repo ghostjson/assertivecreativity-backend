@@ -1,10 +1,26 @@
--Todo :date::30-09-2020
+-Todo :date::14-01-2021
+    - Stock products export to excel
+    -> Fix stock products attribute names
+    - quantity step definition
+    - Stock Products search by name
+    - get Stock Products categories list
+    - Item num to product
+    - stock products follow convention
+    - problem with wishlist
+    - form save (CRUD)
+    - message save (CRUD)
+    - automate message save
+    - stock product edit
+    - order table, delivery_date -> json
+    -> Some UI changes
+
+->Todo :date::30-09-2020
     -> get category
     -> get tag by category name
 
 
 
--Todo :date::30-09-2020
+->Todo :date::30-09-2020
     -> user model add fields
     -> use put for update
     -> cart api

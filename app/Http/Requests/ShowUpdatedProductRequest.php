@@ -24,7 +24,7 @@ class ShowUpdatedProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'Colors' => 'nullable'
+            'colors' => 'nullable'
         ];
     }
 }
