@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static select(string $string)
  * @method static updateOrCreate(array $array, array $array1)
- * @method static where(mixed $conditions, $name='')
+ * @method static where(mixed $conditions, $name='', $s='')
  * @property mixed name
  */
 class StockProduct extends Model

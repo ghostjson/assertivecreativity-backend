@@ -2,7 +2,7 @@
     - Stock products export to excel
     -> Fix stock products attribute names
     - quantity step definition
-    - Stock Products search by name
+    -> Stock Products search by name
     - get Stock Products categories list
     - Item num to product
     - stock products follow convention
