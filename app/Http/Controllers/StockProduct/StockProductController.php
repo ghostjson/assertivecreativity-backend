@@ -126,4 +126,10 @@ class StockProductController extends Controller
         }
         return $products;
     }
+
+    public function getVariant(string $variant_id)
+    {
+        return StockProduct::where('variant_id', $variant_id)
+            ->first();
+    }
 }

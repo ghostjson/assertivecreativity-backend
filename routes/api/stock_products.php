@@ -12,6 +12,9 @@ Route::post('/categories', [StockProductController::class, 'getProductsByCategor
 //search
 Route::post('/search', [StockProductController::class, 'search']);
 
+//variant
+Route::get('/variant/{variant_id}', [StockProductController::class, 'getVariant']);
+
 Route::post('excel', [StockProductController::class, 'import']);
 Route::get('', [StockProductController::class, 'index']);
 Route::get('{product}', [StockProductController::class, 'show']);

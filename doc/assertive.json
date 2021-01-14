@@ -4079,6 +4079,93 @@
 							]
 						},
 						{
+							"name": "Show Product Variant",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/stock/variant/GA-LP-018-003",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"stock",
+										"variant",
+										"GA-LP-018-003"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Show Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/products/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"products",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 29 Sep 2020 13:27:29 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 29 Sep 2020 13:27:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.10"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"ad\",\n        \"basePrice\": \"4432\",\n        \"description\": \"Voluptatibus eum rerum perferendis necessitatibus aut sunt quas laudantium. Optio velit vel et velit optio adipisci est.\",\n        \"image\": \"https://lorempixel.com/640/480/?99556\",\n        \"priceTable\": \"\",\n        \"priceTableMode\": \"\",\n        \"sales\": \"165\",\n        \"serial\": \"1e59a282-5b07-363d-801e-3cb2cce84b57\",\n        \"stock\": \"767\",\n        \"customForms\": \"\",\n        \"category\": \"9\",\n        \"seller_id\": \"8\",\n        \"created_at\": \"2020-09-29T11:50:18.000000Z\",\n        \"updated_at\": \"2020-09-29T11:50:18.000000Z\"\n    }\n}"
+								}
+							]
+						},
+						{
 							"name": "Search By Name",
 							"request": {
 								"method": "GET",
