@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 
 /**
- * @method static create(array $validated)
  * @method static where(string $string, int|string|null $id)
+ * @method static create(array $validated)
  */
-class Wishlist extends Model
+class StockWishlist extends Model
 {
     use HasFactory;
 
@@ -28,7 +27,7 @@ class Wishlist extends Model
 
     public function getProductAttribute()
     {
-        return CustomProduct::find($this->product_id);
+        return StockProduct::find($this->product_id);
     }
 
     public function setOrderDataAttribute(array $value) : void
@@ -36,21 +35,21 @@ class Wishlist extends Model
         $this->attributes['order_data'] = json_encode($value);
     }
 
-    public function getOrderDataAttribute(string $value) : Object
+    public function getOrderDataAttribute(string $value)
     {
         return json_decode($value);
     }
 
     /**
      * Remove given product from wishlist
-     * @param CustomProduct $product
+     * @param StockProduct $product
      * @return bool
      */
-    public static function removeProduct(CustomProduct $product) : bool
+    public static function removeProduct(StockProduct $product) : bool
     {
 
         try {
-            Wishlist::where('product_id', $product->id)
+            StockWishlist::where('product_id', $product->id)
                 ->first()
                 ->delete();
             return true;
@@ -68,7 +67,7 @@ class Wishlist extends Model
     public static function clear()
     {
         try {
-            Wishlist::where('user_id', auth()->id())->delete();
+            StockWishlist::where('user_id', auth()->id())->delete();
             return true;
         }catch (\Exception $exception) {
             Log::error($exception);
@@ -78,6 +77,6 @@ class Wishlist extends Model
 
     public function product()
     {
-        return $this->belongsTo(CustomProduct::class);
+        return $this->belongsTo(StockProduct::class);
     }
 }

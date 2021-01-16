@@ -12,9 +12,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * @property mixed updated_at
  * @property mixed quantity
  * @property mixed product
- * @property mixed custom_forms_entry
+ * @property mixed order_data
  */
-class WishlistResource extends JsonResource
+class CustomWishlistResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -27,7 +27,7 @@ class WishlistResource extends JsonResource
         return [
             'id' => $this->id,
             'product_id' => $this->product_id,
-            'order_data' => $this->custom_forms_entry,
+            'order_data' => $this->order_data,
             'user_id' => $this->user_id,
             'quantity' => $this->quantity,
             'product' => $this->product,

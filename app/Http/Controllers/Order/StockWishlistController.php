@@ -5,21 +5,16 @@ namespace App\Http\Controllers\Order;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
 use App\Http\Requests\StoreWishlistRequest;
-use App\Http\Resources\ProductResource;
-use App\Http\Resources\WishlistResource;
-use App\Models\Order;
-use App\Models\CustomProduct;
-use App\Models\Wishlist;
+use App\Http\Resources\StockWishlistResource;
+use App\Models\StockWishlist;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\ResourceCollection;
-use Ramsey\Collection\Collection;
 
-class WishlistController extends Controller
+class StockWishlistController extends Controller
 {
     public function __construct()
     {
         $this->middleware([
-           Authenticate::class
+            Authenticate::class
         ]);
     }
 
@@ -30,18 +25,18 @@ class WishlistController extends Controller
      */
     public function index() : JsonResponse
     {
-        $products = Wishlist::where('user_id', auth()->id())->get();
+        $products = StockWishlist::where('user_id', auth()->id())->get();
 
 
         return response()->json([
-            'data' => WishlistResource::collection($products),
+            'data' => StockWishlistResource::collection($products),
             'total_price' => $this->sumOfProducts($products)
         ]);
     }
 
-    public function show(Wishlist $wishlist)
+    public function show(StockWishlist $wishlist)
     {
-        return new WishlistResource($wishlist);
+        return new StockWishlistResource($wishlist);
     }
 
     /**
@@ -51,17 +46,17 @@ class WishlistController extends Controller
      */
     public function store(StoreWishlistRequest $request) : JsonResponse
     {
-        $wishlist = Wishlist::create($request->validated());
+        $wishlist = StockWishlist::create($request->validated());
         return respondWithObject('Successfully added product to wishlist', $wishlist);
     }
 
 
     /**
      * Remove a product from wishlist
-     * @param Wishlist $wishlist
+     * @param StockWishlist $wishlist
      * @return JsonResponse
      */
-    public function destroy(Wishlist $wishlist) : JsonResponse
+    public function destroy(StockWishlist $wishlist) : JsonResponse
     {
         try {
             $wishlist->delete();
@@ -78,7 +73,7 @@ class WishlistController extends Controller
      */
     public function clear() : JsonResponse
     {
-        if(Wishlist::clear()) {
+        if(StockWishlist::clear()) {
             return respond('Successfully cleared wishlist');
         }else
         {

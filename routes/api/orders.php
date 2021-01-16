@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Order\OrderController;
-use App\Http\Controllers\Order\WishlistController;
+use App\Http\Controllers\Order\CustomWishlistController;
+use App\Http\Controllers\Order\StockWishlistController;
 use App\Http\Controllers\Thread\ThreadController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,12 +10,20 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// wishlist
-Route::post('wishlist', [WishlistController::class, 'store']);
-Route::get('wishlist', [WishlistController::class, 'index']);
-Route::get('wishlist/{wishlist}', [WishlistController::class, 'show']);
-Route::delete('wishlist/{wishlist}', [WishlistController::class, 'destroy']);
-Route::delete('wishlist', [WishlistController::class, 'clear']);
+// custom wishlist
+Route::post('wishlist/custom', [CustomWishlistController::class, 'store']);
+Route::get('wishlist/custom', [CustomWishlistController::class, 'index']);
+Route::get('wishlist/custom/{wishlist}', [CustomWishlistController::class, 'show']);
+Route::delete('wishlist/custom/{wishlist}', [CustomWishlistController::class, 'destroy']);
+Route::delete('wishlist/custom', [CustomWishlistController::class, 'clear']);
+
+// stock wishlist
+Route::post('wishlist/stock', [StockWishlistController::class, 'store']);
+Route::get('wishlist/stock', [StockWishlistController::class, 'index']);
+Route::get('wishlist/stock/{wishlist}', [StockWishlistController::class, 'show']);
+Route::delete('wishlist/stock/{wishlist}', [StockWishlistController::class, 'destroy']);
+Route::delete('wishlist/stock', [StockWishlistController::class, 'clear']);
+
 
 
 // THREADS
