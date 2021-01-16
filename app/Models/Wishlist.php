@@ -31,12 +31,12 @@ class Wishlist extends Model
         return CustomProduct::find($this->product_id);
     }
 
-    public function setCustomFormsEntryAttribute(array $value) : void
+    public function setOrderDataAttribute(array $value) : void
     {
-        $this->attributes['custom_forms_entry'] = json_encode($value);
+        $this->attributes['order_data'] = json_encode($value);
     }
 
-    public function getCustomFormsEntryAttribute(string $value) : Object
+    public function getOrderDataAttribute(string $value) : Object
     {
         return json_decode($value);
     }

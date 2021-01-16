@@ -26,7 +26,7 @@ class StoreWishlistRequest extends FormRequest
         return [
             'product_id' => 'required',
             'quantity' => 'nullable',
-            'custom_forms_entry' => 'nullable'
+            'order_data' => 'nullable'
         ];
     }
 }

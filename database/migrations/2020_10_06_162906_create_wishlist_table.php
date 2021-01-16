@@ -18,7 +18,7 @@ class CreateWishlistTable extends Migration
             $table->bigInteger('product_id');
             $table->bigInteger('user_id');
             $table->bigInteger('quantity')->unsigned();
-            $table->json('custom_forms_entry')->nullable();
+            $table->json('order_data')->nullable();
 
             $table->foreign('product_id')->references('id')->on('custom_products')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
