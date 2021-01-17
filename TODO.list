@@ -2,7 +2,7 @@
     - Stock products export to excel
     - quantity step definition
     -> problem with wishlist
-    - form save (CRUD)
+    -> form save (CRUD)
     - message save (CRUD)
     - automate message save
     - stock product edit

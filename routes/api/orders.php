@@ -4,6 +4,7 @@ use App\Http\Controllers\Order\OrderController;
 use App\Http\Controllers\Order\CustomWishlistController;
 use App\Http\Controllers\Order\StockWishlistController;
 use App\Http\Controllers\Thread\FormController;
+use App\Http\Controllers\Thread\MessageController;
 use App\Http\Controllers\Thread\ThreadController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,12 +38,18 @@ Route::post('threads/{user}', [ThreadController::class, 'send']);
 Route::post('threads', [ThreadController::class, 'sendToAdmin']);
 
 // Forms
-
 Route::get('forms', [FormController::class, 'index']);
 Route::post('forms', [FormController::class, 'store']);
 Route::get('forms/{form}', [FormController::class, 'show']);
 Route::post('forms/{form}', [FormController::class, 'update']);
 Route::delete('forms/{form}', [FormController::class, 'delete']);
+
+// Message CRUD
+Route::get('messages', [MessageController::class, 'index']);
+Route::post('messages', [MessageController::class, 'store']);
+Route::get('messages/{message}', [MessageController::class, 'show']);
+Route::post('messages/{message}', [MessageController::class, 'update']);
+Route::delete('messages/{message}', [MessageController::class, 'delete']);
 
 // orders
 Route::post('', [OrderController::class, 'store']);

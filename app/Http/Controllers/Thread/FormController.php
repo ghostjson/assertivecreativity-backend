@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Thread;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\AdminAuthMiddleware;
 use App\Http\Requests\CreateFormRequest;
 use App\Http\Requests\UpdateFormRequest;
 use App\Http\Resources\FormResource;
@@ -12,6 +13,13 @@ use Illuminate\Support\Facades\Log;
 
 class FormController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(
+            AdminAuthMiddleware::class
+        );
+    }
 
     public function index()
     {
