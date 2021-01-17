@@ -3,7 +3,7 @@
     - quantity step definition
     -> problem with wishlist
     -> form save (CRUD)
-    - message save (CRUD)
+    -> message save (CRUD)
     - automate message save
     - stock product edit
     -> order table, delivery_date -> json
