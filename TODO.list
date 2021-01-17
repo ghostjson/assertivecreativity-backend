@@ -1,7 +1,7 @@
 -Todo :date::14-01-2021
     - Stock products export to excel
     - quantity step definition
-    - problem with wishlist
+    -> problem with wishlist
     - form save (CRUD)
     - message save (CRUD)
     - automate message save
