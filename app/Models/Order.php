@@ -36,10 +36,10 @@ class Order extends Model
         $order = new Order;
         $order->buyer_id = auth()->id();
         $order->product_id = $data['product_id'];
-        $order->data = $data['data'];
+        $order->data = json_encode($data['data']);
         $order->seller_id = CustomProduct::find($data['product_id'])->seller_id;
         $order->order_status = 'pending'; # pending/accepted/completed/cancelled
-        $order->delivery_date = $data['delivery_date'];
+        $order->delivery_date = json_encode($data['delivery_date']);
 
 
         try{
