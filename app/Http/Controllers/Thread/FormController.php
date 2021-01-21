@@ -35,7 +35,7 @@ class FormController extends Controller
     {
         try {
             $form = Form::create($request->validated());
-            return respondWithObject('Successfully created form', $form);
+            return respondWithObject('Successfully created form', new FormResource($form));
         }catch (\Exception $exception){
             Log::error($exception);
             return respond('Error creating form', 500);
@@ -46,7 +46,7 @@ class FormController extends Controller
     {
         try {
             $form->update($request->validated());
-            return respondWithObject('Successfully update form', $form);
+            return respondWithObject('Successfully update form', new FormResource($form));
         }catch (\Exception $exception){
             Log::error($exception);
             return respond('Error update form', 500);

@@ -52,7 +52,8 @@ Route::post('messages/{message}', [MessageController::class, 'update']);
 Route::delete('messages/{message}', [MessageController::class, 'delete']);
 
 // orders
-Route::post('', [OrderController::class, 'store']);
+Route::post('custom', [OrderController::class, 'storeCustom']);
+Route::post('stock', [OrderController::class, 'storeStock']);
 Route::get('', [OrderController::class, 'index']);
 Route::get('vendor', [OrderController::class, 'indexVendor']);
 Route::get('admin', [OrderController::class, 'indexAdmin']);

@@ -5318,53 +5318,199 @@
 					]
 				},
 				{
-					"name": "Make Order",
+					"name": "Make Order Stock",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTI0NTI3OSwiZXhwIjoxNjExMjQ4ODc5LCJuYmYiOjE2MTEyNDUyNzksImp0aSI6IktOV3FHZ3BvQWh1eTFkY0YiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SQxEP-9vLB7sk4bT0XxUoLI2Klpnzo6wiy0c0jS8KaA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDgxNDk1NywiZXhwIjoxNjEwODE4NTU3LCJuYmYiOjE2MTA4MTQ5NTcsImp0aSI6InVBb2xBNXB3UEZuVEc5cEgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O_tQZ_1fe0tT15M9QwjfDWTUdbKwdRoJ_MhsRIwK_2U",
-								"type": "text"
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDgxNDk1NywiZXhwIjoxNjEwODE4NTU3LCJuYmYiOjE2MTA4MTQ5NTcsImp0aSI6InVBb2xBNXB3UEZuVEc5cEgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O_tQZ_1fe0tT15M9QwjfDWTUdbKwdRoJ_MhsRIwK_2U"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "product_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "data",
-									"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
-									"type": "text"
-								},
-								{
-									"key": "delivery_date",
-									"value": "{ \"sample_date\" : \"2020-10-15\"}",
-									"type": "text"
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 2,\r\n    \"delivery_date\": {\r\n        \"delivery_dates\": [\r\n            \"2021-01-27T15:26:37.000Z\",\r\n            \"2021-01-29T15:26:37.000Z\"\r\n        ],\r\n        \"meeting_dates\": [\r\n            \"2021-01-19T15:26:40.000Z\",\r\n            \"2021-01-28T15:26:40.000Z\"\r\n        ],\r\n        \"confirmation_dates\": [\r\n            \"2021-01-27T15:26:42.000Z\",\r\n            \"2021-01-28T15:26:42.000Z\"\r\n        ]\r\n    },\r\n    \"data\": {\r\n        \"product_details\": {\r\n            \"id\": 2,\r\n            \"product_id\": \"3899374\",\r\n            \"variant_id\": \"GA-LP-018-001\",\r\n            \"name\": \"Pashmina Paisley Feel Scarf with Fringe\",\r\n            \"cat_year\": \"2017\",\r\n            \"expiration_date\": \"12/31/2020\",\r\n            \"discontinued\": \"False\",\r\n            \"category\": \"Scarves\",\r\n            \"image_url_list\": [\r\n                null,\r\n                null,\r\n                null\r\n            ],\r\n            \"tag\": null,\r\n            \"description\": \"Pashmina Paisley Feel Scarf with Fringe! Perfect for every season and weather. This Pashmina Scarf has a 3\\\" Fringe, the total size is 26\\\"x72\\\", fabric may contain Acrylic/Polyester/Viscose. These are local stock items. The pricing reflects the cost of a single item only! Which will change by the amount you order! Minimum order is a dozen per color/style.\",\r\n            \"keywords\": \"Clothing, Fall, Fashion, Spring, Weather\",\r\n            \"colors\": \"Assorted\",\r\n            \"themes\": \"Acrylic, Pashmina, Feel, Fringe\",\r\n            \"dimension_list\": \"[26,72,null]\",\r\n            \"dimension_unit_list\": [\r\n                1,\r\n                1,\r\n                0\r\n            ],\r\n            \"dimension_type_list\": [\r\n                2,\r\n                null,\r\n                0\r\n            ],\r\n            \"quantities_list\": [\r\n                12,\r\n                1008,\r\n                2004,\r\n                3012,\r\n                4008,\r\n                0\r\n            ],\r\n            \"price_list\": [\r\n                7.317,\r\n                7.233,\r\n                7.15,\r\n                7.067,\r\n                6.446,\r\n                0\r\n            ],\r\n            \"pr_code\": \"RRRRS\",\r\n            \"pieces_per_unit_list\": [\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                0\r\n            ],\r\n            \"quote_upon_request\": \"False\",\r\n            \"price_include_clr\": \"Blank\",\r\n            \"price_include_side\": null,\r\n            \"price_include_loc\": null,\r\n            \"setup_chg\": \"0\",\r\n            \"setup_chg_code\": null,\r\n            \"screen_chg\": \"0\",\r\n            \"screen_chg_code\": null,\r\n            \"plate_chg\": \"0\",\r\n            \"plate_chg_code\": null,\r\n            \"die_chg\": \"0\",\r\n            \"die_chg_code\": null,\r\n            \"tooling_chg\": \"0\",\r\n            \"tooling_chg_code\": null,\r\n            \"repeat_chg\": \"0\",\r\n            \"repeat_chg_code\": null,\r\n            \"add_clr_chg\": \"0\",\r\n            \"add_clr_chg_code\": null,\r\n            \"add_clr_run_chg_list\": [\r\n                0,\r\n                0,\r\n                0,\r\n                0,\r\n                0,\r\n                0\r\n            ],\r\n            \"add_clr_run_chg_code\": null,\r\n            \"is_recyclable\": \"False\",\r\n            \"is_environmentally_friendly\": \"False\",\r\n            \"is_new_product\": \"True\",\r\n            \"not_suitable\": \"False\",\r\n            \"exclusive\": \"False\",\r\n            \"hazardous\": \"False\",\r\n            \"officially_licensed\": \"False\",\r\n            \"is_food\": \"False\",\r\n            \"is_clothing\": \"True\",\r\n            \"imprint_size_list\": [\r\n                null,\r\n                null\r\n            ],\r\n            \"imprint_size_units_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"imprint_size_type_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"imprint_loc\": null,\r\n            \"second_imprint_size_list\": [\r\n                null,\r\n                null\r\n            ],\r\n            \"second_imprint_units_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"second_imprint_type_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"second_imprint_loc\": null,\r\n            \"decoration_method\": null,\r\n            \"no_decoration\": \"True\",\r\n            \"made_in_country\": \"True\",\r\n            \"assembled_in_country\": \"CN\",\r\n            \"decorated_in_country\": \"CN\",\r\n            \"compliance_list\": null,\r\n            \"warning_lbl\": null,\r\n            \"compliance_memo\": null,\r\n            \"prod_time_lo\": null,\r\n            \"prod_time_hi\": \"0\",\r\n            \"rush_prod_time_lo\": \"0\",\r\n            \"rush_prod_time_hi\": \"1\",\r\n            \"packing\": \"3\",\r\n            \"carton_l\": \"Bulk\",\r\n            \"carton_w\": \"0\",\r\n            \"carton_h\": \"0\",\r\n            \"weight_per_carton\": \"0\",\r\n            \"units_per_carton\": \"0\",\r\n            \"ship_point_country\": \"0\",\r\n            \"ship_point_zip\": null,\r\n            \"comment\": null,\r\n            \"verified\": null,\r\n            \"update_inventory\": \"True\",\r\n            \"inventory_on_hand\": \"False\",\r\n            \"inventory_on_hand_added\": null,\r\n            \"inventory_memo\": \"0\",\r\n            \"owner\": \"1\",\r\n            \"created_at\": \"2021-01-18T11:52:13.000000Z\",\r\n            \"updated_at\": \"2021-01-18T11:52:13.000000Z\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/orders/",
+							"raw": "{{base_url}}/api/orders/stock",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								""
+								"stock"
 							]
 						},
-						"description": "Make a new order"
+						"description": "Make a new order for stock product.\r\n\r\nPS: return 404 if product not found."
+					},
+					"response": [
+						{
+							"name": "Make Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwMzM2NzY4NiwiZXhwIjoxNjAzMzcxMjg2LCJuYmYiOjE2MDMzNjc2ODYsImp0aSI6InF5cFBtTUEyYVJLTEt5QmYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UDRn3SMmYMOhPH7tzI4YFXSUgZCmpWznrn2uouFAhsk",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "product_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "data",
+											"value": "{\n    \"product_id\": 12,\n    \"order\": {\n        \"name\": \"new product\",\n        \"description\": \"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\",\n        \"base_price\": \"0\",\n        \"image\": \"/assets/images/demo-product-images/1.jpg\",\n        \"custom_forms\": [\n            {\n                \"id\": 0,\n                \"title\": \"First Form\",\n                \"parent_form\": null,\n                \"options\": [\n                    {\n                        \"type\": \"radioBtn\",\n                        \"title\": \"Select a gender\",\n                        \"name\": \"Radio Buttons\",\n                        \"price\": null,\n                        \"input\": \"female\",\n                        \"meta\": {\n                            \"isChained\": false,\n                            \"chained_ops_hidden\": true\n                        },\n                        \"chained_options\": []\n                    }\n                ]\n            }\n        ],\n        \"cartId\": 0,\n        \"totalPrice\": 0\n    }\n}",
+											"type": "text"
+										},
+										{
+											"key": "delivery_date",
+											"value": "2020-10-15",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/orders/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 12:34:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Oct 2020 12:34:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully placed order\",\n    \"data\": {\n        \"buyer_id\": 1,\n        \"product_id\": \"1\",\n        \"data\": \"{\\n    \\\"product_id\\\": 12,\\n    \\\"order\\\": {\\n        \\\"name\\\": \\\"new product\\\",\\n        \\\"description\\\": \\\"This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description. This is the product description.\\\",\\n        \\\"base_price\\\": \\\"0\\\",\\n        \\\"image\\\": \\\"/assets/images/demo-product-images/1.jpg\\\",\\n        \\\"custom_forms\\\": [\\n            {\\n                \\\"id\\\": 0,\\n                \\\"title\\\": \\\"First Form\\\",\\n                \\\"parent_form\\\": null,\\n                \\\"options\\\": [\\n                    {\\n                        \\\"type\\\": \\\"radioBtn\\\",\\n                        \\\"title\\\": \\\"Select a gender\\\",\\n                        \\\"name\\\": \\\"Radio Buttons\\\",\\n                        \\\"price\\\": null,\\n                        \\\"input\\\": \\\"female\\\",\\n                        \\\"meta\\\": {\\n                            \\\"isChained\\\": false,\\n                            \\\"chained_ops_hidden\\\": true\\n                        },\\n                        \\\"chained_options\\\": []\\n                    }\\n                ]\\n            }\\n        ],\\n        \\\"cartId\\\": 0,\\n        \\\"totalPrice\\\": 0\\n    }\\n}\",\n        \"seller_id\": \"2\",\n        \"order_status\": \"pending\",\n        \"delivery_date\": \"2020-10-15\",\n        \"updated_at\": \"2020-10-22T12:34:43.000000Z\",\n        \"created_at\": \"2020-10-22T12:34:43.000000Z\",\n        \"id\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Make Order Custom Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTI0NTI3OSwiZXhwIjoxNjExMjQ4ODc5LCJuYmYiOjE2MTEyNDUyNzksImp0aSI6IktOV3FHZ3BvQWh1eTFkY0YiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SQxEP-9vLB7sk4bT0XxUoLI2Klpnzo6wiy0c0jS8KaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDgxNDk1NywiZXhwIjoxNjEwODE4NTU3LCJuYmYiOjE2MTA4MTQ5NTcsImp0aSI6InVBb2xBNXB3UEZuVEc5cEgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.O_tQZ_1fe0tT15M9QwjfDWTUdbKwdRoJ_MhsRIwK_2U"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 2,\r\n    \"delivery_date\": {\r\n        \"delivery_dates\": [\r\n            \"2021-01-27T15:26:37.000Z\",\r\n            \"2021-01-29T15:26:37.000Z\"\r\n        ],\r\n        \"meeting_dates\": [\r\n            \"2021-01-19T15:26:40.000Z\",\r\n            \"2021-01-28T15:26:40.000Z\"\r\n        ],\r\n        \"confirmation_dates\": [\r\n            \"2021-01-27T15:26:42.000Z\",\r\n            \"2021-01-28T15:26:42.000Z\"\r\n        ]\r\n    },\r\n    \"data\": {\r\n        \"product_details\": {\r\n            \"id\": 2,\r\n            \"product_id\": \"3899374\",\r\n            \"variant_id\": \"GA-LP-018-001\",\r\n            \"name\": \"Pashmina Paisley Feel Scarf with Fringe\",\r\n            \"cat_year\": \"2017\",\r\n            \"expiration_date\": \"12/31/2020\",\r\n            \"discontinued\": \"False\",\r\n            \"category\": \"Scarves\",\r\n            \"image_url_list\": [\r\n                null,\r\n                null,\r\n                null\r\n            ],\r\n            \"tag\": null,\r\n            \"description\": \"Pashmina Paisley Feel Scarf with Fringe! Perfect for every season and weather. This Pashmina Scarf has a 3\\\" Fringe, the total size is 26\\\"x72\\\", fabric may contain Acrylic/Polyester/Viscose. These are local stock items. The pricing reflects the cost of a single item only! Which will change by the amount you order! Minimum order is a dozen per color/style.\",\r\n            \"keywords\": \"Clothing, Fall, Fashion, Spring, Weather\",\r\n            \"colors\": \"Assorted\",\r\n            \"themes\": \"Acrylic, Pashmina, Feel, Fringe\",\r\n            \"dimension_list\": \"[26,72,null]\",\r\n            \"dimension_unit_list\": [\r\n                1,\r\n                1,\r\n                0\r\n            ],\r\n            \"dimension_type_list\": [\r\n                2,\r\n                null,\r\n                0\r\n            ],\r\n            \"quantities_list\": [\r\n                12,\r\n                1008,\r\n                2004,\r\n                3012,\r\n                4008,\r\n                0\r\n            ],\r\n            \"price_list\": [\r\n                7.317,\r\n                7.233,\r\n                7.15,\r\n                7.067,\r\n                6.446,\r\n                0\r\n            ],\r\n            \"pr_code\": \"RRRRS\",\r\n            \"pieces_per_unit_list\": [\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                1,\r\n                0\r\n            ],\r\n            \"quote_upon_request\": \"False\",\r\n            \"price_include_clr\": \"Blank\",\r\n            \"price_include_side\": null,\r\n            \"price_include_loc\": null,\r\n            \"setup_chg\": \"0\",\r\n            \"setup_chg_code\": null,\r\n            \"screen_chg\": \"0\",\r\n            \"screen_chg_code\": null,\r\n            \"plate_chg\": \"0\",\r\n            \"plate_chg_code\": null,\r\n            \"die_chg\": \"0\",\r\n            \"die_chg_code\": null,\r\n            \"tooling_chg\": \"0\",\r\n            \"tooling_chg_code\": null,\r\n            \"repeat_chg\": \"0\",\r\n            \"repeat_chg_code\": null,\r\n            \"add_clr_chg\": \"0\",\r\n            \"add_clr_chg_code\": null,\r\n            \"add_clr_run_chg_list\": [\r\n                0,\r\n                0,\r\n                0,\r\n                0,\r\n                0,\r\n                0\r\n            ],\r\n            \"add_clr_run_chg_code\": null,\r\n            \"is_recyclable\": \"False\",\r\n            \"is_environmentally_friendly\": \"False\",\r\n            \"is_new_product\": \"True\",\r\n            \"not_suitable\": \"False\",\r\n            \"exclusive\": \"False\",\r\n            \"hazardous\": \"False\",\r\n            \"officially_licensed\": \"False\",\r\n            \"is_food\": \"False\",\r\n            \"is_clothing\": \"True\",\r\n            \"imprint_size_list\": [\r\n                null,\r\n                null\r\n            ],\r\n            \"imprint_size_units_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"imprint_size_type_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"imprint_loc\": null,\r\n            \"second_imprint_size_list\": [\r\n                null,\r\n                null\r\n            ],\r\n            \"second_imprint_units_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"second_imprint_type_list\": [\r\n                0,\r\n                0\r\n            ],\r\n            \"second_imprint_loc\": null,\r\n            \"decoration_method\": null,\r\n            \"no_decoration\": \"True\",\r\n            \"made_in_country\": \"True\",\r\n            \"assembled_in_country\": \"CN\",\r\n            \"decorated_in_country\": \"CN\",\r\n            \"compliance_list\": null,\r\n            \"warning_lbl\": null,\r\n            \"compliance_memo\": null,\r\n            \"prod_time_lo\": null,\r\n            \"prod_time_hi\": \"0\",\r\n            \"rush_prod_time_lo\": \"0\",\r\n            \"rush_prod_time_hi\": \"1\",\r\n            \"packing\": \"3\",\r\n            \"carton_l\": \"Bulk\",\r\n            \"carton_w\": \"0\",\r\n            \"carton_h\": \"0\",\r\n            \"weight_per_carton\": \"0\",\r\n            \"units_per_carton\": \"0\",\r\n            \"ship_point_country\": \"0\",\r\n            \"ship_point_zip\": null,\r\n            \"comment\": null,\r\n            \"verified\": null,\r\n            \"update_inventory\": \"True\",\r\n            \"inventory_on_hand\": \"False\",\r\n            \"inventory_on_hand_added\": null,\r\n            \"inventory_memo\": \"0\",\r\n            \"owner\": \"1\",\r\n            \"created_at\": \"2021-01-18T11:52:13.000000Z\",\r\n            \"updated_at\": \"2021-01-18T11:52:13.000000Z\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/orders/custom",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"custom"
+							]
+						},
+						"description": "Make a new order for custom product.\r\n\r\nPS: return 404 if product not found."
 					},
 					"response": [
 						{
@@ -5468,6 +5614,16 @@
 				{
 					"name": "List Current User Orders",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMDk4NTAxOCwiZXhwIjoxNjEwOTg4NjE4LCJuYmYiOjE2MTA5ODUwMTgsImp0aSI6IkhwUFM2QTQ0eFVsWXFNRk8iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.twI9IInTiFKW6T8a6a3N5xv26vHiaX57O945i4f6kwc",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{

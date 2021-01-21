@@ -28,16 +28,33 @@ class Order extends Model
 
     /**
      * Create a new order
-     * @param $data
-     * @return bool
+     * @param array $data
+     * @param string $model
+     * @return Order
      */
-    public static function new(array $data) : Order
+    public static function new(array $data, string $model) : Order
     {
         $order = new Order;
         $order->buyer_id = auth()->id();
         $order->product_id = $data['product_id'];
         $order->data = json_encode($data['data']);
-        $order->seller_id = CustomProduct::find($data['product_id'])->seller_id;
+
+        if($model == 'custom'){
+            $product = CustomProduct::where('id', $data['product_id']);
+            if($product->exists()){
+                $order->seller_id = $product->first()->seller_id;
+            }else{
+                abort(404);
+            }
+        }else if($model = 'stock'){
+            $product = StockProduct::where('id', $data['product_id']);
+            if($product->exists()){
+                $order->seller_id = $product->first()->owner;
+            }else{
+                abort(404);
+            }
+        }
+
         $order->order_status = 'pending'; # pending/accepted/completed/cancelled
         $order->delivery_date = json_encode($data['delivery_date']);
 

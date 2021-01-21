@@ -69,13 +69,27 @@ class OrderController extends Controller
     }
 
     /**
-     * Create a new order
+     * Create a new order custom product
      * @param OrderStoreRequest $order
      * @return JsonResponse
      */
-    public function store(OrderStoreRequest $order) : JsonResponse
+    public function storeCustom(OrderStoreRequest $order) : JsonResponse
     {
-        $order = Order::new($order->validated()) ?? false;
+        $order = Order::new($order->validated(), 'custom') ?? false;
+
+        return  $order ?
+            respondWithObject('Successfully placed order', $order) :
+            respond('Error placing order', 500);
+    }
+
+    /**
+     * Create a new order for stock product
+     * @param OrderStoreRequest $order
+     * @return JsonResponse
+     */
+    public function storeStock(OrderStoreRequest $order) : JsonResponse
+    {
+        $order = Order::new($order->validated(), 'stock') ?? false;
 
         return  $order ?
             respondWithObject('Successfully placed order', $order) :
