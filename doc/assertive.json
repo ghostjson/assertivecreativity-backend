@@ -4231,10 +4231,29 @@
 						{
 							"name": "Search By Name",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "query",
+											"value": "product_name",
+											"type": "text"
+										}
+									]
+								},
 								"url": {
-									"raw": ""
+									"raw": "{{base_url}}/api/products/stock/search",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"stock",
+										"search"
+									]
 								}
 							},
 							"response": []
@@ -4987,6 +5006,16 @@
 						{
 							"name": "List Forms",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTI0NTI3OSwiZXhwIjoxNjExMjQ4ODc5LCJuYmYiOjE2MTEyNDUyNzksImp0aSI6IktOV3FHZ3BvQWh1eTFkY0YiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SQxEP-9vLB7sk4bT0XxUoLI2Klpnzo6wiy0c0jS8KaA",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -5006,6 +5035,16 @@
 						{
 							"name": "Store Form",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTI0NTI3OSwiZXhwIjoxNjExMjQ4ODc5LCJuYmYiOjE2MTEyNDUyNzksImp0aSI6IktOV3FHZ3BvQWh1eTFkY0YiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SQxEP-9vLB7sk4bT0XxUoLI2Klpnzo6wiy0c0jS8KaA",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -5040,10 +5079,20 @@
 						{
 							"name": "Show Form",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTI0NTI3OSwiZXhwIjoxNjExMjQ4ODc5LCJuYmYiOjE2MTEyNDUyNzksImp0aSI6IktOV3FHZ3BvQWh1eTFkY0YiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SQxEP-9vLB7sk4bT0XxUoLI2Klpnzo6wiy0c0jS8KaA",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/api/orders/forms/2",
+									"raw": "{{base_url}}/api/orders/forms/1",
 									"host": [
 										"{{base_url}}"
 									],
@@ -5051,7 +5100,7 @@
 										"api",
 										"orders",
 										"forms",
-										"2"
+										"1"
 									]
 								}
 							},
