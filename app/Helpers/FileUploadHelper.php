@@ -15,11 +15,12 @@ if (!function_exists('fileUploader')) {
     {
         $data = substr($base64_file, strpos($base64_file, ',') + 1);
 
-        $file_name = uniqid(time() . '_', true) .  '.png';
+        $type = explode('/', substr($base64_file, 0, strpos($base64_file, ';')))[1];
+        $file_name = uniqid(time() . '_', true) .  '.' . $type;
 
         $image = base64_decode($data);
-        Storage::disk('local')->put('public/' . $file_name, $image);
-
+        Storage::disk('s3')
+            ->put('files/'. $file_name, $image);
         return $file_name;
     }
 }
