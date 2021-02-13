@@ -48,6 +48,7 @@ class StockProductController extends Controller
         $variants = StockProduct::where('name', $product->name);
         $colors = $variants->select('colors')->distinct()->get();
 
+
         return [
             'product' => $product->toArray(),
             'attributes' => [
@@ -118,6 +119,7 @@ class StockProductController extends Controller
                 ->unique('name')
                 ->values());
         }
+
 
         return $products;
     }

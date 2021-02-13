@@ -32,6 +32,7 @@ class CreateProductsTable extends Migration
             $table->integer('dimension_list')->nullable();
             $table->integer('dimension_unit_list')->nullable();
             $table->integer('dimension_type_list')->nullable();
+            $table->integer('quantity_step')->nullable();
             $table->integer('quantities_list')->nullable();
             $table->integer('price_list')->nullable();
             $table->string('pr_code')->nullable();
@@ -58,7 +59,7 @@ class CreateProductsTable extends Migration
             $table->string('add_clr_run_chg_code')->nullable();
             $table->boolean('is_recyclable')->nullable();
             $table->boolean('is_environmentally_friendly')->nullable();
-            $table->boolean('is_new_product')->nullable();
+            $table->boolean('is_new_prod')->nullable();
             $table->boolean('not_suitable')->nullable();
             $table->boolean('exclusive')->nullable();
             $table->boolean('hazardous')->nullable();
@@ -70,8 +71,8 @@ class CreateProductsTable extends Migration
             $table->string('imprint_size_type_list')->nullable();
             $table->string('imprint_loc')->nullable();
             $table->string('second_imprint_size_list')->nullable();
-            $table->string('second_imprint_units_list')->nullable();
-            $table->string('second_imprint_type_list')->nullable();
+            $table->string('second_imprint_size_units_list')->nullable();
+            $table->string('second_imprint_size_type_list')->nullable();
             $table->string('second_imprint_loc')->nullable();
             $table->string('decoration_method')->nullable();
             $table->boolean('no_decoration')->nullable();
@@ -85,7 +86,7 @@ class CreateProductsTable extends Migration
             $table->string('prod_time_hi')->nullable();
             $table->string('rush_prod_time_lo')->nullable();
             $table->integer('rush_prod_time_hi')->nullable();
-            $table->integer('packing')->nullable();
+            $table->integer('packaging')->nullable();
             $table->string('carton_l')->nullable();
             $table->string('carton_w')->nullable();
             $table->string('carton_h')->nullable();
@@ -97,7 +98,7 @@ class CreateProductsTable extends Migration
             $table->string('verified')->nullable();
             $table->string('update_inventory')->nullable();
             $table->string('inventory_on_hand')->nullable();
-            $table->string('inventory_on_hand_added')->nullable();
+            $table->string('inventory_on_hand_add')->nullable();
             $table->string('inventory_memo')->nullable();
 
             $table->bigInteger('owner')->unsigned();
