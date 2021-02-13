@@ -57,6 +57,11 @@ class StockProductController extends Controller
 
     }
 
+    /**
+     * Import stock products from excel
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function import(Request $request)
     {
         Storage::putFileAs('public', $request->file('sheet'), 'products.xls');
@@ -66,6 +71,12 @@ class StockProductController extends Controller
     }
 
 
+    /**
+     * Give updated variant using given attributes
+     * @param ShowUpdatedProductRequest $request
+     * @param StockProduct $product
+     * @return mixed
+     */
     public function showUpdatedProduct(ShowUpdatedProductRequest $request, StockProduct $product)
     {
         $conditions = $request->validated();
@@ -74,18 +85,11 @@ class StockProductController extends Controller
     }
 
 
-    private function getValues($array)
-    {
-        $values = [];
-        foreach ($array as $value)
-        {
-            array_push($values, array_values($value)[0]);
-        }
 
-        return $values;
-    }
-
-    //categories
+    /**
+     * Return all categories
+     * @return array
+     */
     public function categories()
     {
         return array_values(
@@ -98,6 +102,11 @@ class StockProductController extends Controller
 
     }
 
+    /**
+     * Return products under given category name
+     * @param ProductsByCategoryRequest $request
+     * @return array
+     */
     public function getProductsByCategoryName(ProductsByCategoryRequest $request)
     {
         $products = [];
@@ -113,6 +122,11 @@ class StockProductController extends Controller
         return $products;
     }
 
+    /**
+     * Search a particular product
+     * @param StockProductSearch $search
+     * @return array
+     */
     public function search(StockProductSearch $search)
     {
         $products = [];
@@ -126,9 +140,30 @@ class StockProductController extends Controller
         return $products;
     }
 
+    /**
+     * Get product by variant id
+     * @param string $variant_id
+     * @return mixed
+     */
     public function getVariant(string $variant_id)
     {
         return StockProduct::where('variant_id', $variant_id)
             ->first();
+    }
+
+    /**
+     * Return values of associated array
+     * @param $array
+     * @return array
+     */
+    private function getValues($array)
+    {
+        $values = [];
+        foreach ($array as $value)
+        {
+            array_push($values, array_values($value)[0]);
+        }
+
+        return $values;
     }
 }

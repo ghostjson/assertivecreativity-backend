@@ -6,17 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @method static create(array $validated)
- * @property mixed responses
+ * @method static create(array $response)
  */
-class Form extends Model
+class FormResponse extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function responses()
+    public function form()
     {
-        return $this->hasMany(FormResponse::class);
+        return $this->belongsTo(Form::class);
     }
 }

@@ -10,6 +10,7 @@ use App\Http\Requests\OrderStoreRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use App\Models\Role;
+use http\Env\Response;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\Request;
@@ -96,9 +97,11 @@ class OrderController extends Controller
             respond('Error placing order', 500);
     }
 
+
     /**
-     * Return specific order
+     * Return a specific product
      * @param Order $order
+     * @return OrderResource|JsonResponse
      */
     public function show(Order $order)
     {

@@ -38,11 +38,19 @@ Route::post('threads/{user}', [ThreadController::class, 'send']);
 Route::post('threads', [ThreadController::class, 'sendToAdmin']);
 
 // Forms
+    //Response
+Route::get('forms/responses/{formResponse}', [FormController::class, 'getFormResponse']);
+Route::post('forms/save', [FormController::class, 'saveFormResponse']);
+Route::get('forms/{form}/responses', [FormController::class, 'getAllResponses']);
+
 Route::get('forms', [FormController::class, 'index']);
 Route::post('forms', [FormController::class, 'store']);
 Route::get('forms/{form}', [FormController::class, 'show']);
 Route::post('forms/{form}', [FormController::class, 'update']);
 Route::delete('forms/{form}', [FormController::class, 'delete']);
+
+
+
 
 // Message CRUD
 Route::get('messages', [MessageController::class, 'index']);
