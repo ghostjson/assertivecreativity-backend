@@ -47,12 +47,14 @@ class StockProductController extends Controller
     {
         $variants = StockProduct::where('name', $product->name);
         $colors = $variants->select('colors')->distinct()->get();
+        $variant_ids = $variants->select('variant_id')->distinct()->get();
 
 
         return [
             'product' => $product->toArray(),
             'attributes' => [
-                'colors' => $this->getValues($colors->toArray())
+                'colors' => $this->getValues($colors->toArray()),
+                'variant_ids' => $this->getValues($variant_ids->toArray())
             ],
         ];
 
