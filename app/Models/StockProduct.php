@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static where(mixed $conditions, $name='', $s='')
  * @method static find($product_id)
  * @property mixed name
+ * @property mixed product_key
  */
 class StockProduct extends Model
 {

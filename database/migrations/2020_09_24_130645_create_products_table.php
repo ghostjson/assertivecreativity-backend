@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
 
             $table->string('product_id')->unique();
+            $table->string('product_key');
             $table->string('variant_id');
             $table->string('name');
             $table->integer('cat_year')->nullable();

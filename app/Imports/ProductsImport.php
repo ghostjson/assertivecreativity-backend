@@ -25,6 +25,7 @@ class ProductsImport implements ToModel, WithHeadingRow
             ['product_id' => $row['ProductID']],
             [
                 'product_id' => $row['ProductID'],
+                'product_key' => $row['ProductKey'],
                 'variant_id' => $row['ItemNum'],
                 'name' => $row['Name'],
                 'cat_year' => $row['CatYear'],

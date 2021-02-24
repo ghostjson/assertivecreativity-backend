@@ -30,9 +30,9 @@ class StockProductController extends Controller
     public function index(): array
     {
         $products = [];
-        $product_names = StockProduct::select('name')->distinct()->get();
-        foreach ($product_names as $product_name) {
-            array_push($products, StockProduct::where('name', $product_name->name)->first());
+        $product_objects = StockProduct::select('product_key')->distinct()->get();
+        foreach ($product_objects as $product_object) {
+            array_push($products, StockProduct::where('product_key', $product_object->product_key)->first());
         }
         return $products;
     }
@@ -45,7 +45,7 @@ class StockProductController extends Controller
      */
     public function show(StockProduct $product)
     {
-        $variants = StockProduct::where('name', $product->name);
+        $variants = StockProduct::where('product_key', $product->product_key);
         $colors = $variants->select('colors')->distinct()->get();
         $variant_ids = $variants->select('variant_id')->distinct()->get();
 
@@ -83,7 +83,7 @@ class StockProductController extends Controller
     public function showUpdatedProduct(ShowUpdatedProductRequest $request, StockProduct $product)
     {
         $conditions = $request->validated();
-        $conditions = $conditions + ['name' => $product->name];
+        $conditions = $conditions + ['product_key' => $product->product_key];
         return StockProduct::where($conditions)->get();
     }
 
@@ -118,7 +118,7 @@ class StockProductController extends Controller
         foreach ($categories as $category){
             array_push($products, StockProduct::where('category', $category)
                 ->get()
-                ->unique('name')
+                ->unique('product_key')
                 ->values());
         }
 
@@ -135,7 +135,7 @@ class StockProductController extends Controller
     {
         $products = [];
         $product_names = StockProduct::where('name', 'LIKE', '%'. $search->input('query') .'%')
-            ->select('name')->distinct()
+            ->select('product_key')->distinct()
             ->get();
 
         foreach ($product_names as $product_name) {
