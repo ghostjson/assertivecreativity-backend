@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->date('expiration_date')->nullable();
             $table->boolean('discontinued')->nullable();
             $table->string('category')->nullable();
-            $table->string('image_url_list')->nullable();
+            $table->string('images')->nullable();
             $table->string('tag')->nullable();
             $table->text('description')->nullable();
             $table->string('keywords')->nullable();

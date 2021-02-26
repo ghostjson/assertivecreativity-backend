@@ -33,7 +33,7 @@ class ProductsImport implements ToModel, WithHeadingRow
                 'discontinued' => $row['Discontinued'],
                 'category' => $row['Cat1Name'],
                 'tag' => $row['Tag'],
-                'image_url_list' => json_encode([$row['Image1URL'], $row['Image2URL'], $row['Image3URL']]),
+                'images' => json_encode([$row['Image1URL'], $row['Image2URL'], $row['Image3URL']]),
                 'description' => $row['Description'],
                 'themes' => $row['Themes'],
                 'colors' => $row['Colors'],

@@ -19,7 +19,7 @@ class StockProduct extends Model
 
     protected $guarded = [];
 
-    public function getImageUrlListAttribute($value){
+    public function getImagesAttribute($value){
         return json_decode($value);
     }
 
