@@ -11,6 +11,7 @@ use App\Jobs\ProductImportJob;
 use App\Models\StockProduct;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class StockProductController extends Controller
@@ -20,7 +21,7 @@ class StockProductController extends Controller
     {
         $this->middleware([
             VendorAuthMiddleware::class
-        ])->only(['import']);
+        ])->only(['import', 'deleteProduct']);
     }
 
     /**
@@ -40,12 +41,14 @@ class StockProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param StockProduct $product
+     * @param int $product_key
      * @return array
      */
-    public function show(StockProduct $product)
+    public function show(int $product_key)
     {
-        $variants = StockProduct::where('product_key', $product->product_key);
+        $product = StockProduct::where('product_key', $product_key)->first();
+
+        $variants = StockProduct::where('product_key', $product_key);
         $colors = $variants->select('colors')->distinct()->get();
         $variant_ids = $variants->select('variant_id')->distinct()->get();
 
@@ -77,14 +80,31 @@ class StockProductController extends Controller
     /**
      * Give updated variant using given attributes
      * @param ShowUpdatedProductRequest $request
-     * @param StockProduct $product
+     * @param int $product_key
      * @return mixed
      */
-    public function showUpdatedProduct(ShowUpdatedProductRequest $request, StockProduct $product)
+    public function showUpdatedProduct(ShowUpdatedProductRequest $request, int $product_key)
     {
         $conditions = $request->validated();
-        $conditions = $conditions + ['product_key' => $product->product_key];
+        $conditions = $conditions + ['product_key' => $product_key];
         return StockProduct::where($conditions)->get();
+    }
+
+    /**
+     * Delete stock product
+     * @param int $product_key
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function deleteProduct(int $product_key)
+    {
+        $products = StockProduct::where('product_key', $product_key);
+        try {
+            $products->delete();
+            return respond("Successfully deleted");
+        } catch (\Exception $e) {
+            Log::error($e);
+            return respond("Error during deletion");
+        }
     }
 
 

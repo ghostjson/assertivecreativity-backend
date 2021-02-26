@@ -19,6 +19,7 @@ Route::post('excel', [StockProductController::class, 'import']);
 Route::get('', [StockProductController::class, 'index']);
 Route::get('{product}', [StockProductController::class, 'show']);
 Route::post('{product}/updated', [StockProductController::class, 'showUpdatedProduct']);
+Route::delete('{product}', [StockProductController::class, 'deleteProduct']);
 
 
 
